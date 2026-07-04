@@ -44,6 +44,7 @@
   <button class="active" data-cat="dyr" onclick="toggleCat(this)">🦁 Dyr</button>
   <button data-cat="leke" onclick="toggleCat(this)">🛝 Lek</button>
   <button data-cat="wc" onclick="toggleCat(this)">🚻 WC</button>
+  <button id="btnClearRoute" style="display:none;background:#e91e63;color:#fff;" onclick="clearRoute()">✕ Fjern rute</button>
 </div>
 <div id="hint"></div>
 <div id="panel" class="collapsed">
@@ -118,7 +119,8 @@ function mins(p){if(!me)return null;
 
 function popupHtml(p){
   const t=mins(p);
-  return `<b>${p.e} ${p.n}</b><br>${p.d||''}${t?`<br><span style="color:#2e7d32;font-weight:800;">🚶 ca. ${t} min å gå</span>`:'<br><i>Sett posisjonen din for gangtid</i>'}`;}
+  const idx=P.indexOf(p);
+  return `<b>${p.e} ${p.n}</b><br>${p.d||''}${t?`<br><span style="color:#2e7d32;font-weight:800;">🚶 ca. ${t} min å gå</span>`:'<br><i>Sett posisjonen din for gangtid</i>'}<br><button style="margin-top:6px;border:none;border-radius:12px;padding:6px 12px;background:#e91e63;color:#fff;font-weight:700;font-size:13px;cursor:pointer;" onclick="route(${idx})">🧭 Vis raskeste vei</button>`;}
 
 function activeCats(){return [...document.querySelectorAll('[data-cat].active')].map(b=>b.dataset.cat);}
 function redraw(){
@@ -145,17 +147,52 @@ function renderList(){
 function fly(la,lo){map.flyTo([la,lo],17.5);const m=markers.find(m=>m.p.la===la&&m.p.lo===lo);if(m)m.openPopup();}
 
 function setMe(la,lo,acc){
+  const first=!meMarker;
   me=[la,lo];
   if(!meMarker){
     meMarker=L.marker(me,{icon:L.divIcon({html:'<div class="me-dot"></div>',className:'',iconSize:[18,18],iconAnchor:[9,9]}),zIndexOffset:1000}).addTo(map).bindPopup('<b>Du er her</b>');
+    meMarker.on('click',()=>{map.flyTo(me,Math.max(map.getZoom(),17));});
     accCircle=L.circle(me,{radius:acc||20,color:'#1976d2',weight:1,fillOpacity:.08}).addTo(map);
   } else {meMarker.setLatLng(me);accCircle.setLatLng(me);if(acc)accCircle.setRadius(acc);}
+  if(first)map.flyTo(me,17);
   redraw();
+}
+
+// ---- Rute (raskeste vei langs stiene, OSRM foot) ----
+let routeLine=null;
+function clearRoute(){
+  if(routeLine){map.removeLayer(routeLine);routeLine=null;}
+  document.getElementById('btnClearRoute').style.display='none';
+}
+async function route(idx){
+  const p=P[idx];
+  if(!me){hint('Sett posisjonen din først – trykk «📍 Finn meg» eller «👆 Sett posisjon».',6000);return;}
+  hint('Finner raskeste vei …',3000);
+  map.closePopup();
+  try{
+    const r=await fetch(`https://routing.openstreetmap.de/routed-foot/route/v1/foot/${me[1]},${me[0]};${p.lo},${p.la}?overview=full&geometries=geojson`);
+    const j=await r.json();
+    if(j.code!=='Ok'||!j.routes||!j.routes[0])throw new Error('no route');
+    const coords=j.routes[0].geometry.coordinates.map(c=>[c[1],c[0]]);
+    if(routeLine)map.removeLayer(routeLine);
+    routeLine=L.polyline(coords,{color:'#e91e63',weight:5,opacity:.9}).addTo(map);
+    const d=j.routes[0].distance;
+    const t=Math.max(1,Math.round(d/SPEED_M_PER_MIN));
+    map.fitBounds(routeLine.getBounds(),{padding:[70,70]});
+    hint(`🧭 Til ${p.n}: ca. ${t} min å gå (${Math.round(d)} m) i barnetempo`,10000);
+  }catch(e){
+    if(routeLine)map.removeLayer(routeLine);
+    routeLine=L.polyline([me,[p.la,p.lo]],{color:'#e91e63',weight:4,dashArray:'6 8',opacity:.8}).addTo(map);
+    map.fitBounds(routeLine.getBounds(),{padding:[70,70]});
+    hint(`Fant ikke sti-rute akkurat nå – viser retningen (luftlinje) til ${p.n}. Ca. ${mins(p)} min.`,8000);
+  }
+  document.getElementById('btnClearRoute').style.display='inline-block';
 }
 
 function hint(t,ms){const h=document.getElementById('hint');h.textContent=t;h.style.display='block';if(ms)setTimeout(()=>h.style.display='none',ms);}
 
 function startGps(){
+  if(watchId&&me){map.flyTo(me,Math.max(map.getZoom(),17));return;}
   if(!navigator.geolocation){hint('GPS ikke tilgjengelig – bruk «👆 Sett posisjon».');return;}
   hint('Henter GPS-posisjon …',4000);
   if(watchId)navigator.geolocation.clearWatch(watchId);
