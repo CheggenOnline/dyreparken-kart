@@ -49,7 +49,29 @@
 <div id="map"></div>
 <div class="topbar">
   <button onclick="toggleProgram()">🎭 Program</button>
+  <button onclick="toggleSettings()">⚙️ Innstillinger</button>
   <button id="btnClearRoute" style="display:none;background:#e91e63;color:#fff;" onclick="clearRoute()">✕ Fjern rute</button>
+</div>
+<div id="settings" style="display:none;position:absolute;top:0;bottom:0;left:0;right:0;z-index:1100;background:#fff;overflow-y:auto;padding-top:env(safe-area-inset-top);">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px 6px;">
+    <b style="font-size:17px;">⚙️ Innstillinger</b>
+    <button onclick="toggleSettings()" style="border:none;background:#eee;border-radius:14px;padding:6px 12px;font-weight:700;cursor:pointer;">✕ Lukk</button>
+  </div>
+  <div style="padding:6px 16px 4px;font-size:12px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;">Vis på kartet og i listen</div>
+  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('univers',this.checked)" style="width:20px;height:20px;"> 🎪 Universer og attraksjoner</label>
+  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('dyr',this.checked)" style="width:20px;height:20px;"> 🦁 Dyr</label>
+  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('leke',this.checked)" style="width:20px;height:20px;"> 🛝 Lekeplasser</label>
+  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('wc',this.checked)" style="width:20px;height:20px;"> 🚻 Toaletter</label>
+  <div style="padding:16px 16px 4px;font-size:12px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;">Ganghastighet</div>
+  <div style="padding:6px 16px 20px;">
+    <select onchange="setSpeed(this.value)" style="width:100%;font-size:16px;padding:10px 12px;border:1px solid #ddd;border-radius:12px;background:#fff;">
+      <option value="3">🐢 3-åringer (rolig)</option>
+      <option value="5" selected>🚶 5-åringer</option>
+      <option value="10">🏃 10-åringer</option>
+      <option value="voksen">💨 Voksen</option>
+    </select>
+    <div style="font-size:12px;color:#888;padding-top:8px;">Gangtidene i listen, popupene og rutene justeres etter valget.</div>
+  </div>
 </div>
 <button id="btnCenter" onclick="centerMe()" title="Sentrer på meg"
   style="position:absolute;top:calc(8px + env(safe-area-inset-top));right:8px;z-index:1001;width:42px;height:42px;border:none;border-radius:50%;background:#1976d2;color:#fff;font-size:19px;line-height:42px;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;"><span style="display:inline-block;transform:rotate(-45deg);">➤</span></button>
@@ -63,7 +85,7 @@
 <div id="hint"></div>
 <div id="panel" class="collapsed">
   <div id="panelHead" onclick="document.getElementById('panel').classList.toggle('collapsed')">
-    <span>🚶 Gangtid herfra (4-åringstempo)</span><span id="panelArrow">▲</span>
+    <span id="tempoLbl">🚶 Gangtid herfra (5-åringstempo)</span><span id="panelArrow">▲</span>
   </div>
   <div style="padding:0 12px 8px;"><input id="search" type="search" placeholder="🔎 Søk attraksjon …" oninput="renderList()" onclick="event.stopPropagation()" style="width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:12px;padding:8px 12px;font-size:15px;"></div>
   <div id="list"><div style="padding:12px;color:#777;font-size:13px;">Venter på GPS-posisjon …</div></div>
@@ -109,8 +131,22 @@ const P = [
  {n:"WC (Abra Havn)", la:58.18836, lo:8.15144, c:"wc", e:"🚻"},
 ];
 
-const SPEED_M_PER_MIN = 42;   // ~2,5 km/t – rolig 4-åringstempo
+const SPEEDS={ '3':33, '5':42, '10':58, 'voksen':80 }; // meter per minutt
+let SPEED_M_PER_MIN = SPEEDS['5'];
 const PATH_FACTOR = 1.35;     // stier er ikke luftlinje
+const cats={univers:true,dyr:true,leke:true,wc:true};
+
+function toggleSettings(){
+  const el=document.getElementById('settings');
+  el.style.display=el.style.display==='block'?'none':'block';
+}
+function setCat(cat,on){cats[cat]=on;redraw();}
+function setSpeed(v){
+  SPEED_M_PER_MIN=SPEEDS[v];
+  const lbl={'3':'3-åringstempo','5':'5-åringstempo','10':'10-åringstempo','voksen':'voksentempo'}[v];
+  document.getElementById('tempoLbl').textContent='🚶 Gangtid herfra ('+lbl+')';
+  redraw();
+}
 
 const map = L.map('map',{zoomControl:false}).setView([58.1855,8.1435],16);
 L.control.zoom({position:'bottomright'}).addTo(map);
@@ -139,7 +175,10 @@ function popupHtml(p){
   return `<b>${p.e} ${p.n}</b><br>${p.d||''}${t?`<br><span style="color:#2e7d32;font-weight:800;">🚶 ca. ${t} min å gå</span>`:'<br><i>Sett posisjonen din for gangtid</i>'}<br><button style="margin-top:6px;border:none;border-radius:12px;padding:6px 12px;background:#e91e63;color:#fff;font-weight:700;font-size:13px;cursor:pointer;" onclick="route(${idx})">🧭 Vis raskeste vei</button>`;}
 
 function redraw(){
-  markers.forEach(m=>{m.addTo(map);m.setPopupContent(popupHtml(m.p));});
+  markers.forEach(m=>{
+    if(cats[m.p.c]){m.addTo(map);m.setPopupContent(popupHtml(m.p));}
+    else map.removeLayer(m);
+  });
   renderList();
 }
 
@@ -165,8 +204,8 @@ function renderList(){
   if(!me){return;}
   const q=(document.getElementById('search')?.value||'').trim().toLowerCase();
   const match=p=>!q||p.n.toLowerCase().includes(q)||(p.d||'').toLowerCase().includes(q);
-  const items=P.filter(p=>p.c!=='wc'&&match(p)).map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t);
-  const wc=P.filter(p=>p.c==='wc').map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t)[0];
+  const items=P.filter(p=>p.c!=='wc'&&cats[p.c]&&match(p)).map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t);
+  const wc=cats.wc?P.filter(p=>p.c==='wc').map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t)[0]:null;
   let h='';
   if(wc&&!q) h+=`<div class="row" onclick="fly(${wc.p.la},${wc.p.lo})"><div class="em">🚻</div><div class="nm">Nærmeste toalett</div><div class="min">${wc.t} min</div></div><div class="divlabel">Attraksjoner – nærmest først</div>`;
   if(!items.length) h+='<div style="padding:12px;color:#777;font-size:13px;">Ingen treff.</div>';
@@ -213,7 +252,7 @@ async function routeTo(la,lo,name){
     const d=j.routes[0].distance;
     const t=Math.max(1,Math.round(d/SPEED_M_PER_MIN));
     map.fitBounds(routeLine.getBounds(),{padding:[70,70]});
-    hint(`🧭 Til ${name}: ca. ${t} min å gå (${Math.round(d)} m) i barnetempo`,10000);
+    hint(`🧭 Til ${name}: ca. ${t} min å gå (${Math.round(d)} m) i valgt tempo`,10000);
   }catch(e){
     if(routeLine)map.removeLayer(routeLine);
     routeLine=L.polyline([me,[la,lo]],{color:'#e91e63',weight:4,dashArray:'6 8',opacity:.8}).addTo(map);
