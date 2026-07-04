@@ -239,8 +239,10 @@ function renderProgram(){
   let h='';
   if(progData.date!==today)h+=`<div style="margin:8px 14px;padding:8px 12px;background:#fff8e1;border:1px solid #ffca28;border-radius:10px;font-size:13px;">⚠️ Programmet er fra ${progData.date} og kan avvike i dag. <a href="https://www.dyreparken.no/dagsprogram/" target="_blank">Sjekk dyreparken.no</a></div>`;
   const nowHM=new Date().toTimeString().slice(0,5);
-  const list=progData.entries.map(e=>({...e,next:e.times.find(t=>t.to>=nowHM)||null}));
-  list.sort((a,b)=>(a.next?a.next.from:'~').localeCompare(b.next?b.next.from:'~'));
+  const seen=new Set();
+  const uniq=progData.entries.filter(e=>{const k=e.title+'|'+e.venue+'|'+e.times.map(t=>t.from).join(',');if(seen.has(k))return false;seen.add(k);return true;});
+  const list=uniq.map(e=>({...e,next:e.times.find(t=>t.to>=nowHM)||null}));
+  list.sort((a,b)=>{const ka=a.next?a.next.from:'99:99',kb=b.next?b.next.from:'99:99';return ka<kb?-1:ka>kb?1:0;});
   h+=list.map(e=>{
     const c=venueCoords(e);
     const times=e.times.map(t=>`<span style="${e.next&&t.from===e.next.from?'font-weight:800;color:#2e7d32;':'color:#999;'}">${t.from}</span>`).join(' · ');
