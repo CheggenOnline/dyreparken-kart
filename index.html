@@ -142,7 +142,6 @@ function renderList(){
   if(wc) h+=`<div class="row" onclick="fly(${wc.p.la},${wc.p.lo})"><div class="em">🚻</div><div class="nm">Nærmeste toalett</div><div class="min">${wc.t} min</div></div><div class="divlabel">Attraksjoner – nærmest først</div>`;
   h+=items.map(i=>`<div class="row" onclick="fly(${i.p.la},${i.p.lo})"><div class="em">${i.p.e}</div><div class="nm">${i.p.n}<small>${i.p.d||''}</small></div><div class="min">${i.t} min</div></div>`).join('');
   el.innerHTML=h;
-  document.getElementById('panel').classList.remove('collapsed');
 }
 function fly(la,lo){map.flyTo([la,lo],17.5);const m=markers.find(m=>m.p.la===la&&m.p.lo===lo);if(m)m.openPopup();}
 
@@ -154,7 +153,7 @@ function setMe(la,lo,acc){
     meMarker.on('click',()=>{map.flyTo(me,Math.max(map.getZoom(),17));});
     accCircle=L.circle(me,{radius:acc||20,color:'#1976d2',weight:1,fillOpacity:.08}).addTo(map);
   } else {meMarker.setLatLng(me);accCircle.setLatLng(me);if(acc)accCircle.setRadius(acc);}
-  if(first)map.flyTo(me,17);
+  if(first){map.flyTo(me,17);document.getElementById('panel').classList.remove('collapsed');}
   redraw();
 }
 
