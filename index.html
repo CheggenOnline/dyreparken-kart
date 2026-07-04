@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Dyreparken – familiekart</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  html,body{margin:0;padding:0;height:100%;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;}
+  #map{position:absolute;top:0;bottom:0;left:0;right:0;}
+  .topbar{position:absolute;top:8px;left:8px;right:8px;z-index:1000;display:flex;gap:6px;flex-wrap:wrap;}
+  .topbar button{border:none;border-radius:16px;padding:7px 12px;font-size:13px;font-weight:600;
+    background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.3);cursor:pointer;color:#333;}
+  .topbar button.active{background:#2e7d32;color:#fff;}
+  .topbar button.warn{background:#ff9800;color:#fff;}
+  #panel{position:absolute;bottom:0;left:0;right:0;z-index:1000;background:#fff;border-radius:16px 16px 0 0;
+    box-shadow:0 -2px 10px rgba(0,0,0,.25);max-height:45%;display:flex;flex-direction:column;transition:max-height .25s;}
+  #panel.collapsed{max-height:44px;}
+  #panelHead{padding:10px 16px;font-weight:700;font-size:15px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+  #list{overflow-y:auto;padding:0 8px 12px;}
+  .row{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;cursor:pointer;}
+  .row:active{background:#eef7ee;}
+  .row .em{font-size:22px;width:28px;text-align:center;}
+  .row .nm{flex:1;font-size:14px;font-weight:600;color:#222;}
+  .row .nm small{display:block;font-weight:400;color:#777;font-size:11px;}
+  .row .min{font-size:14px;font-weight:800;color:#2e7d32;white-space:nowrap;}
+  .divlabel{padding:6px 12px 2px;font-size:11px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;}
+  .emoji-marker{font-size:22px;text-shadow:0 1px 3px rgba(0,0,0,.4);text-align:center;line-height:26px;}
+  .emoji-small{font-size:15px;opacity:.85;text-align:center;line-height:18px;}
+  .me-dot{width:18px;height:18px;border-radius:50%;background:#1976d2;border:3px solid #fff;box-shadow:0 0 8px rgba(25,118,210,.9);}
+  .leaflet-popup-content{font-size:14px;margin:10px 14px;}
+  .leaflet-popup-content b{font-size:15px;}
+  #hint{position:absolute;top:52px;left:8px;right:8px;z-index:1001;background:#fff8e1;border:1px solid #ffca28;
+    border-radius:10px;padding:8px 12px;font-size:13px;display:none;}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="topbar">
+  <button id="btnGps" class="warn" onclick="startGps()">📍 Finn meg</button>
+  <button id="btnManual" onclick="manualMode()">👆 Sett posisjon</button>
+  <button class="active" data-cat="univers" onclick="toggleCat(this)">🎪 Universer</button>
+  <button class="active" data-cat="dyr" onclick="toggleCat(this)">🦁 Dyr</button>
+  <button data-cat="leke" onclick="toggleCat(this)">🛝 Lek</button>
+  <button data-cat="wc" onclick="toggleCat(this)">🚻 WC</button>
+</div>
+<div id="hint"></div>
+<div id="panel" class="collapsed">
+  <div id="panelHead" onclick="document.getElementById('panel').classList.toggle('collapsed')">
+    <span>🚶 Gangtid herfra (4-åringstempo)</span><span id="panelArrow">▲</span>
+  </div>
+  <div id="list"><div style="padding:12px;color:#777;font-size:13px;">Trykk «📍 Finn meg» eller «👆 Sett posisjon» først.</div></div>
+</div>
+<script>
+// ---- Attraksjoner (ekte koordinater fra OpenStreetMap) ----
+const P = [
+ // Universer & hovedattraksjoner
+ {n:"Hovedinngang",           la:58.18454, lo:8.14674, c:"univers", e:"🎟️", d:"Inngang øst / hovedinngang"},
+ {n:"Inngang Syd",            la:58.18175, lo:8.14600, c:"univers", e:"🎟️", d:"Sørlig inngang"},
+ {n:"Kardemomme by",          la:58.18734, lo:8.13997, c:"univers", e:"🏘️", d:"Politimester Bastian & Kamomilla. Perfekt for 4-åringer"},
+ {n:"Kardemomme-karusellen",  la:58.18737, lo:8.13931, c:"univers", e:"🎠", d:"Karusell i Kardemomme by"},
+ {n:"Hakkebakkeskogen (togreise)", la:58.18589, lo:8.14061, c:"univers", e:"🚂", d:"Reisen gjennom Hakkebakkeskogen – stor favoritt"},
+ {n:"KuToppen",               la:58.18464, lo:8.14022, c:"univers", e:"🐄", d:"Bondegård med aktivitetshus – klappe dyr"},
+ {n:"Kaptein Sabeltanns verden (Kjuttaviga)", la:58.18585, lo:8.14721, c:"univers", e:"🏴‍☠️", d:"Sjørøverteater, skattkammer, båter"},
+ {n:"Abra Havn",              la:58.18835, lo:8.15130, c:"univers", e:"⚓", d:"Sjørøverlandsby med paradegate"},
+ {n:"Badelandet",             la:58.18805, lo:8.14469, c:"univers", e:"🏊", d:"Innendørs badeland (egen billett)"},
+ {n:"Minitoget",              la:58.18647, lo:8.14585, c:"univers", e:"🚃", d:"Lite tog – fin pause for små bein"},
+ {n:"JungelBob (berg-og-dalbane)", la:58.18511, lo:8.14304, c:"univers", e:"🎢", d:"Barnevennlig berg-og-dalbane"},
+ // Dyr
+ {n:"Nordisk Villmark",       la:58.18638, lo:8.13680, c:"dyr", e:"🐺", d:"Ulv, elg, gaupe, jerv – gangsti gjennom skogen"},
+ {n:"Elgen",                  la:58.18670, lo:8.13476, c:"dyr", e:"🫎", d:"I Nordisk Villmark"},
+ {n:"Savannen",               la:58.18325, lo:8.14716, c:"dyr", e:"🦒", d:"Sjiraff, sebra, antiloper"},
+ {n:"Løvene",                 la:58.18252, lo:8.14568, c:"dyr", e:"🦁", d:"Løveanlegget"},
+ {n:"Tigerens rike",          la:58.18239, lo:8.14013, c:"dyr", e:"🐯", d:"Sibirsk tiger"},
+ {n:"Orangutanghuset",        la:58.18166, lo:8.14088, c:"dyr", e:"🦧", d:"Orangutanger"},
+ {n:"Sjimpansene",            la:58.18386, lo:8.14358, c:"dyr", e:"🐵", d:"Sjimpanseøya"},
+ {n:"Ringhalelemurene",       la:58.18358, lo:8.14196, c:"dyr", e:"🐒", d:"Lemurer"},
+ {n:"Manyatta – Barnas afrikanske landsby", la:58.18301, lo:8.14512, c:"dyr", e:"🐐", d:"Klappedyr – topp for 4-åringer"},
+ {n:"Surikatene",             la:58.18244, lo:8.14678, c:"dyr", e:"🦫", d:"Surikater og ørkenrev"},
+ {n:"Kamelene",               la:58.18807, lo:8.14000, c:"dyr", e:"🐫", d:"Ved Kardemomme by"},
+ // Lekeplasser
+ {n:"Klatrefjellet",          la:58.18337, lo:8.14419, c:"leke", e:"🛝", d:"Lekeplass midt i parken"},
+ {n:"Dødningskallen",         la:58.18880, lo:8.14982, c:"leke", e:"💀", d:"Sjørøverlekeplass ved Abra Havn"},
+ {n:"Ildprøveplassen",        la:58.18921, lo:8.15110, c:"leke", e:"🔥", d:"Lekeplass i Abra Havn"},
+ // WC
+ {n:"WC", la:58.18181, lo:8.14629, c:"wc", e:"🚻"}, {n:"WC", la:58.18229, lo:8.14021, c:"wc", e:"🚻"},
+ {n:"WC", la:58.18288, lo:8.14371, c:"wc", e:"🚻"}, {n:"WC", la:58.18327, lo:8.14618, c:"wc", e:"🚻"},
+ {n:"WC", la:58.18557, lo:8.14716, c:"wc", e:"🚻"}, {n:"WC", la:58.18570, lo:8.14332, c:"wc", e:"🚻"},
+ {n:"WC", la:58.18628, lo:8.14502, c:"wc", e:"🚻"}, {n:"WC", la:58.18727, lo:8.13897, c:"wc", e:"🚻"},
+ {n:"WC", la:58.18785, lo:8.14447, c:"wc", e:"🚻"}, {n:"WC", la:58.18403, lo:8.13943, c:"wc", e:"🚻"},
+ {n:"WC (Abra Havn)", la:58.18836, lo:8.15144, c:"wc", e:"🚻"},
+];
+
+const SPEED_M_PER_MIN = 42;   // ~2,5 km/t – rolig 4-åringstempo
+const PATH_FACTOR = 1.35;     // stier er ikke luftlinje
+
+const map = L.map('map',{zoomControl:false}).setView([58.1855,8.1435],16);
+L.control.zoom({position:'bottomright'}).addTo(map);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,
+  attribution:'&copy; OpenStreetMap'}).addTo(map);
+
+let me=null, meMarker=null, accCircle=null, watchId=null, manual=false;
+const markers=[];
+
+function icon(e,small){return L.divIcon({html:e,className:small?'emoji-small':'emoji-marker',iconSize:small?[18,18]:[26,26],iconAnchor:small?[9,9]:[13,13]});}
+
+P.forEach(p=>{
+  const m=L.marker([p.la,p.lo],{icon:icon(p.e,p.c==='wc')});
+  m.bindPopup('…'); m.p=p; markers.push(m);
+});
+
+function dist(a,b,c,d){const R=6371000,r=Math.PI/180;
+  const x=(c-a)*r, y=(d-b)*r*Math.cos((a+c)/2*r);
+  return R*Math.sqrt(x*x+y*y);}
+function mins(p){if(!me)return null;
+  return Math.max(1,Math.round(dist(me[0],me[1],p.la,p.lo)*PATH_FACTOR/SPEED_M_PER_MIN));}
+
+function popupHtml(p){
+  const t=mins(p);
+  return `<b>${p.e} ${p.n}</b><br>${p.d||''}${t?`<br><span style="color:#2e7d32;font-weight:800;">🚶 ca. ${t} min å gå</span>`:'<br><i>Sett posisjonen din for gangtid</i>'}`;}
+
+function activeCats(){return [...document.querySelectorAll('[data-cat].active')].map(b=>b.dataset.cat);}
+function redraw(){
+  const cats=activeCats();
+  markers.forEach(m=>{
+    if(cats.includes(m.p.c)){m.addTo(map);m.setPopupContent(popupHtml(m.p));}
+    else map.removeLayer(m);});
+  renderList();
+}
+function toggleCat(btn){btn.classList.toggle('active');redraw();}
+
+function renderList(){
+  const el=document.getElementById('list');
+  if(!me){return;}
+  const cats=activeCats();
+  const items=P.filter(p=>cats.includes(p.c)&&p.c!=='wc').map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t);
+  const wc=P.filter(p=>p.c==='wc').map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t)[0];
+  let h='';
+  if(wc) h+=`<div class="row" onclick="fly(${wc.p.la},${wc.p.lo})"><div class="em">🚻</div><div class="nm">Nærmeste toalett</div><div class="min">${wc.t} min</div></div><div class="divlabel">Attraksjoner – nærmest først</div>`;
+  h+=items.map(i=>`<div class="row" onclick="fly(${i.p.la},${i.p.lo})"><div class="em">${i.p.e}</div><div class="nm">${i.p.n}<small>${i.p.d||''}</small></div><div class="min">${i.t} min</div></div>`).join('');
+  el.innerHTML=h;
+  document.getElementById('panel').classList.remove('collapsed');
+}
+function fly(la,lo){map.flyTo([la,lo],17.5);const m=markers.find(m=>m.p.la===la&&m.p.lo===lo);if(m)m.openPopup();}
+
+function setMe(la,lo,acc){
+  me=[la,lo];
+  if(!meMarker){
+    meMarker=L.marker(me,{icon:L.divIcon({html:'<div class="me-dot"></div>',className:'',iconSize:[18,18],iconAnchor:[9,9]}),zIndexOffset:1000}).addTo(map).bindPopup('<b>Du er her</b>');
+    accCircle=L.circle(me,{radius:acc||20,color:'#1976d2',weight:1,fillOpacity:.08}).addTo(map);
+  } else {meMarker.setLatLng(me);accCircle.setLatLng(me);if(acc)accCircle.setRadius(acc);}
+  redraw();
+}
+
+function hint(t,ms){const h=document.getElementById('hint');h.textContent=t;h.style.display='block';if(ms)setTimeout(()=>h.style.display='none',ms);}
+
+function startGps(){
+  if(!navigator.geolocation){hint('GPS ikke tilgjengelig – bruk «👆 Sett posisjon».');return;}
+  hint('Henter GPS-posisjon …',4000);
+  if(watchId)navigator.geolocation.clearWatch(watchId);
+  watchId=navigator.geolocation.watchPosition(
+    pos=>{document.getElementById('btnGps').classList.remove('warn');
+          document.getElementById('btnGps').classList.add('active');
+          document.getElementById('btnGps').textContent='📍 GPS på';
+          setMe(pos.coords.latitude,pos.coords.longitude,pos.coords.accuracy);},
+    err=>{hint('Fikk ikke GPS ('+err.message+'). Bruk «👆 Sett posisjon» og trykk der du står på kartet.');},
+    {enableHighAccuracy:true,maximumAge:5000,timeout:15000});
+}
+function manualMode(){
+  manual=true;
+  hint('Trykk på kartet der du står nå. (Gjenta når du har gått et stykke.)',6000);
+}
+map.on('click',e=>{if(manual){setMe(e.latlng.lat,e.latlng.lng,15);}});
+
+redraw();
+</script>
+</body>
+</html>
