@@ -36,8 +36,8 @@
   .divlabel{padding:6px 12px 2px;font-size:11px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;}
   .emoji-marker{font-size:22px;text-shadow:0 1px 3px rgba(0,0,0,.4);text-align:center;line-height:26px;}
   .emoji-small{font-size:15px;opacity:.85;text-align:center;line-height:18px;}
-  .me-dot{width:18px;height:18px;border-radius:50%;background:#1976d2;border:3px solid #fff;box-shadow:0 0 8px rgba(25,118,210,.9);position:absolute;left:10px;top:10px;}
-  .me-wrap{position:relative;width:44px;height:44px;transform-origin:22px 22px;transition:transform .2s linear;}
+  .me-dot{width:18px;height:18px;border-radius:50%;background:#1976d2;border:3px solid #fff;box-shadow:0 0 8px rgba(25,118,210,.9);position:absolute;left:16px;top:16px;}
+  .me-wrap{position:relative;width:56px;height:56px;transform-origin:28px 28px;transition:transform .2s linear;}
   .me-wrap svg{position:absolute;left:0;top:0;display:none;}
   .leaflet-popup-content{font-size:14px;margin:10px 14px;}
   .leaflet-popup-content b{font-size:15px;}
@@ -166,8 +166,8 @@ function setMe(la,lo,acc){
   const first=!meMarker;
   me=[la,lo];
   if(!meMarker){
-    const html='<div class="me-wrap" id="meWrap"><svg width="44" height="44" viewBox="0 0 44 44"><path d="M22 22 L11 5 A21 21 0 0 1 33 5 Z" fill="rgba(25,118,210,.35)"/></svg><div class="me-dot"></div></div>';
-    meMarker=L.marker(me,{icon:L.divIcon({html:html,className:'',iconSize:[44,44],iconAnchor:[22,22]}),zIndexOffset:1000}).addTo(map).bindPopup('<b>Du er her</b>');
+    const html='<div class="me-wrap" id="meWrap"><svg width="56" height="56" viewBox="0 0 56 56"><path d="M28 28 L12 3 A30 30 0 0 1 44 3 Z" fill="#1976d2" fill-opacity="0.6" stroke="#fff" stroke-width="1.5"/></svg><div class="me-dot"></div></div>';
+    meMarker=L.marker(me,{icon:L.divIcon({html:html,className:'',iconSize:[56,56],iconAnchor:[28,28]}),zIndexOffset:1000}).addTo(map).bindPopup('<b>Du er her</b>');
     meMarker.on('click',()=>{map.flyTo(me,Math.max(map.getZoom(),17));});
     accCircle=L.circle(me,{radius:acc||20,color:'#1976d2',weight:1,fillOpacity:.08}).addTo(map);
   } else {meMarker.setLatLng(me);accCircle.setLatLng(me);if(acc)accCircle.setRadius(acc);}
