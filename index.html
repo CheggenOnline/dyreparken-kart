@@ -52,7 +52,15 @@
   <button class="active" data-cat="dyr" onclick="toggleCat(this)">🦁 Dyr</button>
   <button data-cat="leke" onclick="toggleCat(this)">🛝 Lek</button>
   <button data-cat="wc" onclick="toggleCat(this)">🚻 WC</button>
+  <button onclick="toggleProgram()">🎭 Program</button>
   <button id="btnClearRoute" style="display:none;background:#e91e63;color:#fff;" onclick="clearRoute()">✕ Fjern rute</button>
+</div>
+<div id="prog" style="display:none;position:absolute;top:0;bottom:0;left:0;right:0;z-index:1100;background:#fff;overflow-y:auto;padding-top:env(safe-area-inset-top);">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px 6px;">
+    <b style="font-size:17px;">🎭 Dagens program</b>
+    <button onclick="document.getElementById('prog').style.display='none'" style="border:none;background:#eee;border-radius:14px;padding:6px 12px;font-weight:700;cursor:pointer;">✕ Lukk</button>
+  </div>
+  <div id="progList"><div style="padding:14px;color:#777;">Laster …</div></div>
 </div>
 <div id="hint"></div>
 <div id="panel" class="collapsed">
@@ -171,13 +179,13 @@ function clearRoute(){
   if(routeLine){map.removeLayer(routeLine);routeLine=null;}
   document.getElementById('btnClearRoute').style.display='none';
 }
-async function route(idx){
-  const p=P[idx];
+async function route(idx){const p=P[idx];return routeTo(p.la,p.lo,p.n);}
+async function routeTo(la,lo,name){
   if(!me){hint('Sett posisjonen din først – trykk «📍 Finn meg» eller «👆 Sett posisjon».',6000);return;}
   hint('Finner raskeste vei …',3000);
   map.closePopup();
   try{
-    const r=await fetch(`https://routing.openstreetmap.de/routed-foot/route/v1/foot/${me[1]},${me[0]};${p.lo},${p.la}?overview=full&geometries=geojson`);
+    const r=await fetch(`https://routing.openstreetmap.de/routed-foot/route/v1/foot/${me[1]},${me[0]};${lo},${la}?overview=full&geometries=geojson`);
     const j=await r.json();
     if(j.code!=='Ok'||!j.routes||!j.routes[0])throw new Error('no route');
     const coords=j.routes[0].geometry.coordinates.map(c=>[c[1],c[0]]);
@@ -186,14 +194,69 @@ async function route(idx){
     const d=j.routes[0].distance;
     const t=Math.max(1,Math.round(d/SPEED_M_PER_MIN));
     map.fitBounds(routeLine.getBounds(),{padding:[70,70]});
-    hint(`🧭 Til ${p.n}: ca. ${t} min å gå (${Math.round(d)} m) i barnetempo`,10000);
+    hint(`🧭 Til ${name}: ca. ${t} min å gå (${Math.round(d)} m) i barnetempo`,10000);
   }catch(e){
     if(routeLine)map.removeLayer(routeLine);
-    routeLine=L.polyline([me,[p.la,p.lo]],{color:'#e91e63',weight:4,dashArray:'6 8',opacity:.8}).addTo(map);
+    routeLine=L.polyline([me,[la,lo]],{color:'#e91e63',weight:4,dashArray:'6 8',opacity:.8}).addTo(map);
     map.fitBounds(routeLine.getBounds(),{padding:[70,70]});
-    hint(`Fant ikke sti-rute akkurat nå – viser retningen (luftlinje) til ${p.n}. Ca. ${mins(p)} min.`,8000);
+    const est=Math.max(1,Math.round(dist(me[0],me[1],la,lo)*PATH_FACTOR/SPEED_M_PER_MIN));
+    hint(`Fant ikke sti-rute akkurat nå – viser retningen (luftlinje) til ${name}. Ca. ${est} min.`,8000);
   }
   document.getElementById('btnClearRoute').style.display='inline-block';
+}
+
+// ---- Dagens program (oppdateres automatisk fra dyreparken.no via GitHub Action) ----
+let progData=null, progLoaded=false;
+const VENUES={'KuToppen':[58.18464,8.14022],'Kaptein Sabeltanns Verden':[58.18585,8.14721],'Hakkebakkeskogen':[58.18589,8.14061],'Kardemomme by':[58.18734,8.13997],'Nordisk Villmark':[58.18638,8.13680],'Afrika':[58.18325,8.14716],'Jungelen':[58.18511,8.14304],'Abra Havn':[58.18835,8.15130],'Badelandet':[58.18805,8.14469]};
+function venueCoords(e){
+  if(VENUES[e.venue])return VENUES[e.venue];
+  const t=(e.title||'').toLowerCase();
+  for(const k of Object.keys(VENUES)){if(t.includes(k.toLowerCase()))return VENUES[k];}
+  if(/sabeltann|sjørøver|pinky|langemann/.test(t))return VENUES['Kaptein Sabeltanns Verden'];
+  if(/kardemomme|tobias|bastian|kamomilla|trikke/.test(t))return VENUES['Kardemomme by'];
+  if(/hakkebakke|klatremus|bakermester|morten skogmus/.test(t))return VENUES['Hakkebakkeskogen'];
+  if(/kutoppen|klara|gårds/.test(t))return VENUES['KuToppen'];
+  if(/savanne|sjiraff|afrika/.test(t))return VENUES['Afrika'];
+  return null;
+}
+async function toggleProgram(){
+  const el=document.getElementById('prog');
+  if(el.style.display==='block'){el.style.display='none';return;}
+  el.style.display='block';
+  if(!progLoaded){
+    try{const r=await fetch('program.json?t='+Date.now(),{cache:'no-store'});progData=await r.json();}catch(e){progData=null;}
+    progLoaded=true;
+  }
+  renderProgram();
+}
+function renderProgram(){
+  const el=document.getElementById('progList');
+  const today=new Date().toLocaleDateString('sv-SE');
+  if(!progData||!progData.entries||!progData.entries.length){
+    el.innerHTML='<div style="padding:14px;font-size:14px;color:#555;">Programmet er ikke lastet ennå. Se <a href="https://www.dyreparken.no/dagsprogram/" target="_blank">dagsprogrammet på dyreparken.no</a>.</div>';
+    return;
+  }
+  let h='';
+  if(progData.date!==today)h+=`<div style="margin:8px 14px;padding:8px 12px;background:#fff8e1;border:1px solid #ffca28;border-radius:10px;font-size:13px;">⚠️ Programmet er fra ${progData.date} og kan avvike i dag. <a href="https://www.dyreparken.no/dagsprogram/" target="_blank">Sjekk dyreparken.no</a></div>`;
+  const nowHM=new Date().toTimeString().slice(0,5);
+  const list=progData.entries.map(e=>({...e,next:e.times.find(t=>t.to>=nowHM)||null}));
+  list.sort((a,b)=>(a.next?a.next.from:'~').localeCompare(b.next?b.next.from:'~'));
+  h+=list.map(e=>{
+    const c=venueCoords(e);
+    const times=e.times.map(t=>`<span style="${e.next&&t.from===e.next.from?'font-weight:800;color:#2e7d32;':'color:#999;'}">${t.from}</span>`).join(' · ');
+    const em=e.category==='Dyrepresentasjoner'?'🦁':e.category==='Kveldsforestillinger'?'🌟':'🎭';
+    return `<div class="row" style="${e.next?'':'opacity:.45;'}" ${c?`onclick="progGo(${c[0]},${c[1]},false)"`:''}>
+      <div class="em">${em}</div>
+      <div class="nm">${e.title}${e.ticket?' 🎟️':''}<small>${e.venue||''} · ${times}${e.ticket?' · egen billett':''}</small></div>
+      ${c?`<button style="border:none;background:#e91e63;color:#fff;border-radius:12px;padding:6px 10px;font-weight:700;cursor:pointer;" onclick="event.stopPropagation();progGo(${c[0]},${c[1]},true)">🧭</button>`:''}
+    </div>`;}).join('');
+  h+=`<div style="padding:10px 14px 24px;font-size:12px;color:#888;">Hentes automatisk fra dyreparken.no hver morgen · <a href="https://www.dyreparken.no/dagsprogram/" target="_blank">offisielt dagsprogram</a></div>`;
+  el.innerHTML=h;
+}
+function progGo(la,lo,withRoute){
+  document.getElementById('prog').style.display='none';
+  if(withRoute)routeTo(la,lo,'forestillingen');
+  else map.flyTo([la,lo],17.5);
 }
 
 function hint(t,ms){const h=document.getElementById('hint');h.textContent=t;h.style.display='block';if(ms)setTimeout(()=>h.style.display='none',ms);}
