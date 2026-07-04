@@ -36,7 +36,9 @@
   .divlabel{padding:6px 12px 2px;font-size:11px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;}
   .emoji-marker{font-size:22px;text-shadow:0 1px 3px rgba(0,0,0,.4);text-align:center;line-height:26px;}
   .emoji-small{font-size:15px;opacity:.85;text-align:center;line-height:18px;}
-  .me-dot{width:18px;height:18px;border-radius:50%;background:#1976d2;border:3px solid #fff;box-shadow:0 0 8px rgba(25,118,210,.9);}
+  .me-dot{width:18px;height:18px;border-radius:50%;background:#1976d2;border:3px solid #fff;box-shadow:0 0 8px rgba(25,118,210,.9);position:absolute;left:10px;top:10px;}
+  .me-wrap{position:relative;width:44px;height:44px;transform-origin:22px 22px;transition:transform .2s linear;}
+  .me-wrap svg{position:absolute;left:0;top:0;display:none;}
   .leaflet-popup-content{font-size:14px;margin:10px 14px;}
   .leaflet-popup-content b{font-size:15px;}
   #hint{position:absolute;top:52px;left:8px;right:8px;z-index:1001;background:#fff8e1;border:1px solid #ffca28;
@@ -47,7 +49,6 @@
 <div id="map"></div>
 <div class="topbar">
   <button id="btnGps" class="warn" onclick="startGps()">📍 Finn meg</button>
-  <button id="btnManual" onclick="manualMode()">👆 Sett posisjon</button>
   <button class="active" data-cat="univers" onclick="toggleCat(this)">🎪 Universer</button>
   <button class="active" data-cat="dyr" onclick="toggleCat(this)">🦁 Dyr</button>
   <button data-cat="leke" onclick="toggleCat(this)">🛝 Lek</button>
@@ -67,7 +68,7 @@
   <div id="panelHead" onclick="document.getElementById('panel').classList.toggle('collapsed')">
     <span>🚶 Gangtid herfra (4-åringstempo)</span><span id="panelArrow">▲</span>
   </div>
-  <div id="list"><div style="padding:12px;color:#777;font-size:13px;">Trykk «📍 Finn meg» eller «👆 Sett posisjon» først.</div></div>
+  <div id="list"><div style="padding:12px;color:#777;font-size:13px;">Venter på GPS-posisjon …</div></div>
 </div>
 <script>
 // ---- Attraksjoner (ekte koordinater fra OpenStreetMap) ----
@@ -117,7 +118,7 @@ L.control.zoom({position:'bottomright'}).addTo(map);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,
   attribution:'&copy; OpenStreetMap'}).addTo(map);
 
-let me=null, meMarker=null, accCircle=null, watchId=null, manual=false;
+let me=null, meMarker=null, accCircle=null, watchId=null, hasCompass=false;
 const markers=[];
 
 function icon(e,small){return L.divIcon({html:e,className:small?'emoji-small':'emoji-marker',iconSize:small?[18,18]:[26,26],iconAnchor:small?[9,9]:[13,13]});}
@@ -165,7 +166,8 @@ function setMe(la,lo,acc){
   const first=!meMarker;
   me=[la,lo];
   if(!meMarker){
-    meMarker=L.marker(me,{icon:L.divIcon({html:'<div class="me-dot"></div>',className:'',iconSize:[18,18],iconAnchor:[9,9]}),zIndexOffset:1000}).addTo(map).bindPopup('<b>Du er her</b>');
+    const html='<div class="me-wrap" id="meWrap"><svg width="44" height="44" viewBox="0 0 44 44"><path d="M22 22 L11 5 A21 21 0 0 1 33 5 Z" fill="rgba(25,118,210,.35)"/></svg><div class="me-dot"></div></div>';
+    meMarker=L.marker(me,{icon:L.divIcon({html:html,className:'',iconSize:[44,44],iconAnchor:[22,22]}),zIndexOffset:1000}).addTo(map).bindPopup('<b>Du er her</b>');
     meMarker.on('click',()=>{map.flyTo(me,Math.max(map.getZoom(),17));});
     accCircle=L.circle(me,{radius:acc||20,color:'#1976d2',weight:1,fillOpacity:.08}).addTo(map);
   } else {meMarker.setLatLng(me);accCircle.setLatLng(me);if(acc)accCircle.setRadius(acc);}
@@ -272,17 +274,41 @@ function startGps(){
     pos=>{document.getElementById('btnGps').classList.remove('warn');
           document.getElementById('btnGps').classList.add('active');
           document.getElementById('btnGps').textContent='📍 GPS på';
-          setMe(pos.coords.latitude,pos.coords.longitude,pos.coords.accuracy);},
-    err=>{hint('Fikk ikke GPS ('+err.message+'). Bruk «👆 Sett posisjon» og trykk der du står på kartet.');},
+          setMe(pos.coords.latitude,pos.coords.longitude,pos.coords.accuracy);
+          if(!hasCompass&&pos.coords.heading!=null&&!isNaN(pos.coords.heading)&&(pos.coords.speed||0)>0.5)applyHeading(pos.coords.heading);},
+    err=>{hint('Fikk ikke GPS-posisjon. Sjekk at nettleseren har lov til å bruke stedstjenester (Innstillinger → Safari/Chrome → Posisjon), og prøv «📍 Finn meg» igjen.');},
     {enableHighAccuracy:true,maximumAge:5000,timeout:15000});
 }
-function manualMode(){
-  manual=true;
-  hint('Trykk på kartet der du står nå. (Gjenta når du har gått et stykke.)',6000);
+
+// ---- Kompass / retning ----
+function applyHeading(h){
+  const w=document.getElementById('meWrap');
+  if(!w)return;
+  w.style.transform='rotate('+h+'deg)';
+  w.querySelector('svg').style.display='block';
 }
-map.on('click',e=>{if(manual){setMe(e.latlng.lat,e.latlng.lng,15);}});
+function headingHandler(e){
+  let h=null;
+  if(typeof e.webkitCompassHeading==='number'&&!isNaN(e.webkitCompassHeading))h=e.webkitCompassHeading;
+  else if(e.absolute&&typeof e.alpha==='number')h=(360-e.alpha)%360;
+  if(h!=null){hasCompass=true;applyHeading(h);}
+}
+function initHeading(){
+  if(window.DeviceOrientationEvent&&typeof DeviceOrientationEvent.requestPermission==='function'){
+    // iOS: krever brukertrykk for kompass-tillatelse
+    const ask=()=>{DeviceOrientationEvent.requestPermission().then(s=>{if(s==='granted')window.addEventListener('deviceorientation',headingHandler,true);}).catch(()=>{});};
+    document.addEventListener('click',ask,{once:true});
+    document.addEventListener('touchend',ask,{once:true});
+  } else if('ondeviceorientationabsolute' in window){
+    window.addEventListener('deviceorientationabsolute',headingHandler,true);
+  } else {
+    window.addEventListener('deviceorientation',headingHandler,true);
+  }
+}
 
 redraw();
+initHeading();
+startGps();
 </script>
 </body>
 </html>
