@@ -279,7 +279,12 @@ function renderProgram(){
 }
 function progGo(la,lo,withRoute){
   document.getElementById('prog').style.display='none';
-  if(withRoute)routeTo(la,lo,'forestillingen');
+  // finn attraksjonsmarkøren på samme sted, så vi kan vise samme popup som i listen
+  let best=null,bd=1e9;
+  for(const m of markers){const d=dist(m.p.la,m.p.lo,la,lo);if(d<bd){bd=d;best=m;}}
+  const hit=best&&bd<80?best:null;
+  if(withRoute){routeTo(la,lo,hit?hit.p.n:'forestillingen');return;}
+  if(hit)fly(hit.p.la,hit.p.lo); // åpner popupen med gangtid + «Vis raskeste vei»
   else map.flyTo([la,lo],17.5);
 }
 
