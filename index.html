@@ -48,11 +48,6 @@
 <body>
 <div id="map"></div>
 <div class="topbar">
-  <button id="btnGps" class="warn" onclick="startGps()">📍 Finn meg</button>
-  <button class="active" data-cat="univers" onclick="toggleCat(this)">🎪 Universer</button>
-  <button class="active" data-cat="dyr" onclick="toggleCat(this)">🦁 Dyr</button>
-  <button data-cat="leke" onclick="toggleCat(this)">🛝 Lek</button>
-  <button data-cat="wc" onclick="toggleCat(this)">🚻 WC</button>
   <button onclick="toggleProgram()">🎭 Program</button>
   <button id="btnClearRoute" style="display:none;background:#e91e63;color:#fff;" onclick="clearRoute()">✕ Fjern rute</button>
 </div>
@@ -68,6 +63,7 @@
   <div id="panelHead" onclick="document.getElementById('panel').classList.toggle('collapsed')">
     <span>🚶 Gangtid herfra (4-åringstempo)</span><span id="panelArrow">▲</span>
   </div>
+  <div style="padding:0 12px 8px;"><input id="search" type="search" placeholder="🔎 Søk attraksjon …" oninput="renderList()" onclick="event.stopPropagation()" style="width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:12px;padding:8px 12px;font-size:15px;"></div>
   <div id="list"><div style="padding:12px;color:#777;font-size:13px;">Venter på GPS-posisjon …</div></div>
 </div>
 <script>
@@ -139,25 +135,43 @@ function popupHtml(p){
   const idx=P.indexOf(p);
   return `<b>${p.e} ${p.n}</b><br>${p.d||''}${t?`<br><span style="color:#2e7d32;font-weight:800;">🚶 ca. ${t} min å gå</span>`:'<br><i>Sett posisjonen din for gangtid</i>'}<br><button style="margin-top:6px;border:none;border-radius:12px;padding:6px 12px;background:#e91e63;color:#fff;font-weight:700;font-size:13px;cursor:pointer;" onclick="route(${idx})">🧭 Vis raskeste vei</button>`;}
 
-function activeCats(){return [...document.querySelectorAll('[data-cat].active')].map(b=>b.dataset.cat);}
 function redraw(){
-  const cats=activeCats();
-  markers.forEach(m=>{
-    if(cats.includes(m.p.c)){m.addTo(map);m.setPopupContent(popupHtml(m.p));}
-    else map.removeLayer(m);});
+  markers.forEach(m=>{m.addTo(map);m.setPopupContent(popupHtml(m.p));});
   renderList();
 }
-function toggleCat(btn){btn.classList.toggle('active');redraw();}
+
+function timeToMin(hm){return (+hm.slice(0,2))*60+(+hm.slice(3,5));}
+function nextShowFor(p){
+  if(!progData||!progData.entries)return null;
+  if(progData.date!==new Date().toLocaleDateString('sv-SE'))return null;
+  const nowM=timeToMin(new Date().toTimeString().slice(0,5));
+  let best=null;
+  for(const e of progData.entries){
+    const c=venueCoords(e); if(!c)continue;
+    if(dist(c[0],c[1],p.la,p.lo)>60)continue;
+    for(const t of e.times){
+      const m=timeToMin(t.from)-nowM;
+      if(m>=0&&(!best||m<best.min))best={min:m,title:e.title,from:t.from};
+    }
+  }
+  return best;
+}
 
 function renderList(){
   const el=document.getElementById('list');
   if(!me){return;}
-  const cats=activeCats();
-  const items=P.filter(p=>cats.includes(p.c)&&p.c!=='wc').map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t);
+  const q=(document.getElementById('search')?.value||'').trim().toLowerCase();
+  const match=p=>!q||p.n.toLowerCase().includes(q)||(p.d||'').toLowerCase().includes(q);
+  const items=P.filter(p=>p.c!=='wc'&&match(p)).map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t);
   const wc=P.filter(p=>p.c==='wc').map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t)[0];
   let h='';
-  if(wc) h+=`<div class="row" onclick="fly(${wc.p.la},${wc.p.lo})"><div class="em">🚻</div><div class="nm">Nærmeste toalett</div><div class="min">${wc.t} min</div></div><div class="divlabel">Attraksjoner – nærmest først</div>`;
-  h+=items.map(i=>`<div class="row" onclick="fly(${i.p.la},${i.p.lo})"><div class="em">${i.p.e}</div><div class="nm">${i.p.n}<small>${i.p.d||''}</small></div><div class="min">${i.t} min</div></div>`).join('');
+  if(wc&&!q) h+=`<div class="row" onclick="fly(${wc.p.la},${wc.p.lo})"><div class="em">🚻</div><div class="nm">Nærmeste toalett</div><div class="min">${wc.t} min</div></div><div class="divlabel">Attraksjoner – nærmest først</div>`;
+  if(!items.length) h+='<div style="padding:12px;color:#777;font-size:13px;">Ingen treff.</div>';
+  h+=items.map(i=>{
+    const ns=nextShowFor(i.p);
+    const show=ns?`<small style="color:#e91e63;font-weight:600;">🎭 ${ns.title.length>40?ns.title.slice(0,38)+'…':ns.title} kl. ${ns.from}${ns.min>0?` (om ${ns.min} min)`:' (nå)'}</small>`:'';
+    return `<div class="row" onclick="fly(${i.p.la},${i.p.lo})"><div class="em">${i.p.e}</div><div class="nm">${i.p.n}<small>${i.p.d||''}</small>${show}</div><div class="min">${i.t} min</div></div>`;
+  }).join('');
   el.innerHTML=h;
 }
 function fly(la,lo){map.flyTo([la,lo],17.5);const m=markers.find(m=>m.p.la===la&&m.p.lo===lo);if(m)m.openPopup();}
@@ -221,14 +235,17 @@ function venueCoords(e){
   if(/savanne|sjiraff|afrika/.test(t))return VENUES['Afrika'];
   return null;
 }
+async function ensureProgram(){
+  if(progLoaded)return;
+  try{const r=await fetch('program.json?t='+Date.now(),{cache:'no-store'});progData=await r.json();}catch(e){progData=null;}
+  progLoaded=true;
+  renderList();
+}
 async function toggleProgram(){
   const el=document.getElementById('prog');
   if(el.style.display==='block'){el.style.display='none';return;}
   el.style.display='block';
-  if(!progLoaded){
-    try{const r=await fetch('program.json?t='+Date.now(),{cache:'no-store'});progData=await r.json();}catch(e){progData=null;}
-    progLoaded=true;
-  }
+  await ensureProgram();
   renderProgram();
 }
 function renderProgram(){
@@ -266,17 +283,13 @@ function progGo(la,lo,withRoute){
 function hint(t,ms){const h=document.getElementById('hint');h.textContent=t;h.style.display='block';if(ms)setTimeout(()=>h.style.display='none',ms);}
 
 function startGps(){
-  if(watchId&&me){map.flyTo(me,Math.max(map.getZoom(),17));return;}
-  if(!navigator.geolocation){hint('GPS ikke tilgjengelig – bruk «👆 Sett posisjon».');return;}
+  if(!navigator.geolocation){hint('GPS er ikke tilgjengelig i denne nettleseren.');return;}
   hint('Henter GPS-posisjon …',4000);
   if(watchId)navigator.geolocation.clearWatch(watchId);
   watchId=navigator.geolocation.watchPosition(
-    pos=>{document.getElementById('btnGps').classList.remove('warn');
-          document.getElementById('btnGps').classList.add('active');
-          document.getElementById('btnGps').textContent='📍 GPS på';
-          setMe(pos.coords.latitude,pos.coords.longitude,pos.coords.accuracy);
+    pos=>{setMe(pos.coords.latitude,pos.coords.longitude,pos.coords.accuracy);
           if(!hasCompass&&pos.coords.heading!=null&&!isNaN(pos.coords.heading)&&(pos.coords.speed||0)>0.5)applyHeading(pos.coords.heading);},
-    err=>{hint('Fikk ikke GPS-posisjon. Sjekk at nettleseren har lov til å bruke stedstjenester (Innstillinger → Safari/Chrome → Posisjon), og prøv «📍 Finn meg» igjen.');},
+    err=>{hint('Fikk ikke GPS-posisjon. Sjekk at nettleseren har lov til å bruke stedstjenester (Innstillinger → Safari/Chrome → Posisjon), og last siden på nytt.');},
     {enableHighAccuracy:true,maximumAge:5000,timeout:15000});
 }
 
@@ -309,6 +322,8 @@ function initHeading(){
 redraw();
 initHeading();
 startGps();
+ensureProgram();
+setInterval(()=>{renderList();},60000); // oppdater «om X min» hvert minutt
 </script>
 </body>
 </html>
