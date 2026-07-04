@@ -51,6 +51,8 @@
   <button onclick="toggleProgram()">🎭 Program</button>
   <button id="btnClearRoute" style="display:none;background:#e91e63;color:#fff;" onclick="clearRoute()">✕ Fjern rute</button>
 </div>
+<button id="btnCenter" onclick="centerMe()" title="Sentrer på meg"
+  style="position:absolute;top:calc(8px + env(safe-area-inset-top));right:8px;z-index:1001;width:42px;height:42px;border:none;border-radius:50%;background:#1976d2;color:#fff;font-size:19px;line-height:42px;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;"><span style="display:inline-block;transform:rotate(-45deg);">➤</span></button>
 <div id="prog" style="display:none;position:absolute;top:0;bottom:0;left:0;right:0;z-index:1100;background:#fff;overflow-y:auto;padding-top:env(safe-area-inset-top);">
   <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px 6px;">
     <b style="font-size:17px;">🎭 Dagens program</b>
@@ -260,13 +262,14 @@ function renderProgram(){
   const nowHM=new Date().toTimeString().slice(0,5);
   const seen=new Set();
   const uniq=progData.entries.filter(e=>{const k=e.title+'|'+e.venue+'|'+e.times.map(t=>t.from).join(',');if(seen.has(k))return false;seen.add(k);return true;});
-  const list=uniq.map(e=>({...e,next:e.times.find(t=>t.to>=nowHM)||null}));
-  list.sort((a,b)=>{const ka=a.next?a.next.from:'99:99',kb=b.next?b.next.from:'99:99';return ka<kb?-1:ka>kb?1:0;});
+  const list=uniq.map(e=>({...e,next:e.times.find(t=>t.to>=nowHM)||null})).filter(e=>e.next);
+  list.sort((a,b)=>{const ka=a.next.from,kb=b.next.from;return ka<kb?-1:ka>kb?1:0;});
+  if(!list.length) h+='<div style="padding:14px;font-size:14px;color:#555;">Ingen flere programposter i dag. <a href="https://www.dyreparken.no/dagsprogram/" target="_blank">Se morgendagens program på dyreparken.no</a></div>';
   h+=list.map(e=>{
     const c=venueCoords(e);
-    const times=e.times.map(t=>`<span style="${e.next&&t.from===e.next.from?'font-weight:800;color:#2e7d32;':'color:#999;'}">${t.from}</span>`).join(' · ');
+    const times=e.times.filter(t=>t.to>=nowHM).map(t=>`<span style="${t.from===e.next.from?'font-weight:800;color:#2e7d32;':'color:#999;'}">${t.from}</span>`).join(' · ');
     const em=e.category==='Dyrepresentasjoner'?'🦁':e.category==='Kveldsforestillinger'?'🌟':'🎭';
-    return `<div class="row" style="${e.next?'':'opacity:.45;'}" ${c?`onclick="progGo(${c[0]},${c[1]},false)"`:''}>
+    return `<div class="row" ${c?`onclick="progGo(${c[0]},${c[1]},false)"`:''}>
       <div class="em">${em}</div>
       <div class="nm">${e.title}${e.ticket?' 🎟️':''}<small>${e.venue||''} · ${times}${e.ticket?' · egen billett':''}</small></div>
       ${c?`<button style="border:none;background:#e91e63;color:#fff;border-radius:12px;padding:6px 10px;font-weight:700;cursor:pointer;" onclick="event.stopPropagation();progGo(${c[0]},${c[1]},true)">🧭</button>`:''}
@@ -282,6 +285,10 @@ function progGo(la,lo,withRoute){
 
 function hint(t,ms){const h=document.getElementById('hint');h.textContent=t;h.style.display='block';if(ms)setTimeout(()=>h.style.display='none',ms);}
 
+function centerMe(){
+  if(me){map.flyTo(me,Math.max(map.getZoom(),17));}
+  else{hint('Venter fortsatt på GPS-posisjon …',4000);startGps();}
+}
 function startGps(){
   if(!navigator.geolocation){hint('GPS er ikke tilgjengelig i denne nettleseren.');return;}
   hint('Henter GPS-posisjon …',4000);
