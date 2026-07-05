@@ -24,16 +24,28 @@ async function scrape(date) {
     const txt = c.textContent;
     return { title, venue, category, times, ticket: /Krever egen billett/.test(txt), weather: /temperaturforbehold/.test(txt) };
   }));
-  return all.filter((e) => e.title && e.times.length && keep.includes(e.category));
+  const hours = await page.evaluate(() => {
+    const body = document.body.textContent.replace(/\s+/g, ' ');
+    const ix = body.indexOf('pningstider valgt dato');
+    if (ix < 0) return null;
+    const seg = body.slice(ix, ix + 220);
+    const dp = seg.match(/Dyreparken:\s*(\d{2}[:.]\d{2})\s*-\s*(\d{2}[:.]\d{2})/);
+    const bl = seg.match(/Badelandet:\s*(\d{2}[:.]\d{2})\s*-\s*(\d{2}[:.]\d{2})/);
+    return {
+      dyreparken: dp ? dp[1] + '\u2013' + dp[2] : null,
+      badelandet: bl ? bl[1] + '\u2013' + bl[2] : null
+    };
+  });
+  return { entries: all.filter((e) => e.title && e.times.length && keep.includes(e.category)), hours };
 }
 
 const today = fmt(new Date());
 const tomorrowISO = fmt(new Date(Date.now() + 86400000));
-const entries = await scrape(today);
-let tomorrowEntries = [];
-try { tomorrowEntries = await scrape(tomorrowISO); } catch (e) { console.error('Klarte ikke hente morgendagen: ' + e.message); }
+const dayToday = await scrape(today);
+let dayTomorrow = { entries: [], hours: null };
+try { dayTomorrow = await scrape(tomorrowISO); } catch (e) { console.error('Klarte ikke hente morgendagen: ' + e.message); }
 await browser.close();
 
-if (!entries.length) { console.error('Ingen oppfoeringer funnet - har dyreparken.no endret layout?'); process.exit(1); }
-writeFileSync('program.json', JSON.stringify({ date: today, updated: new Date().toISOString(), entries, tomorrow: { date: tomorrowISO, entries: tomorrowEntries } }, null, 1));
-console.log('I dag: ' + entries.length + ' oppfoeringer, i morgen: ' + tomorrowEntries.length);
+if (!dayToday.entries.length) { console.error('Ingen oppfoeringer funnet - har dyreparken.no endret layout?'); process.exit(1); }
+writeFileSync('program.json', JSON.stringify({ date: today, updated: new Date().toISOString(), entries: dayToday.entries, hours: dayToday.hours, tomorrow: { date: tomorrowISO, entries: dayTomorrow.entries, hours: dayTomorrow.hours } }, null, 1));
+console.log('I dag: ' + dayToday.entries.length + ' oppfoeringer, i morgen: ' + dayTomorrow.entries.length);
