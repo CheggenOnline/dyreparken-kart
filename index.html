@@ -62,6 +62,10 @@
   <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('dyr',this.checked)" style="width:20px;height:20px;"> 🦁 Dyr</label>
   <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('leke',this.checked)" style="width:20px;height:20px;"> 🛝 Lekeplasser</label>
   <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('wc',this.checked)" style="width:20px;height:20px;"> 🚻 Toaletter</label>
+  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('forstehjelp',this.checked)" style="width:20px;height:20px;"> 🩹 Førstehjelp</label>
+  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('skap',this.checked)" style="width:20px;height:20px;"> 🔐 Oppbevaringsskap</label>
+  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('vogn',this.checked)" style="width:20px;height:20px;"> 🛒 Utleie trillevogn/rullestol</label>
+  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('service',this.checked)" style="width:20px;height:20px;"> ℹ️ Gjesteservice og minibank</label>
   <div style="padding:16px 16px 4px;font-size:12px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;">Ganghastighet</div>
   <div style="padding:6px 16px 20px;">
     <select onchange="setSpeed(this.value)" style="width:100%;font-size:16px;padding:10px 12px;border:1px solid #ddd;border-radius:12px;background:#fff;">
@@ -129,12 +133,18 @@ const P = [
  {n:"WC", la:58.18628, lo:8.14502, c:"wc", e:"🚻"}, {n:"WC", la:58.18727, lo:8.13897, c:"wc", e:"🚻"},
  {n:"WC", la:58.18785, lo:8.14447, c:"wc", e:"🚻"}, {n:"WC", la:58.18403, lo:8.13943, c:"wc", e:"🚻"},
  {n:"WC (Abra Havn)", la:58.18836, lo:8.15144, c:"wc", e:"🚻"},
+ // Service og hjelp
+ {n:"Gjesteservice",              la:58.18446, lo:8.14705, c:"service", e:"ℹ️", d:"Billetter, Vis hensyn-bånd, utleie og hjelp – ved hovedinngangen"},
+ {n:"Førstehjelp",                la:58.18450, lo:8.14655, c:"forstehjelp", e:"🩹", d:"Kontakt Gjesteservice ved hovedinngangen eller nærmeste ansatt"},
+ {n:"Oppbevaringsskap",           la:58.18462, lo:8.14690, c:"skap", e:"🔐", d:"Ved hovedinngangen"},
+ {n:"Utleie trillevogn/rullestol", la:58.18440, lo:8.14670, c:"vogn", e:"🛒", d:"Gjesteservice ved hovedinngangen – vogner og rullestoler (depositum, kan reserveres)"},
+ {n:"Minibank",                   la:58.18560, lo:8.14397, c:"service", e:"🏧", d:"Ved Båtbasaren"},
 ];
 
 const SPEEDS={ '3':33, '5':42, '10':58, 'voksen':80 }; // meter per minutt
 let SPEED_M_PER_MIN = SPEEDS['5'];
 const PATH_FACTOR = 1.35;     // stier er ikke luftlinje
-const cats={univers:true,dyr:true,leke:true,wc:true};
+const cats={univers:true,dyr:true,leke:true,wc:true,forstehjelp:true,skap:true,vogn:true,service:true};
 
 function toggleSettings(){
   const el=document.getElementById('settings');
@@ -283,7 +293,7 @@ function normalizeProgram(){
   const today=new Date().toLocaleDateString('sv-SE');
   // Har datoen rullet over? Da er «i morgen» i dataene blitt «i dag».
   if(progData.date!==today&&progData.tomorrow&&progData.tomorrow.date===today){
-    progData={date:progData.tomorrow.date,updated:progData.updated,entries:progData.tomorrow.entries,tomorrow:null};
+    progData={date:progData.tomorrow.date,updated:progData.updated,entries:progData.tomorrow.entries,hours:progData.tomorrow.hours||null,tomorrow:null};
   }
 }
 function cleanMyProg(){
@@ -431,10 +441,13 @@ function renderProgram(){
   const nowHM=new Date().toTimeString().slice(0,5);
   let h=renderMyProg();
   if(progData.date!==today)h+=`<div style="margin:8px 14px;padding:8px 12px;background:#fff8e1;border:1px solid #ffca28;border-radius:10px;font-size:13px;">⚠️ Programmet er fra ${progData.date} og kan avvike i dag. <a href="https://www.dyreparken.no/dagsprogram/" target="_blank">Sjekk dyreparken.no</a></div>`;
+  const hoursLine=hh=>hh?`<div style="padding:2px 16px 6px;font-size:13px;font-weight:700;color:#2e7d32;">🕘 Dyreparken ${hh.dyreparken||'–'}${hh.badelandet?' · Badelandet '+hh.badelandet:''}</div>`:'';
   h+=`<div class="divlabel" style="font-size:13px;padding-top:12px;">📅 I dag – ${dayLabel(progData.date)}</div>`;
+  h+=hoursLine(progData.hours);
   h+=renderDayEntries(progData.entries,progData.date,progData.date===today,nowHM);
   if(progData.tomorrow&&progData.tomorrow.entries&&progData.tomorrow.entries.length){
     h+=`<div class="divlabel" style="font-size:13px;padding-top:16px;margin-top:10px;border-top:3px solid #e0e0e0;">📅 I morgen – ${dayLabel(progData.tomorrow.date)}</div>`;
+    h+=hoursLine(progData.tomorrow.hours);
     h+=renderDayEntries(progData.tomorrow.entries,progData.tomorrow.date,false,nowHM);
   }
   h+=`<div style="padding:10px 14px 24px;font-size:12px;color:#888;">Hentes automatisk fra dyreparken.no hver morgen · <a href="https://www.dyreparken.no/dagsprogram/" target="_blank">offisielt dagsprogram</a></div>`;
