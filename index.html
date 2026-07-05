@@ -34,6 +34,8 @@
   .row .nm small{display:block;font-weight:400;color:#777;font-size:11px;}
   .row .min{font-size:14px;font-weight:800;color:#2e7d32;white-space:nowrap;}
   .divlabel{padding:6px 12px 2px;font-size:11px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;}
+  .chip{flex:none;border:none;border-radius:14px;padding:6px 12px;background:#eee;color:#333;font-weight:700;font-size:13px;cursor:pointer;}
+  .chip.on{background:#2e7d32;color:#fff;}
   .emoji-marker{font-size:22px;text-shadow:0 1px 3px rgba(0,0,0,.4);text-align:center;line-height:26px;}
   .emoji-small{font-size:15px;opacity:.85;text-align:center;line-height:18px;}
   .me-dot{width:18px;height:18px;border-radius:50%;background:#1976d2;border:3px solid #fff;box-shadow:0 0 8px rgba(25,118,210,.9);position:absolute;left:16px;top:16px;}
@@ -58,15 +60,8 @@
     <b style="font-size:17px;">⚙️ Innstillinger</b>
     <button onclick="toggleSettings()" style="border:none;background:#eee;border-radius:14px;padding:6px 12px;font-weight:700;cursor:pointer;">✕ Lukk</button>
   </div>
-  <div style="padding:6px 16px 4px;font-size:12px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;">Vis på kartet og i listen</div>
-  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('univers',this.checked)" style="width:20px;height:20px;"> 🎪 Universer og attraksjoner</label>
-  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('dyr',this.checked)" style="width:20px;height:20px;"> 🦁 Dyr</label>
-  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('leke',this.checked)" style="width:20px;height:20px;"> 🛝 Lekeplasser</label>
-  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('wc',this.checked)" style="width:20px;height:20px;"> 🚻 Toaletter</label>
-  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('forstehjelp',this.checked)" style="width:20px;height:20px;"> 🩹 Førstehjelp</label>
-  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('skap',this.checked)" style="width:20px;height:20px;"> 🔐 Oppbevaringsskap</label>
-  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('vogn',this.checked)" style="width:20px;height:20px;"> 🛒 Utleie trillevogn/rullestol</label>
-  <label style="display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:15px;font-weight:600;"><input type="checkbox" checked onchange="setCat('service',this.checked)" style="width:20px;height:20px;"> ℹ️ Gjesteservice og minibank</label>
+  <div style="padding:6px 16px 4px;font-size:12px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;">Kategorier</div>
+  <div style="padding:2px 16px 8px;font-size:13px;color:#777;">Kategorifiltrene finner du nå øverst i listen nederst på skjermen.</div>
   <div style="padding:16px 16px 4px;font-size:12px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:.5px;">Ganghastighet</div>
   <div style="padding:6px 16px 20px;">
     <select onchange="setSpeed(this.value)" style="width:100%;font-size:16px;padding:10px 12px;border:1px solid #ddd;border-radius:12px;background:#fff;">
@@ -92,7 +87,19 @@
   <div id="panelHead" onclick="document.getElementById('panel').classList.toggle('collapsed')">
     <span id="tempoLbl">🚶 Gangtid herfra (5-åringstempo)</span><span id="panelArrow">▲</span>
   </div>
-  <div style="padding:0 12px 8px;"><input id="search" type="search" placeholder="🔎 Søk attraksjon …" oninput="renderList()" onclick="event.stopPropagation()" style="width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:12px;padding:8px 12px;font-size:15px;"></div>
+  <div style="padding:0 12px 6px;"><input id="search" type="search" placeholder="🔎 Søk attraksjon …" oninput="renderList()" onclick="event.stopPropagation()" style="width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:12px;padding:8px 12px;font-size:15px;"></div>
+  <div id="chips" style="display:flex;gap:6px;overflow-x:auto;padding:0 12px 8px;-webkit-overflow-scrolling:touch;">
+    <button class="chip on" data-f="alle" onclick="setFilter(this)">Alle</button>
+    <button class="chip" data-f="univers" onclick="setFilter(this)">🎪 Attraksjoner</button>
+    <button class="chip" data-f="dyr" onclick="setFilter(this)">🦁 Dyr</button>
+    <button class="chip" data-f="mat" onclick="setFilter(this)">🍔 Mat</button>
+    <button class="chip" data-f="leke" onclick="setFilter(this)">🛝 Lek</button>
+    <button class="chip" data-f="wc" onclick="setFilter(this)">🚻 WC</button>
+    <button class="chip" data-f="forstehjelp" onclick="setFilter(this)">🩹 Førstehjelp</button>
+    <button class="chip" data-f="skap" onclick="setFilter(this)">🔐 Skap</button>
+    <button class="chip" data-f="vogn" onclick="setFilter(this)">🛒 Vognutleie</button>
+    <button class="chip" data-f="service" onclick="setFilter(this)">ℹ️ Service</button>
+  </div>
   <div id="list"><div style="padding:12px;color:#777;font-size:13px;">Venter på GPS-posisjon …</div></div>
 </div>
 <script>
@@ -140,18 +147,48 @@ const P = [
  {n:"Oppbevaringsskap",           la:58.18462, lo:8.14690, c:"skap", e:"🔐", d:"Ved hovedinngangen"},
  {n:"Utleie trillevogn/rullestol", la:58.18440, lo:8.14670, c:"vogn", e:"🛒", d:"Gjesteservice ved hovedinngangen – vogner og rullestoler (depositum, kan reserveres)"},
  {n:"Minibank",                   la:58.18560, lo:8.14397, c:"service", e:"🏧", d:"Ved Båtbasaren"},
+ // Mat og drikke (fra OpenStreetMap)
+ {n:"Ankerstua", la:58.18641, lo:8.14382, c:"mat", e:"🍔"},
+ {n:"Gorines Pizza", la:58.18640, lo:8.14303, c:"mat", e:"🍕"},
+ {n:"Woken", la:58.18227, lo:8.13973, c:"mat", e:"🍜"},
+ {n:"Hevnen er søt", la:58.18566, lo:8.14698, c:"mat", e:"🍩"},
+ {n:"Ishuset", la:58.18638, lo:8.14332, c:"mat", e:"🍦"},
+ {n:"Kaptein Sabeltanns Sjørøver Grill", la:58.18552, lo:8.14724, c:"mat", e:"🍔"},
+ {n:"Kjuttaviga Vertshus", la:58.18639, lo:8.14518, c:"mat", e:"🍽️"},
+ {n:"Lars på Brygga", la:58.18652, lo:8.14419, c:"mat", e:"🍔"},
+ {n:"Pirat proviant", la:58.18570, lo:8.14669, c:"mat", e:"🥪"},
+ {n:"Popcornboden", la:58.18562, lo:8.14427, c:"mat", e:"🍿"},
+ {n:"SOKO Mat", la:58.18321, lo:8.14629, c:"mat", e:"🍔"},
+ {n:"SOKO Løveburgeren", la:58.18314, lo:8.14609, c:"mat", e:"🍔"},
+ {n:"Tang og Tare Café", la:58.18614, lo:8.14615, c:"mat", e:"☕"},
+ {n:"Drivhuset", la:58.18308, lo:8.14393, c:"mat", e:"🥗"},
+ {n:"Hiv o'Hoi", la:58.18605, lo:8.14531, c:"mat", e:"🍔"},
+ {n:"Heksegryta", la:58.18589, lo:8.14691, c:"mat", e:"🍲"},
+ {n:"Golfstrømmen", la:58.18747, lo:8.14540, c:"mat", e:"🍦"},
+ {n:"Vannlinja", la:58.18835, lo:8.14340, c:"mat", e:"🥤"},
+ {n:"Setra", la:58.18436, lo:8.13888, c:"mat", e:"🥞", d:"Ved KuToppen"},
+ {n:"Kjuttas Brød og Salat", la:58.18638, lo:8.14362, c:"mat", e:"🥖"},
+ {n:"Ekorn-Jensen", la:58.18606, lo:8.13976, c:"mat", e:"☕", d:"I Hakkebakkeskogen"},
+ {n:"Teina", la:58.18783, lo:8.14530, c:"mat", e:"🍔"},
+ {n:"Sjøpølsa", la:58.18806, lo:8.14309, c:"mat", e:"🌭", d:"I Badelandet"},
+ {n:"Restaurant Safari", la:58.18505, lo:8.14821, c:"mat", e:"🍽️", d:"Ved Safarihotellet"},
+ {n:"Bananas Spiseri", la:58.18975, lo:8.14930, c:"mat", e:"🍌", d:"I Juliusskogen"},
 ];
 
 const SPEEDS={ '3':33, '5':42, '10':58, 'voksen':80 }; // meter per minutt
 let SPEED_M_PER_MIN = SPEEDS['5'];
 const PATH_FACTOR = 1.35;     // stier er ikke luftlinje
-const cats={univers:true,dyr:true,leke:true,wc:true,forstehjelp:true,skap:true,vogn:true,service:true};
-
+let activeCat='alle';
+function matchCat(p){return activeCat==='alle'||p.c===activeCat;}
+function setFilter(btn){
+  activeCat=btn.dataset.f;
+  document.querySelectorAll('#chips .chip').forEach(b=>b.classList.toggle('on',b.dataset.f===activeCat));
+  redraw();
+}
 function toggleSettings(){
   const el=document.getElementById('settings');
   el.style.display=el.style.display==='block'?'none':'block';
 }
-function setCat(cat,on){cats[cat]=on;redraw();}
 function setSpeed(v){
   SPEED_M_PER_MIN=SPEEDS[v];
   const lbl={'3':'3-åringstempo','5':'5-åringstempo','10':'10-åringstempo','voksen':'voksentempo'}[v];
@@ -187,11 +224,12 @@ function popupHtml(p){
 
 function redraw(){
   markers.forEach(m=>{
-    if(cats[m.p.c]){m.addTo(map);m.setPopupContent(popupHtml(m.p));}
+    if(matchCat(m.p)){m.addTo(map);m.setPopupContent(popupHtml(m.p));}
     else map.removeLayer(m);
   });
   renderList();
 }
+function fmtMin(m){if(m<60)return m+' min';const h=Math.floor(m/60),mm=m%60;return h+' t'+(mm?' '+mm+' min':'');}
 
 function timeToMin(hm){return (+hm.slice(0,2))*60+(+hm.slice(3,5));}
 function nextShowFor(p){
@@ -215,14 +253,14 @@ function renderList(){
   if(!me){return;}
   const q=(document.getElementById('search')?.value||'').trim().toLowerCase();
   const match=p=>!q||p.n.toLowerCase().includes(q)||(p.d||'').toLowerCase().includes(q);
-  const items=P.filter(p=>p.c!=='wc'&&cats[p.c]&&match(p)).map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t);
-  const wc=cats.wc?P.filter(p=>p.c==='wc').map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t)[0]:null;
+  const items=P.filter(p=>matchCat(p)&&(activeCat!=='alle'||p.c!=='wc')&&match(p)).map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t);
+  const wc=activeCat==='alle'?P.filter(p=>p.c==='wc').map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t)[0]:null;
   let h='';
   if(wc&&!q) h+=`<div class="row" onclick="fly(${wc.p.la},${wc.p.lo})"><div class="em">🚻</div><div class="nm">Nærmeste toalett</div><div class="min">${wc.t} min</div></div><div class="divlabel">Attraksjoner – nærmest først</div>`;
   if(!items.length) h+='<div style="padding:12px;color:#777;font-size:13px;">Ingen treff.</div>';
   h+=items.map(i=>{
     const ns=nextShowFor(i.p);
-    const show=ns?`<small style="color:#e91e63;font-weight:600;">🎭 ${ns.title.length>40?ns.title.slice(0,38)+'…':ns.title} kl. ${ns.from}${ns.min>0?` (om ${ns.min} min)`:' (nå)'}</small>`:'';
+    const show=ns?`<small style="color:#e91e63;font-weight:600;">🎭 ${ns.title.length>40?ns.title.slice(0,38)+'…':ns.title} kl. ${ns.from}${ns.min>0?` (om ${fmtMin(ns.min)})`:' (nå)'}</small>`:'';
     return `<div class="row" onclick="fly(${i.p.la},${i.p.lo})"><div class="em">${i.p.e}</div><div class="nm">${i.p.n}<small>${i.p.d||''}</small>${show}</div><div class="min">${i.t} min</div></div>`;
   }).join('');
   el.innerHTML=h;
@@ -523,7 +561,11 @@ initHeading();
 startGps();
 ensureProgram();
 setInterval(()=>{refreshProgram(false);},60000); // hvert minutt: rydd bort passerte poster, oppdater «om X min», hent nytt program ved datoskifte
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refreshProgram(false);});
+document.addEventListener('visibilitychange',()=>{
+  if(document.visibilityState!=='visible')return;
+  if(performance.now()>6*3600*1000){location.reload();return;} // hent ny versjon av appen etter 6+ timer
+  refreshProgram(false);
+});
 // Lukk gangavstandslisten når man trykker et annet sted på skjermen
 document.addEventListener('click',ev=>{
   const p=document.getElementById('panel');
