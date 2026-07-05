@@ -77,7 +77,7 @@
     </select>
     <div style="font-size:12px;color:#888;padding-top:8px;">Gangtidene i listen, popupene og rutene justeres etter valget.</div>
   </div>
-  <div style="padding:4px 16px 20px;font-size:11px;color:#bbb;">Versjon 2026-07-05.6</div>
+  <div style="padding:4px 16px 20px;font-size:11px;color:#bbb;">Versjon 2026-07-05.7</div>
 </div>
 <button id="btnCenter" onclick="centerMe()" title="Sentrer på meg"
   style="position:absolute;top:calc(8px + env(safe-area-inset-top));right:8px;z-index:1001;width:42px;height:42px;border:none;border-radius:50%;background:#1976d2;color:#fff;font-size:19px;line-height:42px;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;"><span style="display:inline-block;transform:rotate(-45deg);">➤</span></button>
@@ -486,7 +486,8 @@ async function routeTo(la,lo,name){
 
 // ---- Dagens program (oppdateres automatisk fra dyreparken.no via GitHub Action) ----
 let progData=null, progLoaded=false;
-const VENUES={'KuToppen':[58.18464,8.14022],'Kaptein Sabeltanns Verden':[58.18585,8.14721],'Hakkebakkeskogen':[58.18589,8.14061],'Kardemomme by':[58.18734,8.13997],'Nordisk Villmark':[58.18638,8.13680],'Afrika':[58.18325,8.14716],'Jungelen':[58.18511,8.14304],'Abra Havn':[58.18835,8.15130],'Badelandet':[58.18805,8.14469]};
+const VENUES={'KuToppen':[58.18464,8.14022],'Kaptein Sabeltanns Verden':[58.18585,8.14721],'Hakkebakkeskogen':[58.18589,8.14061],'Kardemomme by':[58.18734,8.13997],'Nordisk Villmark':[58.18638,8.13680],'Afrika':[58.18325,8.14716],'Asia':[58.18278,8.13956],'Jungelen':[58.18511,8.14304],'Abra Havn':[58.18835,8.15130],'Badelandet':[58.18805,8.14469],'Dyreparken Safarihotell':[58.18505,8.14821]};
+const PARK_CENTER=[58.18588,8.14322];
 function venueCoords(e){
   if(VENUES[e.venue])return VENUES[e.venue];
   const t=(e.title||'').toLowerCase();
@@ -496,7 +497,17 @@ function venueCoords(e){
   if(/hakkebakke|klatremus|bakermester|morten skogmus/.test(t))return VENUES['Hakkebakkeskogen'];
   if(/kutoppen|klara|gårds/.test(t))return VENUES['KuToppen'];
   if(/savanne|sjiraff|afrika/.test(t))return VENUES['Afrika'];
-  return null;
+  // Match mot alle navngitte destinasjoner på kartet (lengste treff vinner)
+  let best=null;
+  for(const p of P){
+    const pn=p.n.toLowerCase();
+    if(pn.length<5)continue;
+    if(t.includes(pn)||(t.length>=5&&pn.includes(t))){
+      if(!best||pn.length>best.n.length)best=p;
+    }
+  }
+  if(best)return [best.la,best.lo];
+  return PARK_CENTER; // alltid et sted å vise
 }
 let progFetchedAt=0;
 function normalizeProgram(){
