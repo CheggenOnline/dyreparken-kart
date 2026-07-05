@@ -277,11 +277,36 @@ function venueCoords(e){
   if(/savanne|sjiraff|afrika/.test(t))return VENUES['Afrika'];
   return null;
 }
-async function ensureProgram(){
-  if(progLoaded)return;
-  try{const r=await fetch('program.json?t='+Date.now(),{cache:'no-store'});progData=await r.json();}catch(e){progData=null;}
-  progLoaded=true;
+let progFetchedAt=0;
+function normalizeProgram(){
+  if(!progData)return;
+  const today=new Date().toLocaleDateString('sv-SE');
+  // Har datoen rullet over? Da er «i morgen» i dataene blitt «i dag».
+  if(progData.date!==today&&progData.tomorrow&&progData.tomorrow.date===today){
+    progData={date:progData.tomorrow.date,updated:progData.updated,entries:progData.tomorrow.entries,tomorrow:null};
+  }
+}
+function cleanMyProg(){
+  const today=new Date().toLocaleDateString('sv-SE');
+  const nowHM=new Date().toTimeString().slice(0,5);
+  const before=myProg.length;
+  myProg=myProg.filter(m=>m.date>today||(m.date===today&&m.to>=nowHM));
+  if(myProg.length!==before)saveMyProg();
+}
+async function refreshProgram(force){
+  const today=new Date().toLocaleDateString('sv-SE');
+  const stale=!progData||(progData.date!==today&&!(progData.tomorrow&&progData.tomorrow.date===today))||Date.now()-progFetchedAt>30*60000;
+  if(force||stale){
+    try{const r=await fetch('program.json?t='+Date.now(),{cache:'no-store'});progData=await r.json();progFetchedAt=Date.now();}catch(e){}
+  }
+  normalizeProgram();
+  cleanMyProg();
   renderList();
+  if(document.getElementById('prog').style.display==='block')renderProgram();
+}
+async function ensureProgram(){
+  if(!progLoaded){await refreshProgram(true);progLoaded=true;}
+  else{await refreshProgram(false);}
 }
 async function toggleProgram(){
   const el=document.getElementById('prog');
@@ -473,7 +498,13 @@ redraw();
 initHeading();
 startGps();
 ensureProgram();
-setInterval(()=>{renderList();},60000); // oppdater «om X min» hvert minutt
+setInterval(()=>{refreshProgram(false);},60000); // hvert minutt: rydd bort passerte poster, oppdater «om X min», hent nytt program ved datoskifte
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refreshProgram(false);});
+// Lukk gangavstandslisten når man trykker et annet sted på skjermen
+document.addEventListener('click',ev=>{
+  const p=document.getElementById('panel');
+  if(!p.classList.contains('collapsed')&&!p.contains(ev.target))p.classList.add('collapsed');
+},true);
 </script>
 </body>
 </html>
