@@ -23,9 +23,11 @@
   .topbar button.active{background:#2e7d32;color:#fff;}
   .topbar button.warn{background:#ff9800;color:#fff;}
   #panel{position:absolute;bottom:0;left:0;right:0;z-index:1000;background:#fff;border-radius:16px 16px 0 0;
-    box-shadow:0 -2px 10px rgba(0,0,0,.25);max-height:45%;display:flex;flex-direction:column;transition:max-height .25s;}
-  #panel.collapsed{max-height:44px;}
-  #panelHead{flex:none;padding:10px 16px;font-weight:700;font-size:15px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+    box-shadow:0 -2px 10px rgba(0,0,0,.25);max-height:48%;display:flex;flex-direction:column;transition:max-height .25s;overflow:hidden;}
+  #panel.collapsed{max-height:calc(86px + env(safe-area-inset-bottom));}
+  #panelHead{flex:none;padding:8px 16px 10px;cursor:pointer;touch-action:none;}
+  #panelArrow{transition:transform .25s;display:inline-block;font-size:18px;}
+  #panel.collapsed #panelArrow{transform:rotate(180deg);}
   #searchWrap{flex:none;}
   #chips{flex:none;}
   #list{flex:1 1 auto;overflow-y:auto;padding:0 8px calc(12px + env(safe-area-inset-bottom));}
@@ -74,7 +76,7 @@
     </select>
     <div style="font-size:12px;color:#888;padding-top:8px;">Gangtidene i listen, popupene og rutene justeres etter valget.</div>
   </div>
-  <div style="padding:4px 16px 20px;font-size:11px;color:#bbb;">Versjon 2026-07-05.3</div>
+  <div style="padding:4px 16px 20px;font-size:11px;color:#bbb;">Versjon 2026-07-05.4</div>
 </div>
 <button id="btnCenter" onclick="centerMe()" title="Sentrer på meg"
   style="position:absolute;top:calc(8px + env(safe-area-inset-top));right:8px;z-index:1001;width:42px;height:42px;border:none;border-radius:50%;background:#1976d2;color:#fff;font-size:19px;line-height:42px;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;"><span style="display:inline-block;transform:rotate(-45deg);">➤</span></button>
@@ -87,8 +89,12 @@
 </div>
 <div id="hint"></div>
 <div id="panel" class="collapsed">
-  <div id="panelHead" onclick="document.getElementById('panel').classList.toggle('collapsed')">
-    <span id="tempoLbl">🚶 Gangtid herfra (5-åringstempo)</span><span id="panelArrow">▲</span>
+  <div id="panelHead" onclick="togglePanel()">
+    <div style="width:44px;height:5px;border-radius:3px;background:#ccc;margin:0 auto 8px;"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <b style="font-size:19px;">📍 Destinasjoner</b><span id="panelArrow">▼</span>
+    </div>
+    <div id="tempoLbl" style="font-size:12px;color:#888;font-weight:400;">Gangtid herfra i 5-åringstempo · trykk eller dra for å åpne/lukke</div>
   </div>
   <div id="searchWrap" style="padding:0 12px 6px;"><input id="search" type="search" placeholder="🔎 Søk attraksjon …" oninput="renderList()" onclick="event.stopPropagation()" style="width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:12px;padding:8px 12px;font-size:15px;"></div>
   <div id="chips" style="display:flex;gap:6px;overflow-x:auto;padding:0 12px 8px;-webkit-overflow-scrolling:touch;">
@@ -176,6 +182,166 @@ const P = [
  {n:"Sjøpølsa", la:58.18806, lo:8.14309, c:"mat", e:"🌭", d:"I Badelandet"},
  {n:"Restaurant Safari", la:58.18505, lo:8.14821, c:"mat", e:"🍽️", d:"Ved Safarihotellet"},
  {n:"Bananas Spiseri", la:58.18975, lo:8.14930, c:"mat", e:"🍌", d:"I Juliusskogen"},
+ // Navngitte steder fra OpenStreetMap (søkbare og trykkbare)
+ {n:"Byporten", la:58.18709, lo:8.14012, c:"sted", e:"📍"},
+ {n:"Kardemomme bru", la:58.1875, lo:8.1401, c:"sted", e:"📍"},
+ {n:"Dyreparken Hotel", la:58.18494, lo:8.14827, c:"sted", e:"🏨"},
+ {n:"Reli Safari", la:58.18346, lo:8.14512, c:"sted", e:"📍"},
+ {n:"Inngang Øst", la:58.18461, lo:8.14678, c:"sted", e:"📍"},
+ {n:"Kaptein Sabeltanns skattkammer", la:58.18566, lo:8.14721, c:"sted", e:"📍"},
+ {n:"Sjørøverteateret", la:58.1862, lo:8.14713, c:"sted", e:"🎭"},
+ {n:"Legemiddel-utsalg", la:58.18743, lo:8.14547, c:"sted", e:"💊"},
+ {n:"Dønningen", la:58.18826, lo:8.14336, c:"sted", e:"💦"},
+ {n:"Korallrevet", la:58.18805, lo:8.14352, c:"sted", e:"💦"},
+ {n:"Lagunen", la:58.18815, lo:8.14344, c:"sted", e:"💦"},
+ {n:"Plaskedammen", la:58.18822, lo:8.14359, c:"sted", e:"💦"},
+ {n:"Stampen", la:58.18814, lo:8.14362, c:"sted", e:"💦"},
+ {n:"Alpesteinbukk", la:58.18277, lo:8.14077, c:"sted", e:"🐐"},
+ {n:"Smokkarium", la:58.18568, lo:8.14736, c:"sted", e:"📍"},
+ {n:"Skatteparadiset", la:58.18289, lo:8.14402, c:"sted", e:"📍"},
+ {n:"Kaptein Sabeltann-statuen", la:58.18841, lo:8.15058, c:"sted", e:"🗿"},
+ {n:"Utgang Syd", la:58.18203, lo:8.14668, c:"sted", e:"📍"},
+ {n:"Gibbon", la:58.18213, lo:8.13947, c:"sted", e:"🐒"},
+ {n:"Utsikten", la:58.18105, lo:8.15097, c:"sted", e:"📍"},
+ {n:"Gruvebyen", la:58.18553, lo:8.14157, c:"sted", e:"📍"},
+ {n:"Gruvedalen", la:58.18542, lo:8.14283, c:"sted", e:"📍"},
+ {n:"Båthavna", la:58.187, lo:8.14528, c:"sted", e:"⚓"},
+ {n:"Kjuttaviga (bukta)", la:58.18613, lo:8.14396, c:"sted", e:"🌊"},
+ {n:"Bella og Gusto", la:58.18782, lo:8.15006, c:"sted", e:"🏠"},
+ {n:"Skalken", la:58.18857, lo:8.15109, c:"sted", e:"🏠"},
+ {n:"Oliver", la:58.18813, lo:8.1502, c:"sted", e:"🏠"},
+ {n:"Glade Gorm", la:58.18782, lo:8.15065, c:"sted", e:"🏠"},
+ {n:"Frøya", la:58.18847, lo:8.15051, c:"sted", e:"🏠"},
+ {n:"Heksa Miriams suite", la:58.18773, lo:8.15031, c:"sted", e:"🏠"},
+ {n:"Sara", la:58.1883, lo:8.15028, c:"sted", e:"🏠"},
+ {n:"Tøge", la:58.18811, lo:8.14953, c:"sted", e:"🏠"},
+ {n:"Benjamin", la:58.18807, lo:8.1505, c:"sted", e:"🏠"},
+ {n:"John Benløs", la:58.189, lo:8.15082, c:"sted", e:"🏠"},
+ {n:"Mia & barna (Ebba & Simon)", la:58.18819, lo:8.14942, c:"sted", e:"🏠"},
+ {n:"Birk", la:58.18795, lo:8.14944, c:"sted", e:"🏠"},
+ {n:"Villa Rosa", la:58.18748, lo:8.15038, c:"sted", e:"🏠"},
+ {n:"Valdemar", la:58.18906, lo:8.15063, c:"sted", e:"🏠"},
+ {n:"Kaptein Sabeltanns suite", la:58.18794, lo:8.14902, c:"sted", e:"🏠"},
+ {n:"Lech", la:58.18794, lo:8.15075, c:"sted", e:"🏠"},
+ {n:"Pelle og Pysa", la:58.18821, lo:8.14981, c:"sted", e:"🏠"},
+ {n:"Pinky", la:58.18777, lo:8.14898, c:"sted", e:"🏠"},
+ {n:"Lillebøll", la:58.18773, lo:8.15033, c:"sted", e:"🏠"},
+ {n:"Tårnsuiten", la:58.18781, lo:8.15031, c:"sted", e:"🏠"},
+ {n:"Røverhuset", la:58.18849, lo:8.13929, c:"sted", e:"🏠"},
+ {n:"KuToppen aktivitetshus", la:58.18427, lo:8.13996, c:"sted", e:"📍"},
+ {n:"Edvards Hus", la:58.18219, lo:8.14213, c:"sted", e:"🏠"},
+ {n:"Apejungelen", la:58.18337, lo:8.14281, c:"sted", e:"🐒"},
+ {n:"Tårnet", la:58.18725, lo:8.14022, c:"sted", e:"📍"},
+ {n:"Eselstall", la:58.18711, lo:8.13993, c:"sted", e:"📍"},
+ {n:"Makrellfotball", la:58.18597, lo:8.1453, c:"sted", e:"⚽"},
+ {n:"Bydue", la:58.18711, lo:8.14003, c:"sted", e:"📍"},
+ {n:"Over dammen", la:58.18606, lo:8.14577, c:"sted", e:"📍"},
+ {n:"Hippokrates", la:58.18748, lo:8.13997, c:"sted", e:"📍"},
+ {n:"Hal + Ogdra", la:58.18625, lo:8.14558, c:"sted", e:"📍"},
+ {n:"Brannstasjonen", la:58.18746, lo:8.13978, c:"sted", e:"🚒"},
+ {n:"Førstehjelper", la:58.18582, lo:8.14569, c:"sted", e:"🩹"},
+ {n:"Kardemomme kunstforening", la:58.18743, lo:8.14002, c:"sted", e:"🎨"},
+ {n:"Postkontoret", la:58.18736, lo:8.14038, c:"sted", e:"📮"},
+ {n:"Dyrehandleren", la:58.18754, lo:8.13998, c:"sted", e:"📍"},
+ {n:"Grabben", la:58.18641, lo:8.1458, c:"sted", e:"📍"},
+ {n:"Bykontoret", la:58.18711, lo:8.14023, c:"sted", e:"📍"},
+ {n:"Tante Sofie", la:58.18726, lo:8.13996, c:"sted", e:"🏠"},
+ {n:"Barbermester Sørensen", la:58.18746, lo:8.14026, c:"sted", e:"💈"},
+ {n:"Arresten", la:58.18725, lo:8.14052, c:"sted", e:"📍"},
+ {n:"Huset til Silius", la:58.18713, lo:8.13981, c:"sted", e:"🏠"},
+ {n:"Trillebua", la:58.18491, lo:8.14679, c:"sted", e:"🛒"},
+ {n:"Politistasjonen", la:58.18732, lo:8.14054, c:"sted", e:"👮"},
+ {n:"Mosks Traktorbane", la:58.18457, lo:8.13965, c:"sted", e:"🚜"},
+ {n:"Vestlandsk fjordfe", la:58.18407, lo:8.13816, c:"sted", e:"🐄"},
+ {n:"Nilen", la:58.18365, lo:8.14521, c:"sted", e:"🌊"},
+ {n:"Barnestimen", la:58.18758, lo:8.14571, c:"sted", e:"💦"},
+ {n:"Bølgen", la:58.18767, lo:8.14481, c:"sted", e:"💦"},
+ {n:"Ulv", la:58.18673, lo:8.13714, c:"sted", e:"🐺"},
+ {n:"Gaupe", la:58.18539, lo:8.13793, c:"sted", e:"🐱"},
+ {n:"Jerv", la:58.18591, lo:8.13595, c:"sted", e:"📍"},
+ {n:"Elg", la:58.1867, lo:8.13476, c:"sted", e:"🫎"},
+ {n:"Fjellrev", la:58.18591, lo:8.13742, c:"sted", e:"🦊"},
+ {n:"Storfugl", la:58.18577, lo:8.13807, c:"sted", e:"🦃"},
+ {n:"Hubro", la:58.18734, lo:8.13477, c:"sted", e:"🦉"},
+ {n:"Orangutang", la:58.18215, lo:8.14041, c:"sted", e:"🦧"},
+ {n:"Sibirsk tiger", la:58.18278, lo:8.13956, c:"sted", e:"🐯"},
+ {n:"Dødningskallebukta", la:58.18862, lo:8.15018, c:"sted", e:"🌊"},
+ {n:"Kongens torg", la:58.18837, lo:8.15074, c:"sted", e:"🥾"},
+ {n:"Lilletorget", la:58.18806, lo:8.15026, c:"sted", e:"🥾"},
+ {n:"Resepsjon Abra Havn", la:58.18842, lo:8.15126, c:"sted", e:"📍"},
+ {n:"Rotteløypa", la:58.18811, lo:8.15056, c:"sted", e:"🥾"},
+ {n:"Benjamins gate", la:58.18819, lo:8.15052, c:"sted", e:"🥾"},
+ {n:"Miriams gate", la:58.18792, lo:8.15024, c:"sted", e:"🥾"},
+ {n:"Skomakerstredet", la:58.18894, lo:8.15081, c:"sted", e:"🥾"},
+ {n:"Langemann", la:58.18773, lo:8.14904, c:"sted", e:"🏠"},
+ {n:"Ravn", la:58.18783, lo:8.15006, c:"sted", e:"🏠"},
+ {n:"Saragossa", la:58.18779, lo:8.14959, c:"sted", e:"🏠"},
+ {n:"Pinkys gate", la:58.18802, lo:8.14931, c:"sted", e:"🥾"},
+ {n:"Gustos gate", la:58.18787, lo:8.15006, c:"sted", e:"🥾"},
+ {n:"Heksefaret", la:58.18774, lo:8.15022, c:"sted", e:"🥾"},
+ {n:"Kaptein Sabeltanns paradegate", la:58.18859, lo:8.151, c:"sted", e:"🥾"},
+ {n:"Kjøttbollesmuget", la:58.18851, lo:8.1506, c:"sted", e:"🥾"},
+ {n:"Lillebølls smug", la:58.1878, lo:8.15045, c:"sted", e:"🥾"},
+ {n:"Olivers gate", la:58.18822, lo:8.15034, c:"sted", e:"🥾"},
+ {n:"Plankegangen", la:58.18797, lo:8.14967, c:"sted", e:"🥾"},
+ {n:"Ravnestien", la:58.18793, lo:8.15035, c:"sted", e:"🥾"},
+ {n:"Valdemars bakgate", la:58.18907, lo:8.1505, c:"sted", e:"🥾"},
+ {n:"Fruktutsalg", la:58.1872, lo:8.1405, c:"sted", e:"🍎"},
+ {n:"Papegøyer", la:58.1875, lo:8.13997, c:"sted", e:"🦜"},
+ {n:"Byscenen", la:58.18761, lo:8.13882, c:"sted", e:"🎭"},
+ {n:"Fuglehuset", la:58.18305, lo:8.14308, c:"sted", e:"🦜"},
+ {n:"Lavvoen", la:58.18715, lo:8.13388, c:"sted", e:"⛺"},
+ {n:"Villmarkshytta", la:58.18584, lo:8.13777, c:"sted", e:"🛖"},
+ {n:"Europeisk oter", la:58.18783, lo:8.13735, c:"sted", e:"🦦"},
+ {n:"Fredsstien", la:58.18782, lo:8.13894, c:"sted", e:"🥾"},
+ {n:"Baktrisk kamel", la:58.18807, lo:8.14, c:"sted", e:"🐫"},
+ {n:"Kaffekoppen", la:58.18613, lo:8.14593, c:"sted", e:"☕"},
+ {n:"Mathilde", la:58.18656, lo:8.14568, c:"sted", e:"📍"},
+ {n:"Streif", la:58.18653, lo:8.14592, c:"sted", e:"📍"},
+ {n:"Barnas Favoritter", la:58.18634, lo:8.14615, c:"sted", e:"📍"},
+ {n:"Midt i Blinken", la:58.1863, lo:8.14596, c:"sted", e:"🎯"},
+ {n:"Møkkalasset", la:58.18604, lo:8.14552, c:"sted", e:"📍"},
+ {n:"Fyrtårnet", la:58.18647, lo:8.14561, c:"sted", e:"🗼"},
+ {n:"Ubåtene", la:58.18584, lo:8.14582, c:"sted", e:"📍"},
+ {n:"Spøkelseshuset", la:58.18601, lo:8.14751, c:"sted", e:"👻"},
+ {n:"Makrellen, Silda og Torsken", la:58.18752, lo:8.14586, c:"sted", e:"💦"},
+ {n:"Fiskespretten", la:58.18833, lo:8.14283, c:"sted", e:"💦"},
+ {n:"Grotta", la:58.18879, lo:8.14327, c:"sted", e:"📍"},
+ {n:"Haisann", la:58.18801, lo:8.14308, c:"sted", e:"💦"},
+ {n:"Inky-dammen", la:58.18857, lo:8.14328, c:"sted", e:"💦"},
+ {n:"Superspeed", la:58.18865, lo:8.14402, c:"sted", e:"💦"},
+ {n:"Surikat", la:58.18244, lo:8.14678, c:"sted", e:"🦫"},
+ {n:"Ørkenrev", la:58.18234, lo:8.14702, c:"sted", e:"🦊"},
+ {n:"Tåkeskogen", la:58.18336, lo:8.14326, c:"sted", e:"🌫️"},
+ {n:"Dåhjort", la:58.18372, lo:8.1411, c:"sted", e:"🦌"},
+ {n:"Edderkoppape", la:58.18343, lo:8.14362, c:"sted", e:"🐒"},
+ {n:"Guanako", la:58.18272, lo:8.14172, c:"sted", e:"🦙"},
+ {n:"Lavlandstapir / Flodsvin", la:58.18262, lo:8.14252, c:"sted", e:"📍"},
+ {n:"Ringhalelemur", la:58.18358, lo:8.14196, c:"sted", e:"🐒"},
+ {n:"Shetlandsponni", la:58.18377, lo:8.13889, c:"sted", e:"🐴"},
+ {n:"Forsvar av Abra Havn", la:58.18702, lo:8.14866, c:"sted", e:"📍"},
+ {n:"Frokost med sjørøvere", la:58.18648, lo:8.14851, c:"sted", e:"📍"},
+ {n:"Jungelstien", la:58.18459, lo:8.1431, c:"sted", e:"🥾"},
+ {n:"Sjøulken Mattis sine sjøboder", la:58.18764, lo:8.14938, c:"sted", e:"📍"},
+ {n:"Bellas gate", la:58.18786, lo:8.15016, c:"sted", e:"🥾"},
+ {n:"Skalkens Rottesmug", la:58.18853, lo:8.15105, c:"sted", e:"🥾"},
+ {n:"Smiegangen", la:58.188, lo:8.15052, c:"sted", e:"🥾"},
+ {n:"Tømmeråstjønn", la:58.19206, lo:8.1356, c:"sted", e:"🌊"},
+ {n:"Sirkus Jesper (teltet)", la:58.18719, lo:8.14116, c:"sted", e:"🎪"},
+ {n:"Hakkebakkeskogen Filmstudio", la:58.1869, lo:8.14256, c:"sted", e:"🎬"},
+ {n:"Badestranda", la:58.18728, lo:8.14667, c:"sted", e:"🏖️"},
+ {n:"Festplassen", la:58.18727, lo:8.14119, c:"sted", e:"🥾"},
+ {n:"Murre", la:58.18795, lo:8.14402, c:"sted", e:"💦"},
+ {n:"Hoppetårn og basseng", la:58.18793, lo:8.14571, c:"sted", e:"💦"},
+ {n:"Stupetårnet", la:58.18786, lo:8.14595, c:"sted", e:"💦"},
+ {n:"Jungelland", la:58.18475, lo:8.14397, c:"sted", e:"🛝"},
+ {n:"Kardemomme byparken", la:58.18756, lo:8.13887, c:"sted", e:"🥾"},
+ {n:"Overfloden", la:58.18855, lo:8.14291, c:"sted", e:"💦"},
+ {n:"Linje 1 (trikken)", la:58.18733, lo:8.13996, c:"sted", e:"🚋"},
+ {n:"Grasvannet", la:58.18777, lo:8.14502, c:"sted", e:"🌊"},
+ {n:"Inky", la:58.18861, lo:8.14269, c:"sted", e:"💦"},
+ {n:"Gepard", la:58.18174, lo:8.14406, c:"sted", e:"🐆"},
+ {n:"Hjelmetjønn", la:58.18782, lo:8.13389, c:"sted", e:"🌊"},
 ];
 
 const SPEEDS={ '3':33, '5':42, '10':58, 'voksen':80 }; // meter per minutt
@@ -195,9 +361,10 @@ function toggleSettings(){
 function setSpeed(v){
   SPEED_M_PER_MIN=SPEEDS[v];
   const lbl={'3':'3-åringstempo','5':'5-åringstempo','10':'10-åringstempo','voksen':'voksentempo'}[v];
-  document.getElementById('tempoLbl').textContent='🚶 Gangtid herfra ('+lbl+')';
+  document.getElementById('tempoLbl').textContent='Gangtid herfra i '+lbl+' · trykk eller dra for å åpne/lukke';
   redraw();
 }
+function togglePanel(){document.getElementById('panel').classList.toggle('collapsed');}
 
 const map = L.map('map',{zoomControl:false}).setView([58.1855,8.1435],16);
 L.control.zoom({position:'bottomright'}).addTo(map);
@@ -210,7 +377,7 @@ const markers=[];
 function icon(e,small){return L.divIcon({html:e,className:small?'emoji-small':'emoji-marker',iconSize:small?[18,18]:[26,26],iconAnchor:small?[9,9]:[13,13]});}
 
 P.forEach(p=>{
-  const m=L.marker([p.la,p.lo],{icon:icon(p.e,p.c==='wc')});
+  const m=L.marker([p.la,p.lo],{icon:icon(p.e,p.c==='wc'||p.c==='sted')});
   m.bindPopup('…'); m.p=p; markers.push(m);
 });
 
@@ -256,7 +423,7 @@ function renderList(){
   if(!me){return;}
   const q=(document.getElementById('search')?.value||'').trim().toLowerCase();
   const match=p=>!q||p.n.toLowerCase().includes(q)||(p.d||'').toLowerCase().includes(q);
-  const items=P.filter(p=>matchCat(p)&&(activeCat!=='alle'||p.c!=='wc')&&match(p)).map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t);
+  const items=P.filter(p=>matchCat(p)&&(activeCat!=='alle'||(p.c!=='wc'&&(q?true:p.c!=='sted')))&&match(p)).map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t);
   const wc=activeCat==='alle'?P.filter(p=>p.c==='wc').map(p=>({p,t:mins(p)})).sort((a,b)=>a.t-b.t)[0]:null;
   let h='';
   if(wc&&!q) h+=`<div class="row" onclick="fly(${wc.p.la},${wc.p.lo})"><div class="em">🚻</div><div class="nm">Nærmeste toalett</div><div class="min">${wc.t} min</div></div><div class="divlabel">Attraksjoner – nærmest først</div>`;
@@ -569,11 +736,25 @@ document.addEventListener('visibilitychange',()=>{
   if(performance.now()>6*3600*1000){location.reload();return;} // hent ny versjon av appen etter 6+ timer
   refreshProgram(false);
 });
-// Lukk gangavstandslisten når man trykker et annet sted på skjermen
+// Lukk destinasjonslisten når man trykker et annet sted på skjermen
 document.addEventListener('click',ev=>{
   const p=document.getElementById('panel');
   if(!p.classList.contains('collapsed')&&!p.contains(ev.target))p.classList.add('collapsed');
 },true);
+// Dra i toppen av panelet for å åpne/lukke
+(function(){
+  const head=document.getElementById('panelHead');
+  const panel=document.getElementById('panel');
+  let startY=null;
+  head.addEventListener('touchstart',e=>{startY=e.touches[0].clientY;},{passive:true});
+  head.addEventListener('touchmove',e=>{
+    if(startY==null)return;
+    const dy=e.touches[0].clientY-startY;
+    if(dy>25){panel.classList.add('collapsed');startY=null;}
+    else if(dy<-25){panel.classList.remove('collapsed');startY=null;}
+  },{passive:true});
+  head.addEventListener('touchend',()=>{startY=null;});
+})();
 </script>
 </body>
 </html>
