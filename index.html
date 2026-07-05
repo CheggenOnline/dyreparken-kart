@@ -41,8 +41,9 @@
   .me-wrap svg{position:absolute;left:0;top:0;display:none;}
   .leaflet-popup-content{font-size:14px;margin:10px 14px;}
   .leaflet-popup-content b{font-size:15px;}
-  #hint{position:absolute;top:52px;left:8px;right:8px;z-index:1001;background:#fff8e1;border:1px solid #ffca28;
-    border-radius:10px;padding:8px 12px;font-size:13px;display:none;}
+  #hint{position:fixed;top:calc(52px + env(safe-area-inset-top));left:8px;right:8px;z-index:1300;background:#fff8e1;border:1px solid #ffca28;
+    border-radius:10px;padding:8px 12px;font-size:13px;display:none;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+  #hint.alert{background:#ffebee;border:2px solid #e53935;font-size:16px;font-weight:700;padding:14px;}
 </style>
 </head>
 <body>
@@ -52,7 +53,7 @@
   <button onclick="toggleSettings()">⚙️ Innstillinger</button>
   <button id="btnClearRoute" style="display:none;background:#e91e63;color:#fff;" onclick="clearRoute()">✕ Fjern rute</button>
 </div>
-<div id="settings" style="display:none;position:absolute;top:0;bottom:0;left:0;right:0;z-index:1100;background:#fff;overflow-y:auto;padding-top:env(safe-area-inset-top);">
+<div id="settings" style="display:none;position:fixed;top:0;bottom:0;left:0;right:0;z-index:1100;background:#fff;overflow-y:auto;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);">
   <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px 6px;">
     <b style="font-size:17px;">⚙️ Innstillinger</b>
     <button onclick="toggleSettings()" style="border:none;background:#eee;border-radius:14px;padding:6px 12px;font-weight:700;cursor:pointer;">✕ Lukk</button>
@@ -79,7 +80,7 @@
 </div>
 <button id="btnCenter" onclick="centerMe()" title="Sentrer på meg"
   style="position:absolute;top:calc(8px + env(safe-area-inset-top));right:8px;z-index:1001;width:42px;height:42px;border:none;border-radius:50%;background:#1976d2;color:#fff;font-size:19px;line-height:42px;padding:0;box-shadow:0 2px 6px rgba(0,0,0,.35);cursor:pointer;"><span style="display:inline-block;transform:rotate(-45deg);">➤</span></button>
-<div id="prog" style="display:none;position:absolute;top:0;bottom:0;left:0;right:0;z-index:1100;background:#fff;overflow-y:auto;padding-top:env(safe-area-inset-top);">
+<div id="prog" style="display:none;position:fixed;top:0;bottom:0;left:0;right:0;z-index:1100;background:#fff;overflow-y:auto;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);">
   <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px 6px;">
     <b style="font-size:17px;">🎭 Dagens program</b>
     <button onclick="document.getElementById('prog').style.display='none'" style="border:none;background:#eee;border-radius:14px;padding:6px 12px;font-weight:700;cursor:pointer;">✕ Lukk</button>
@@ -239,6 +240,7 @@ function setMe(la,lo,acc){
   } else {meMarker.setLatLng(me);accCircle.setLatLng(me);if(acc)accCircle.setRadius(acc);}
   if(first){map.flyTo(me,17);document.getElementById('panel').classList.remove('collapsed');}
   redraw();
+  if(typeof notifyCheck==='function')notifyCheck();
 }
 
 // ---- Rute (raskeste vei langs stiene, OSRM foot) ----
@@ -379,15 +381,22 @@ function notifyCheck(){
     const w=walkMinBetween(me[0],me[1],m.la,m.lo);
     if(nowMin>=start-w-1){
       m.notified=true;changed=true;
-      const msg='Gå nå! «'+m.title+'» begynner kl. '+m.from+' – ca. '+w+' min å gå dit.';
-      if(('Notification' in window)&&Notification.permission==='granted'){try{new Notification('🎭 Dyreparken',{body:msg,icon:'icon-192.png'});}catch(e){}}
-      hint('🔔 '+msg,20000);
-      if(navigator.vibrate)navigator.vibrate([300,150,300]);
+      fireNotify('Gå nå! «'+m.title+'» begynner kl. '+m.from+' – ca. '+w+' min å gå dit.');
     }
   }
   if(changed)saveMyProg();
 }
-setInterval(notifyCheck,30000);
+function fireNotify(msg){
+  if(('Notification' in window)&&Notification.permission==='granted'){try{new Notification('🎭 Dyreparken',{body:msg,icon:'icon-192.png'});}catch(e){}}
+  alertHint('🔔 '+msg);
+  if(navigator.vibrate)navigator.vibrate([300,150,300]);
+}
+function testNotify(){
+  if(('Notification' in window)&&Notification.permission==='default'){try{Notification.requestPermission();}catch(e){}}
+  fireNotify('Test: Slik ser «gå nå»-varselet ut. Hold appen åpen, så kommer det automatisk.');
+}
+setInterval(notifyCheck,20000);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')notifyCheck();});
 function renderMyProg(){
   if(!myProg.length)return '<div style="padding:8px 16px 0;font-size:13px;color:#888;">Trykk ＋ på programpostene under for å bygge «Mitt program» for i dag og i morgen.</div>';
   const sorted=[...myProg].sort((a,b)=>(a.date+a.from).localeCompare(b.date+b.from));
@@ -401,6 +410,7 @@ function renderMyProg(){
     <button style="border:none;background:#eee;color:#555;border-radius:12px;padding:6px 10px;font-weight:700;cursor:pointer;" data-id="${m.id.replace(/"/g,'&quot;')}" onclick="event.stopPropagation();removeMine(this.dataset.id)">✕</button>
   </div>`).join('');
   h+=`<label style="display:flex;align-items:center;gap:8px;padding:8px 16px 4px;font-size:13px;color:#555;"><input type="checkbox" ${notifyOn?'checked':''} onchange="setNotify(this.checked)" style="width:18px;height:18px;"> 🔔 Varsle meg når jeg må gå for å rekke neste post (appen må være åpen)</label>`;
+  h+=`<div style="padding:0 16px 8px;"><button onclick="testNotify()" style="border:none;background:#eee;color:#333;border-radius:12px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer;">🔔 Test varsling</button></div>`;
   return h;
 }
 function dayLabel(iso){
@@ -464,7 +474,8 @@ function progGo(la,lo,withRoute){
   else map.flyTo([la,lo],17.5);
 }
 
-function hint(t,ms){const h=document.getElementById('hint');h.textContent=t;h.style.display='block';if(ms)setTimeout(()=>h.style.display='none',ms);}
+function hint(t,ms){const h=document.getElementById('hint');h.classList.remove('alert');h.textContent=t;h.style.display='block';if(ms)setTimeout(()=>h.style.display='none',ms);}
+function alertHint(t,ms){const h=document.getElementById('hint');h.classList.add('alert');h.textContent=t;h.style.display='block';setTimeout(()=>{h.style.display='none';h.classList.remove('alert');},ms||25000);}
 
 function centerMe(){
   if(me){map.flyTo(me,Math.max(map.getZoom(),17));}
