@@ -1,6 +1,6 @@
 {
- "date": "2026-07-05",
- "updated": "2026-07-05T06:53:55.439Z",
+ "date": "2026-07-06",
+ "updated": "2026-07-06T08:00:26.347Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -9,15 +9,15 @@
    "times": [
     {
      "from": "10:30",
-     "to": "11:45"
+     "to": "12:00"
     },
     {
-     "from": "12:30",
-     "to": "15:00"
+     "from": "12:45",
+     "to": "15:30"
     },
     {
-     "from": "15:45",
-     "to": "16:30"
+     "from": "16:15",
+     "to": "17:30"
     }
    ],
    "ticket": false,
@@ -58,19 +58,6 @@
    "weather": false
   },
   {
-   "title": "Kaptein Sabeltann og hans menn drar på tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "14:00",
-     "to": "14:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
    "title": "KuToppens NYE episke gårdskonsert",
    "venue": "KuToppen",
    "category": "Underholdning",
@@ -88,6 +75,19 @@
    "weather": false
   },
   {
+   "title": "Kaptein Sabeltann og hans menn drar på tokt",
+   "venue": "Kaptein Sabeltanns Verden",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "14:00",
+     "to": "14:20"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
    "title": "Det brenner i tårnet til Tobias",
    "venue": "Dyreparken",
    "category": "Underholdning",
@@ -99,19 +99,6 @@
    ],
    "ticket": false,
    "weather": false
-  },
-  {
-   "title": "Sirkus Jesper",
-   "venue": "Dyreparken",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "17:30",
-     "to": "18:40"
-    }
-   ],
-   "ticket": true,
-   "weather": true
   },
   {
    "title": "Dyrene på Savannen",
@@ -245,10 +232,6 @@
     {
      "from": "12:30",
      "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -285,7 +268,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -309,6 +292,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:30",
+     "to": "15:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -371,6 +367,23 @@
    "weather": false
   },
   {
+   "title": "Fotball-VM på Safarihotellet (for boende gjester)",
+   "venue": "Dyreparken Safarihotell",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "02:00",
+     "to": "04:00"
+    },
+    {
+     "from": "21:00",
+     "to": "23:00"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
    "title": "Vekking i Abra Havn (For boende gjester i Abra Havn)",
    "venue": "Abra Havn",
    "category": "Underholdning",
@@ -416,15 +429,15 @@
    "times": [
     {
      "from": "10:30",
-     "to": "11:45"
+     "to": "12:00"
     },
     {
-     "from": "12:30",
-     "to": "15:00"
+     "from": "12:45",
+     "to": "15:30"
     },
     {
-     "from": "15:45",
-     "to": "16:30"
+     "from": "16:15",
+     "to": "17:30"
     }
    ],
    "ticket": false,
@@ -568,19 +581,6 @@
    "weather": false
   },
   {
-   "title": "Kaptein Sabeltann og hans menn drar på tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "14:00",
-     "to": "14:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
    "title": "KuToppens NYE episke gårdskonsert",
    "venue": "KuToppen",
    "category": "Underholdning",
@@ -605,6 +605,19 @@
     {
      "from": "14:00",
      "to": "14:15"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Kaptein Sabeltann og hans menn drar på tokt",
+   "venue": "Kaptein Sabeltanns Verden",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "14:00",
+     "to": "14:20"
     }
    ],
    "ticket": false,
@@ -648,32 +661,6 @@
    ],
    "ticket": false,
    "weather": false
-  },
-  {
-   "title": "Fotball-VM på Safarihotellet (for boende gjester)",
-   "venue": "Dyreparken Safarihotell",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "20:00",
-     "to": "23:59"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Sirkus Jesper",
-   "venue": "Dyreparken",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "17:30",
-     "to": "18:40"
-    }
-   ],
-   "ticket": true,
-   "weather": true
   }
  ],
  "hours": {
@@ -681,7 +668,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-06",
+  "date": "2026-07-07",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -776,6 +763,32 @@
      {
       "from": "15:00",
       "to": "15:15"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Sirkus Jesper",
+    "venue": "Dyreparken",
+    "category": "Kveldsforestillinger",
+    "times": [
+     {
+      "from": "17:30",
+      "to": "18:40"
+     }
+    ],
+    "ticket": true,
+    "weather": true
+   },
+   {
+    "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
+    "venue": "Kjuttaviga",
+    "category": "Kveldsforestillinger",
+    "times": [
+     {
+      "from": "23:00",
+      "to": "00:30"
      }
     ],
     "ticket": false,
@@ -913,6 +926,10 @@
      {
       "from": "12:30",
       "to": "12:45"
+     },
+     {
+      "from": "15:30",
+      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -949,7 +966,7 @@
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -973,19 +990,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Gaupe",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:30",
-      "to": "15:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1057,8 +1061,12 @@
       "to": "04:00"
      },
      {
-      "from": "21:00",
-      "to": "23:00"
+      "from": "18:00",
+      "to": "20:00"
+     },
+     {
+      "from": "22:00",
+      "to": "23:59"
      }
     ],
     "ticket": false,
@@ -1338,6 +1346,32 @@
      {
       "from": "18:00",
       "to": "18:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Sirkus Jesper",
+    "venue": "Dyreparken",
+    "category": "Kveldsforestillinger",
+    "times": [
+     {
+      "from": "17:30",
+      "to": "18:40"
+     }
+    ],
+    "ticket": true,
+    "weather": true
+   },
+   {
+    "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
+    "venue": "Kjuttaviga",
+    "category": "Kveldsforestillinger",
+    "times": [
+     {
+      "from": "23:00",
+      "to": "00:30"
      }
     ],
     "ticket": false,
