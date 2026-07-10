@@ -1,6 +1,6 @@
 {
- "date": "2026-07-09",
- "updated": "2026-07-09T07:00:09.706Z",
+ "date": "2026-07-10",
+ "updated": "2026-07-10T07:00:05.999Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -17,7 +17,7 @@
     },
     {
      "from": "16:15",
-     "to": "17:15"
+     "to": "17:00"
     }
    ],
    "ticket": false,
@@ -258,10 +258,6 @@
     {
      "from": "12:30",
      "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -298,7 +294,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -322,6 +318,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:30",
+     "to": "15:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -437,7 +446,7 @@
     },
     {
      "from": "16:15",
-     "to": "17:15"
+     "to": "17:00"
     }
    ],
    "ticket": false,
@@ -663,13 +672,26 @@
    "weather": false
   },
   {
+   "title": "Flaggfiring på Kongens Torg (For boende gjester i Abra Havn)",
+   "venue": "Abra Havn",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "18:30",
+     "to": "18:50"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
    "title": "Fotball-VM på Safarihotellet (for boende gjester)",
    "venue": "Dyreparken Safarihotell",
    "category": "Underholdning",
    "times": [
     {
-     "from": "22:00",
-     "to": "23:59"
+     "from": "21:00",
+     "to": "23:00"
     }
    ],
    "ticket": false,
@@ -707,7 +729,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-10",
+  "date": "2026-07-11",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -716,15 +738,15 @@
     "times": [
      {
       "from": "10:30",
-      "to": "12:00"
+      "to": "11:45"
      },
      {
-      "from": "12:45",
-      "to": "15:30"
+      "from": "12:30",
+      "to": "15:00"
      },
      {
-      "from": "16:15",
-      "to": "17:00"
+      "from": "15:45",
+      "to": "16:30"
      }
     ],
     "ticket": false,
@@ -965,6 +987,10 @@
      {
       "from": "12:30",
       "to": "12:45"
+     },
+     {
+      "from": "15:30",
+      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1001,7 +1027,7 @@
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1025,19 +1051,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Gaupe",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:30",
-      "to": "15:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1145,15 +1158,15 @@
     "times": [
      {
       "from": "10:30",
-      "to": "12:00"
+      "to": "11:45"
      },
      {
-      "from": "12:45",
-      "to": "15:30"
+      "from": "12:30",
+      "to": "15:00"
      },
      {
-      "from": "16:15",
-      "to": "17:00"
+      "from": "15:45",
+      "to": "16:30"
      }
     ],
     "ticket": false,
@@ -1263,6 +1276,19 @@
     "weather": false
    },
    {
+    "title": "Tante Sofie er røvet",
+    "venue": "Dyreparken",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "13:00",
+      "to": "13:15"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
     "title": "Møt noen av sjørøverne",
     "venue": "Kaptein Sabeltanns Verden",
     "category": "Underholdning",
@@ -1278,19 +1304,6 @@
      {
       "from": "17:00",
       "to": "17:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Tante Sofie er røvet",
-    "venue": "Dyreparken",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "13:00",
-      "to": "13:15"
      }
     ],
     "ticket": false,
@@ -1379,13 +1392,26 @@
     "weather": false
    },
    {
+    "title": "Flaggfiring på Kongens Torg (For boende gjester i Abra Havn)",
+    "venue": "Abra Havn",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "18:30",
+      "to": "18:50"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
     "title": "Fotball-VM på Safarihotellet (for boende gjester)",
     "venue": "Dyreparken Safarihotell",
     "category": "Underholdning",
     "times": [
      {
-      "from": "21:00",
-      "to": "23:00"
+      "from": "23:00",
+      "to": "23:59"
      }
     ],
     "ticket": false,
