@@ -1,6 +1,6 @@
 {
- "date": "2026-07-15",
- "updated": "2026-07-15T05:45:40.868Z",
+ "date": "2026-07-16",
+ "updated": "2026-07-16T05:58:53.168Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -17,7 +17,7 @@
     },
     {
      "from": "16:15",
-     "to": "17:30"
+     "to": "17:00"
     }
    ],
    "ticket": false,
@@ -258,6 +258,10 @@
     {
      "from": "12:30",
      "to": "12:45"
+    },
+    {
+     "from": "15:30",
+     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -294,7 +298,7 @@
    "weather": true
   },
   {
-   "title": "Ulv",
+   "title": "Jerv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -318,19 +322,6 @@
    ],
    "ticket": false,
    "weather": true
-  },
-  {
-   "title": "Gaupe",
-   "venue": "Nordisk Villmark",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "15:30",
-     "to": "15:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -446,7 +437,7 @@
     },
     {
      "from": "16:15",
-     "to": "17:30"
+     "to": "17:00"
     }
    ],
    "ticket": false,
@@ -685,19 +676,6 @@
    "weather": false
   },
   {
-   "title": "Fotball-VM på Safarihotellet (for boende gjester)",
-   "venue": "Dyreparken Safarihotell",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "21:00",
-     "to": "23:00"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
    "title": "Sirkus Jesper",
    "venue": "Dyreparken",
    "category": "Kveldsforestillinger",
@@ -729,7 +707,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-16",
+  "date": "2026-07-17",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -987,10 +965,6 @@
      {
       "from": "12:30",
       "to": "12:45"
-     },
-     {
-      "from": "15:30",
-      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1027,7 +1001,7 @@
     "weather": true
    },
    {
-    "title": "Jerv",
+    "title": "Ulv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1051,6 +1025,19 @@
     ],
     "ticket": false,
     "weather": true
+   },
+   {
+    "title": "Gaupe",
+    "venue": "Nordisk Villmark",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "15:30",
+      "to": "15:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1431,6 +1418,9 @@
     "weather": false
    }
   ],
-  "hours": null
+  "hours": {
+   "dyreparken": "09:00–19:00",
+   "badelandet": "10:00–19:00"
+  }
  }
 }
