@@ -1,6 +1,6 @@
 {
- "date": "2026-07-16",
- "updated": "2026-07-16T05:58:53.168Z",
+ "date": "2026-07-17",
+ "updated": "2026-07-17T05:59:28.950Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -48,10 +48,6 @@
     {
      "from": "11:00",
      "to": "11:15"
-    },
-    {
-     "from": "17:00",
-     "to": "17:15"
     }
    ],
    "ticket": false,
@@ -258,10 +254,6 @@
     {
      "from": "12:30",
      "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -298,7 +290,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -322,6 +314,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:30",
+     "to": "15:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -468,10 +473,6 @@
     {
      "from": "11:00",
      "to": "11:15"
-    },
-    {
-     "from": "17:00",
-     "to": "17:15"
     }
    ],
    "ticket": false,
@@ -540,7 +541,7 @@
    "times": [
     {
      "from": "13:00",
-     "to": "13:20"
+     "to": "13:15"
     }
    ],
    "ticket": false,
@@ -707,7 +708,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-17",
+  "date": "2026-07-18",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -716,36 +717,19 @@
     "times": [
      {
       "from": "10:30",
-      "to": "12:00"
+      "to": "11:45"
      },
      {
-      "from": "12:45",
-      "to": "15:30"
+      "from": "12:30",
+      "to": "15:00"
      },
      {
-      "from": "16:15",
-      "to": "17:00"
+      "from": "15:45",
+      "to": "16:30"
      }
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Vi er KuToppen",
-    "venue": "KuToppen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:00",
-      "to": "11:20"
-     },
-     {
-      "from": "12:00",
-      "to": "12:20"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Møt noen av innbyggerne i Kardemomme by",
@@ -765,17 +749,17 @@
     "weather": false
    },
    {
-    "title": "KuToppens NYE episke gårdskonsert",
+    "title": "Vi er KuToppen",
     "venue": "KuToppen",
     "category": "Underholdning",
     "times": [
      {
-      "from": "14:00",
-      "to": "14:20"
+      "from": "11:00",
+      "to": "11:20"
      },
      {
-      "from": "15:00",
-      "to": "15:20"
+      "from": "12:00",
+      "to": "12:20"
      }
     ],
     "ticket": false,
@@ -789,6 +773,23 @@
      {
       "from": "14:00",
       "to": "14:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "KuToppens NYE episke gårdskonsert",
+    "venue": "KuToppen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "14:00",
+      "to": "14:20"
+     },
+     {
+      "from": "15:00",
+      "to": "15:20"
      }
     ],
     "ticket": false,
@@ -965,6 +966,10 @@
      {
       "from": "12:30",
       "to": "12:45"
+     },
+     {
+      "from": "15:30",
+      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1001,7 +1006,7 @@
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1025,19 +1030,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Gaupe",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:30",
-      "to": "15:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1145,36 +1137,19 @@
     "times": [
      {
       "from": "10:30",
-      "to": "12:00"
+      "to": "11:45"
      },
      {
-      "from": "12:45",
-      "to": "15:30"
+      "from": "12:30",
+      "to": "15:00"
      },
      {
-      "from": "16:15",
-      "to": "17:00"
+      "from": "15:45",
+      "to": "16:30"
      }
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Vi er KuToppen",
-    "venue": "KuToppen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:00",
-      "to": "11:20"
-     },
-     {
-      "from": "12:00",
-      "to": "12:20"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Møt noen av innbyggerne i Kardemomme by",
@@ -1188,6 +1163,23 @@
      {
       "from": "17:00",
       "to": "17:15"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Vi er KuToppen",
+    "venue": "KuToppen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:00",
+      "to": "11:20"
+     },
+     {
+      "from": "12:00",
+      "to": "12:20"
      }
     ],
     "ticket": false,
@@ -1297,6 +1289,19 @@
     "weather": false
    },
    {
+    "title": "Kaptein Sabeltann og hans menn drar på tokt",
+    "venue": "Kaptein Sabeltanns Verden",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "14:00",
+      "to": "14:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
     "title": "KuToppens NYE episke gårdskonsert",
     "venue": "KuToppen",
     "category": "Underholdning",
@@ -1308,19 +1313,6 @@
      {
       "from": "15:00",
       "to": "15:20"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Kaptein Sabeltann og hans menn drar på tokt",
-    "venue": "Kaptein Sabeltanns Verden",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "14:00",
-      "to": "14:20"
      }
     ],
     "ticket": false,
@@ -1386,6 +1378,19 @@
      {
       "from": "18:30",
       "to": "18:50"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Fotball-VM på Safarihotellet (for boende gjester)",
+    "venue": "Dyreparken Safarihotell",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "23:00",
+      "to": "23:59"
      }
     ],
     "ticket": false,
