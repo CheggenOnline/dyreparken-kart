@@ -1,6 +1,6 @@
 {
- "date": "2026-07-18",
- "updated": "2026-07-18T05:41:46.146Z",
+ "date": "2026-07-19",
+ "updated": "2026-07-19T06:12:58.104Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -112,19 +112,6 @@
    ],
    "ticket": true,
    "weather": true
-  },
-  {
-   "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
-   "venue": "Kjuttaviga",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "23:00",
-     "to": "00:30"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   },
   {
    "title": "Dyrene på Savannen",
@@ -540,7 +527,7 @@
    "times": [
     {
      "from": "13:00",
-     "to": "13:15"
+     "to": "13:20"
     }
    ],
    "ticket": false,
@@ -681,8 +668,8 @@
    "category": "Underholdning",
    "times": [
     {
-     "from": "23:00",
-     "to": "23:59"
+     "from": "21:00",
+     "to": "23:00"
     }
    ],
    "ticket": false,
@@ -700,19 +687,6 @@
    ],
    "ticket": true,
    "weather": true
-  },
-  {
-   "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
-   "venue": "Kjuttaviga",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "23:00",
-     "to": "00:30"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   }
  ],
  "hours": {
@@ -720,7 +694,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-19",
+  "date": "2026-07-20",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -729,15 +703,15 @@
     "times": [
      {
       "from": "10:30",
-      "to": "11:45"
+      "to": "12:00"
      },
      {
-      "from": "12:30",
-      "to": "15:00"
+      "from": "12:45",
+      "to": "15:30"
      },
      {
-      "from": "15:45",
-      "to": "16:30"
+      "from": "16:15",
+      "to": "17:00"
      }
     ],
     "ticket": false,
@@ -821,17 +795,17 @@
     "weather": false
    },
    {
-    "title": "Sirkus Jesper",
-    "venue": "Dyreparken",
+    "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
+    "venue": "Kjuttaviga",
     "category": "Kveldsforestillinger",
     "times": [
      {
-      "from": "17:30",
-      "to": "18:40"
+      "from": "23:00",
+      "to": "00:30"
      }
     ],
-    "ticket": true,
-    "weather": true
+    "ticket": false,
+    "weather": false
    },
    {
     "title": "Dyrene på Savannen",
@@ -965,10 +939,6 @@
      {
       "from": "12:30",
       "to": "12:45"
-     },
-     {
-      "from": "15:30",
-      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1005,7 +975,7 @@
     "weather": true
    },
    {
-    "title": "Jerv",
+    "title": "Ulv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1029,6 +999,19 @@
     ],
     "ticket": false,
     "weather": true
+   },
+   {
+    "title": "Gaupe",
+    "venue": "Nordisk Villmark",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "15:30",
+      "to": "15:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1136,15 +1119,15 @@
     "times": [
      {
       "from": "10:30",
-      "to": "11:45"
+      "to": "12:00"
      },
      {
-      "from": "12:30",
-      "to": "15:00"
+      "from": "12:45",
+      "to": "15:30"
      },
      {
-      "from": "15:45",
-      "to": "16:30"
+      "from": "16:15",
+      "to": "17:00"
      }
     ],
     "ticket": false,
@@ -1383,30 +1366,17 @@
     "weather": false
    },
    {
-    "title": "Fotball-VM på Safarihotellet (for boende gjester)",
-    "venue": "Dyreparken Safarihotell",
-    "category": "Underholdning",
+    "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
+    "venue": "Kjuttaviga",
+    "category": "Kveldsforestillinger",
     "times": [
      {
-      "from": "21:00",
-      "to": "23:00"
+      "from": "23:00",
+      "to": "00:30"
      }
     ],
     "ticket": false,
     "weather": false
-   },
-   {
-    "title": "Sirkus Jesper",
-    "venue": "Dyreparken",
-    "category": "Kveldsforestillinger",
-    "times": [
-     {
-      "from": "17:30",
-      "to": "18:40"
-     }
-    ],
-    "ticket": true,
-    "weather": true
    }
   ],
   "hours": {
