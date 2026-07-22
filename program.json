@@ -1,6 +1,6 @@
 {
- "date": "2026-07-21",
- "updated": "2026-07-21T06:10:48.166Z",
+ "date": "2026-07-22",
+ "updated": "2026-07-22T06:09:44.898Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -17,28 +17,11 @@
     },
     {
      "from": "16:15",
-     "to": "17:00"
+     "to": "17:30"
     }
    ],
    "ticket": false,
    "weather": true
-  },
-  {
-   "title": "Møt noen av innbyggerne i Kardemomme by",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:00",
-     "to": "11:15"
-    },
-    {
-     "from": "17:00",
-     "to": "17:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   },
   {
    "title": "Vi er KuToppen",
@@ -52,6 +35,23 @@
     {
      "from": "12:00",
      "to": "12:20"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Møt noen av innbyggerne i Kardemomme by",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "11:00",
+     "to": "11:15"
+    },
+    {
+     "from": "17:00",
+     "to": "17:15"
     }
    ],
    "ticket": false,
@@ -258,10 +258,6 @@
     {
      "from": "12:30",
      "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -298,7 +294,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -322,6 +318,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:30",
+     "to": "15:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -437,28 +446,11 @@
     },
     {
      "from": "16:15",
-     "to": "17:00"
+     "to": "17:30"
     }
    ],
    "ticket": false,
    "weather": true
-  },
-  {
-   "title": "Møt noen av innbyggerne i Kardemomme by",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:00",
-     "to": "11:15"
-    },
-    {
-     "from": "17:00",
-     "to": "17:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   },
   {
    "title": "Vi er KuToppen",
@@ -472,6 +464,23 @@
     {
      "from": "12:00",
      "to": "12:20"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Møt noen av innbyggerne i Kardemomme by",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "11:00",
+     "to": "11:15"
+    },
+    {
+     "from": "17:00",
+     "to": "17:15"
     }
    ],
    "ticket": false,
@@ -707,7 +716,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-22",
+  "date": "2026-07-23",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -731,23 +740,6 @@
     "weather": true
    },
    {
-    "title": "Møt noen av innbyggerne i Kardemomme by",
-    "venue": "Dyreparken",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:00",
-      "to": "11:15"
-     },
-     {
-      "from": "17:00",
-      "to": "17:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "Vi er KuToppen",
     "venue": "KuToppen",
     "category": "Underholdning",
@@ -759,6 +751,23 @@
      {
       "from": "12:00",
       "to": "12:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt noen av innbyggerne i Kardemomme by",
+    "venue": "Dyreparken",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:00",
+      "to": "11:15"
+     },
+     {
+      "from": "17:00",
+      "to": "17:15"
      }
     ],
     "ticket": false,
@@ -965,6 +974,10 @@
      {
       "from": "12:30",
       "to": "12:45"
+     },
+     {
+      "from": "15:30",
+      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1001,7 +1014,7 @@
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1025,19 +1038,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Gaupe",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:30",
-      "to": "15:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1160,23 +1160,6 @@
     "weather": true
    },
    {
-    "title": "Møt noen av innbyggerne i Kardemomme by",
-    "venue": "Dyreparken",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:00",
-      "to": "11:15"
-     },
-     {
-      "from": "17:00",
-      "to": "17:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "Vi er KuToppen",
     "venue": "KuToppen",
     "category": "Underholdning",
@@ -1188,6 +1171,23 @@
      {
       "from": "12:00",
       "to": "12:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt noen av innbyggerne i Kardemomme by",
+    "venue": "Dyreparken",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:00",
+      "to": "11:15"
+     },
+     {
+      "from": "17:00",
+      "to": "17:15"
      }
     ],
     "ticket": false,
@@ -1418,6 +1418,9 @@
     "weather": false
    }
   ],
-  "hours": null
+  "hours": {
+   "dyreparken": "09:00–19:00",
+   "badelandet": "10:00–19:00"
+  }
  }
 }
