@@ -1,6 +1,6 @@
 {
- "date": "2026-07-22",
- "updated": "2026-07-22T06:09:44.898Z",
+ "date": "2026-07-23",
+ "updated": "2026-07-23T06:14:53.189Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -17,7 +17,7 @@
     },
     {
      "from": "16:15",
-     "to": "17:30"
+     "to": "17:00"
     }
    ],
    "ticket": false,
@@ -258,6 +258,10 @@
     {
      "from": "12:30",
      "to": "12:45"
+    },
+    {
+     "from": "15:30",
+     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -294,7 +298,7 @@
    "weather": true
   },
   {
-   "title": "Ulv",
+   "title": "Jerv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -318,19 +322,6 @@
    ],
    "ticket": false,
    "weather": true
-  },
-  {
-   "title": "Gaupe",
-   "venue": "Nordisk Villmark",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "15:30",
-     "to": "15:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -446,7 +437,7 @@
     },
     {
      "from": "16:15",
-     "to": "17:30"
+     "to": "17:00"
     }
    ],
    "ticket": false,
@@ -716,7 +707,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-23",
+  "date": "2026-07-24",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -974,10 +965,6 @@
      {
       "from": "12:30",
       "to": "12:45"
-     },
-     {
-      "from": "15:30",
-      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1014,7 +1001,7 @@
     "weather": true
    },
    {
-    "title": "Jerv",
+    "title": "Ulv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1038,6 +1025,19 @@
     ],
     "ticket": false,
     "weather": true
+   },
+   {
+    "title": "Gaupe",
+    "venue": "Nordisk Villmark",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "15:30",
+      "to": "15:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
    },
    {
     "title": "Asiatiske aper",
