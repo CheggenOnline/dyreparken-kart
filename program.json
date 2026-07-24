@@ -1,6 +1,6 @@
 {
- "date": "2026-07-23",
- "updated": "2026-07-23T06:14:53.189Z",
+ "date": "2026-07-24",
+ "updated": "2026-07-24T06:08:21.980Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -258,10 +258,6 @@
     {
      "from": "12:30",
      "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -298,7 +294,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -322,6 +318,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:30",
+     "to": "15:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -707,7 +716,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-24",
+  "date": "2026-07-25",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -716,15 +725,15 @@
     "times": [
      {
       "from": "10:30",
-      "to": "12:00"
+      "to": "11:45"
      },
      {
-      "from": "12:45",
-      "to": "15:30"
+      "from": "12:30",
+      "to": "15:00"
      },
      {
-      "from": "16:15",
-      "to": "17:00"
+      "from": "15:45",
+      "to": "16:30"
      }
     ],
     "ticket": false,
@@ -965,6 +974,10 @@
      {
       "from": "12:30",
       "to": "12:45"
+     },
+     {
+      "from": "15:30",
+      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1001,7 +1014,7 @@
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1025,19 +1038,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Gaupe",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:30",
-      "to": "15:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1145,15 +1145,15 @@
     "times": [
      {
       "from": "10:30",
-      "to": "12:00"
+      "to": "11:45"
      },
      {
-      "from": "12:45",
-      "to": "15:30"
+      "from": "12:30",
+      "to": "15:00"
      },
      {
-      "from": "16:15",
-      "to": "17:00"
+      "from": "15:45",
+      "to": "16:30"
      }
     ],
     "ticket": false,
@@ -1418,9 +1418,6 @@
     "weather": false
    }
   ],
-  "hours": {
-   "dyreparken": "09:00–19:00",
-   "badelandet": "10:00–19:00"
-  }
+  "hours": null
  }
 }
