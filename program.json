@@ -1,6 +1,6 @@
 {
- "date": "2026-07-29",
- "updated": "2026-07-29T06:12:49.063Z",
+ "date": "2026-07-30",
+ "updated": "2026-07-30T06:04:47.946Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -24,7 +24,7 @@
    "weather": true
   },
   {
-   "title": "Vi er KuToppen",
+   "title": "KuToppens NYE episke gårdskonsert",
    "venue": "KuToppen",
    "category": "Underholdning",
    "times": [
@@ -35,6 +35,10 @@
     {
      "from": "12:00",
      "to": "12:20"
+    },
+    {
+     "from": "14:00",
+     "to": "14:20"
     }
    ],
    "ticket": false,
@@ -52,23 +56,6 @@
     {
      "from": "17:00",
      "to": "17:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "KuToppens NYE episke gårdskonsert",
-   "venue": "KuToppen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "14:00",
-     "to": "14:20"
-    },
-    {
-     "from": "15:00",
-     "to": "15:20"
     }
    ],
    "ticket": false,
@@ -258,6 +245,10 @@
     {
      "from": "12:30",
      "to": "12:45"
+    },
+    {
+     "from": "15:30",
+     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -294,7 +285,7 @@
    "weather": true
   },
   {
-   "title": "Ulv",
+   "title": "Jerv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -318,19 +309,6 @@
    ],
    "ticket": false,
    "weather": true
-  },
-  {
-   "title": "Gaupe",
-   "venue": "Nordisk Villmark",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "15:30",
-     "to": "15:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -453,7 +431,7 @@
    "weather": true
   },
   {
-   "title": "Vi er KuToppen",
+   "title": "KuToppens NYE episke gårdskonsert",
    "venue": "KuToppen",
    "category": "Underholdning",
    "times": [
@@ -464,6 +442,10 @@
     {
      "from": "12:00",
      "to": "12:20"
+    },
+    {
+     "from": "14:00",
+     "to": "14:20"
     }
    ],
    "ticket": false,
@@ -590,23 +572,6 @@
    "weather": false
   },
   {
-   "title": "KuToppens NYE episke gårdskonsert",
-   "venue": "KuToppen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "14:00",
-     "to": "14:20"
-    },
-    {
-     "from": "15:00",
-     "to": "15:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
    "title": "Kaptein Sabeltann og hans menn drar på tokt",
    "venue": "Kaptein Sabeltanns Verden",
    "category": "Underholdning",
@@ -716,7 +681,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-30",
+  "date": "2026-07-31",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -961,10 +926,6 @@
      {
       "from": "12:30",
       "to": "12:45"
-     },
-     {
-      "from": "15:30",
-      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1001,7 +962,7 @@
     "weather": true
    },
    {
-    "title": "Jerv",
+    "title": "Ulv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1025,6 +986,19 @@
     ],
     "ticket": false,
     "weather": true
+   },
+   {
+    "title": "Gaupe",
+    "venue": "Nordisk Villmark",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "15:30",
+      "to": "15:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1392,9 +1366,6 @@
     "weather": false
    }
   ],
-  "hours": {
-   "dyreparken": "09:00–19:00",
-   "badelandet": "10:00–19:00"
-  }
+  "hours": null
  }
 }
