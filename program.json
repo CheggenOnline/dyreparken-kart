@@ -1,6 +1,6 @@
 {
- "date": "2026-07-30",
- "updated": "2026-07-30T06:04:47.946Z",
+ "date": "2026-07-31",
+ "updated": "2026-07-31T06:28:47.048Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -245,10 +245,6 @@
     {
      "from": "12:30",
      "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -285,7 +281,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -309,6 +305,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:30",
+     "to": "15:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -681,7 +690,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-07-31",
+  "date": "2026-08-01",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -705,27 +714,6 @@
     "weather": true
    },
    {
-    "title": "KuToppens NYE episke gårdskonsert",
-    "venue": "KuToppen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:00",
-      "to": "11:20"
-     },
-     {
-      "from": "12:00",
-      "to": "12:20"
-     },
-     {
-      "from": "14:00",
-      "to": "14:20"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "Møt noen av innbyggerne i Kardemomme by",
     "venue": "Dyreparken",
     "category": "Underholdning",
@@ -737,6 +725,27 @@
      {
       "from": "17:00",
       "to": "17:15"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "KuToppens NYE episke gårdskonsert",
+    "venue": "KuToppen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:00",
+      "to": "12:20"
+     },
+     {
+      "from": "13:00",
+      "to": "13:20"
+     },
+     {
+      "from": "15:00",
+      "to": "15:20"
      }
     ],
     "ticket": false,
@@ -926,6 +935,10 @@
      {
       "from": "12:30",
       "to": "12:45"
+     },
+     {
+      "from": "15:30",
+      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -962,7 +975,7 @@
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -986,19 +999,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Gaupe",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:30",
-      "to": "15:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1121,27 +1121,6 @@
     "weather": true
    },
    {
-    "title": "KuToppens NYE episke gårdskonsert",
-    "venue": "KuToppen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:00",
-      "to": "11:20"
-     },
-     {
-      "from": "12:00",
-      "to": "12:20"
-     },
-     {
-      "from": "14:00",
-      "to": "14:20"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "Møt noen av innbyggerne i Kardemomme by",
     "venue": "Dyreparken",
     "category": "Underholdning",
@@ -1185,6 +1164,27 @@
     "weather": false
    },
    {
+    "title": "KuToppens NYE episke gårdskonsert",
+    "venue": "KuToppen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:00",
+      "to": "12:20"
+     },
+     {
+      "from": "13:00",
+      "to": "13:20"
+     },
+     {
+      "from": "15:00",
+      "to": "15:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
     "title": "Politimester Bastian ønsker alle velkommen på torvet",
     "venue": "Dyreparken",
     "category": "Underholdning",
@@ -1209,19 +1209,6 @@
      {
       "from": "16:00",
       "to": "16:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Møt innbyggerne på KuToppen",
-    "venue": "KuToppen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "13:00",
-      "to": "13:20"
      }
     ],
     "ticket": false,
@@ -1256,6 +1243,19 @@
      {
       "from": "13:00",
       "to": "13:15"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt innbyggerne på KuToppen",
+    "venue": "KuToppen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "14:00",
+      "to": "14:20"
      }
     ],
     "ticket": false,
