@@ -1,6 +1,6 @@
 {
- "date": "2026-08-02",
- "updated": "2026-08-02T06:17:08.105Z",
+ "date": "2026-08-03",
+ "updated": "2026-08-03T06:43:23.600Z",
  "entries": [
   {
    "title": "Reisen gjennom Hakkebakkeskogen",
@@ -88,17 +88,17 @@
    "weather": false
   },
   {
-   "title": "Sirkus Jesper",
-   "venue": "Dyreparken",
+   "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
+   "venue": "Kjuttaviga",
    "category": "Kveldsforestillinger",
    "times": [
     {
-     "from": "17:30",
-     "to": "18:40"
+     "from": "23:00",
+     "to": "00:30"
     }
    ],
-   "ticket": true,
-   "weather": true
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Dyrene på Savannen",
@@ -232,10 +232,6 @@
     {
      "from": "12:30",
      "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -272,7 +268,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -296,6 +292,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:30",
+     "to": "15:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -637,17 +646,17 @@
    "weather": false
   },
   {
-   "title": "Sirkus Jesper",
-   "venue": "Dyreparken",
+   "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
+   "venue": "Kjuttaviga",
    "category": "Kveldsforestillinger",
    "times": [
     {
-     "from": "17:30",
-     "to": "18:40"
+     "from": "23:00",
+     "to": "00:30"
     }
    ],
-   "ticket": true,
-   "weather": true
+   "ticket": false,
+   "weather": false
   }
  ],
  "hours": {
@@ -655,7 +664,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-08-03",
+  "date": "2026-08-04",
   "entries": [
    {
     "title": "Reisen gjennom Hakkebakkeskogen",
@@ -741,6 +750,19 @@
     ],
     "ticket": false,
     "weather": false
+   },
+   {
+    "title": "Sirkus Jesper",
+    "venue": "Dyreparken",
+    "category": "Kveldsforestillinger",
+    "times": [
+     {
+      "from": "17:30",
+      "to": "18:40"
+     }
+    ],
+    "ticket": true,
+    "weather": true
    },
    {
     "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
@@ -887,6 +909,10 @@
      {
       "from": "12:30",
       "to": "12:45"
+     },
+     {
+      "from": "15:30",
+      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -923,7 +949,7 @@
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -947,19 +973,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Gaupe",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:30",
-      "to": "15:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1301,6 +1314,19 @@
     "weather": false
    },
    {
+    "title": "Sirkus Jesper",
+    "venue": "Dyreparken",
+    "category": "Kveldsforestillinger",
+    "times": [
+     {
+      "from": "17:30",
+      "to": "18:40"
+     }
+    ],
+    "ticket": true,
+    "weather": true
+   },
+   {
     "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
     "venue": "Kjuttaviga",
     "category": "Kveldsforestillinger",
@@ -1314,9 +1340,6 @@
     "weather": false
    }
   ],
-  "hours": {
-   "dyreparken": "09:00–19:00",
-   "badelandet": "10:00–19:00"
-  }
+  "hours": null
  }
 }
