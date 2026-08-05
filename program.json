@@ -1,47 +1,22 @@
 {
- "date": "2026-08-04",
- "updated": "2026-08-04T06:09:05.470Z",
+ "date": "2026-08-05",
+ "updated": "2026-08-05T06:05:44.015Z",
  "entries": [
   {
-   "title": "Reisen gjennom Hakkebakkeskogen",
-   "venue": "Hakkebakkeskogen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "11:45"
-    },
-    {
-     "from": "12:30",
-     "to": "15:00"
-    },
-    {
-     "from": "15:45",
-     "to": "16:30"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Møt noen av innbyggerne i Kardemomme by",
+   "title": "Jubileumstorget: Besøk fra Dyrene i Hakkebakkeskogen",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
     {
-     "from": "11:00",
-     "to": "11:15"
-    },
-    {
-     "from": "17:00",
-     "to": "17:15"
+     "from": "11:30",
+     "to": "11:45"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "KuToppens NYE episke gårdskonsert",
+   "title": "Klaras mini-superkonsert",
    "venue": "KuToppen",
    "category": "Underholdning",
    "times": [
@@ -62,26 +37,91 @@
    "weather": false
   },
   {
-   "title": "Kaptein Sabeltann og hans menn drar på tokt",
-   "venue": "Kaptein Sabeltanns Verden",
+   "title": "Klatremustur i Hakkebakkeskogen",
+   "venue": "Hakkebakkeskogen",
    "category": "Underholdning",
    "times": [
     {
-     "from": "14:00",
-     "to": "14:20"
+     "from": "12:00",
+     "to": "16:30"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Den gang da",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "13:00",
+     "to": "13:15"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Det brenner i tårnet til Tobias",
+   "title": "Jubileumstorget: Besøk fra innbyggerne i Kardemomme by",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
     {
-     "from": "15:00",
-     "to": "15:15"
+     "from": "14:00",
+     "to": "14:15"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Jubileumstorget: Besøk fra KuToppen",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "15:15",
+     "to": "15:30"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Politimester Bastian utfører politiarbeid, og tante Sofie er rystet",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "16:00",
+     "to": "16:15"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Her og nå",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "16:15",
+     "to": "16:30"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Jubileumstorget: Besøk fra Kaptein Sabeltann og hans mannskap",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "16:45",
+     "to": "16:55"
     }
    ],
    "ticket": false,
@@ -101,32 +141,6 @@
    "weather": true
   },
   {
-   "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
-   "venue": "Kjuttaviga",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "23:00",
-     "to": "00:30"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Dyrene på Savannen",
-   "venue": "Afrika",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "09:30",
-     "to": "09:45"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
    "title": "Tiger",
    "venue": "Asia",
    "category": "Dyrepresentasjoner",
@@ -134,6 +148,19 @@
     {
      "from": "10:15",
      "to": "10:30"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Dyrene på Savannen",
+   "venue": "Afrika",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "10:30",
+     "to": "10:45"
     }
    ],
    "ticket": false,
@@ -225,19 +252,6 @@
    "weather": true
   },
   {
-   "title": "Lær om våre dyrebare dyr",
-   "venue": "Dyreparken",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "17:00"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
    "title": "Oter",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
@@ -245,10 +259,6 @@
     {
      "from": "12:30",
      "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -285,7 +295,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -309,6 +319,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:30",
+     "to": "15:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -410,71 +433,46 @@
    "weather": true
   },
   {
-   "title": "Reisen gjennom Hakkebakkeskogen",
-   "venue": "Hakkebakkeskogen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "11:45"
-    },
-    {
-     "from": "12:30",
-     "to": "15:00"
-    },
-    {
-     "from": "15:45",
-     "to": "16:30"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Møt noen av innbyggerne i Kardemomme by",
+   "title": "Jubileumstorget: Møt og hils på Dyrene i Hakkebakkeskogen",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
     {
-     "from": "11:00",
-     "to": "11:15"
-    },
-    {
-     "from": "17:00",
-     "to": "17:15"
+     "from": "11:15",
+     "to": "11:30"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Bli med Kobra Kahn på tokt",
+   "title": "Jubileumstorget: Besøk fra Dyrene i Hakkebakkeskogen",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "11:30",
+     "to": "11:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Kaptein Sabeltann og hans menn vender hjem fra tokt",
    "venue": "Kaptein Sabeltanns Verden",
    "category": "Underholdning",
    "times": [
     {
-     "from": "11:20",
-     "to": "17:30"
+     "from": "11:30",
+     "to": "11:45"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Bli med Den Sorte Dame på tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:20",
-     "to": "18:00"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "KuToppens NYE episke gårdskonsert",
+   "title": "Klaras mini-superkonsert",
    "venue": "KuToppen",
    "category": "Underholdning",
    "times": [
@@ -495,97 +493,85 @@
    "weather": false
   },
   {
+   "title": "Klatremustur i Hakkebakkeskogen",
+   "venue": "Hakkebakkeskogen",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "12:00",
+     "to": "16:30"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Møt tante Sofie og politimester Bastian i Kardemomme by",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "12:00",
+     "to": "12:20"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Bli med Den Sorte Dame på tokt",
+   "venue": "Kaptein Sabeltanns Verden",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "12:00",
+     "to": "18:15"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Den gang da",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "13:00",
+     "to": "13:15"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
    "title": "Politimester Bastian ønsker alle velkommen på torvet",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
     {
-     "from": "12:00",
-     "to": "12:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Kaptein Sabeltann og hans menn vender hjem fra tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "12:15"
-    },
-    {
-     "from": "16:00",
-     "to": "16:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Møt noen av sjørøverne",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
      "from": "13:00",
      "to": "13:15"
-    },
-    {
-     "from": "15:00",
-     "to": "15:15"
-    },
-    {
-     "from": "17:00",
-     "to": "17:15"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Tante Sofie er røvet",
+   "title": "Jubileumstorget: Møt og hils på innbyggerne i Kardemomme by",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
     {
-     "from": "13:00",
-     "to": "13:15"
+     "from": "13:45",
+     "to": "14:00"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Møt innbyggerne på KuToppen",
-   "venue": "KuToppen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "14:00",
-     "to": "14:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Kaptein Sabeltann og hans menn drar på tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "14:00",
-     "to": "14:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Røverne røver trikken og arresteres",
+   "title": "Jubileumstorget: Besøk fra innbyggerne i Kardemomme by",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
@@ -598,7 +584,20 @@
    "weather": false
   },
   {
-   "title": "Det brenner i tårnet til Tobias",
+   "title": "Møt Klara på KuToppen",
+   "venue": "KuToppen",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "14:00",
+     "to": "14:20"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Jubileumstorget: Møt og hils på Klara fra KuToppen",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
@@ -611,13 +610,78 @@
    "weather": false
   },
   {
-   "title": "Byfest med folk og røvere i Kardemomme by",
+   "title": "Tante Sofie er forferdet",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "15:00",
+     "to": "15:15"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Jubileumstorget: Besøk fra KuToppen",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "15:15",
+     "to": "15:30"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Politimester Bastian utfører politiarbeid, og tante Sofie er rystet",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
     {
      "from": "16:00",
+     "to": "16:15"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Her og nå",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "16:15",
      "to": "16:30"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Jubileumstorget: Besøk fra Kaptein Sabeltann og hans mannskap",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "16:45",
+     "to": "16:55"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Jubileumstorget: Møt og hils på Kaptein Sabeltann og hans mannskap",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "16:55",
+     "to": "17:10"
     }
    ],
    "ticket": false,
@@ -629,8 +693,8 @@
    "category": "Underholdning",
    "times": [
     {
-     "from": "18:00",
-     "to": "18:20"
+     "from": "17:30",
+     "to": "17:50"
     }
    ],
    "ticket": false,
@@ -642,8 +706,8 @@
    "category": "Underholdning",
    "times": [
     {
-     "from": "18:30",
-     "to": "18:50"
+     "from": "18:00",
+     "to": "18:15"
     }
    ],
    "ticket": false,
@@ -661,28 +725,28 @@
    ],
    "ticket": true,
    "weather": true
-  },
-  {
-   "title": "Kaptein Sabeltann og jakten på Den Magiske Diamant",
-   "venue": "Kjuttaviga",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "23:00",
-     "to": "00:30"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   }
  ],
  "hours": {
-  "dyreparken": "09:00–19:00",
+  "dyreparken": "10:00–19:00",
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-08-05",
+  "date": "2026-08-06",
   "entries": [
+   {
+    "title": "Klatremustur i Hakkebakkeskogen",
+    "venue": "Hakkebakkeskogen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:00",
+      "to": "15:30"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
    {
     "title": "Jubileumstorget: Besøk fra Dyrene i Hakkebakkeskogen",
     "venue": "Dyreparken",
@@ -718,19 +782,6 @@
     "weather": false
    },
    {
-    "title": "Klatremustur i Hakkebakkeskogen",
-    "venue": "Hakkebakkeskogen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "12:00",
-      "to": "16:30"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
     "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Den gang da",
     "venue": "Dyreparken",
     "category": "Underholdning",
@@ -751,19 +802,6 @@
      {
       "from": "14:00",
       "to": "14:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Kaptein Sabeltann og hans menn drar på tokt",
-    "venue": "Kaptein Sabeltanns Verden",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "14:00",
-      "to": "14:20"
      }
     ],
     "ticket": false,
@@ -814,8 +852,8 @@
     "category": "Underholdning",
     "times": [
      {
-      "from": "17:15",
-      "to": "17:25"
+      "from": "16:45",
+      "to": "16:55"
      }
     ],
     "ticket": false,
@@ -835,19 +873,6 @@
     "weather": true
    },
    {
-    "title": "Dyrene på Savannen",
-    "venue": "Afrika",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "09:30",
-      "to": "09:45"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
     "title": "Tiger",
     "venue": "Asia",
     "category": "Dyrepresentasjoner",
@@ -855,6 +880,19 @@
      {
       "from": "10:15",
       "to": "10:30"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Dyrene på Savannen",
+    "venue": "Afrika",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "10:30",
+      "to": "10:45"
      }
     ],
     "ticket": false,
@@ -953,6 +991,10 @@
      {
       "from": "12:30",
       "to": "12:45"
+     },
+     {
+      "from": "15:30",
+      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -989,7 +1031,7 @@
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1013,19 +1055,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Gaupe",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:30",
-      "to": "15:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1127,6 +1156,19 @@
     "weather": true
    },
    {
+    "title": "Klatremustur i Hakkebakkeskogen",
+    "venue": "Hakkebakkeskogen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:00",
+      "to": "15:30"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
     "title": "Jubileumstorget: Møt og hils på Dyrene i Hakkebakkeskogen",
     "venue": "Dyreparken",
     "category": "Underholdning",
@@ -1142,6 +1184,19 @@
    {
     "title": "Jubileumstorget: Besøk fra Dyrene i Hakkebakkeskogen",
     "venue": "Dyreparken",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:30",
+      "to": "11:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Kaptein Sabeltann og hans menn vender hjem fra tokt",
+    "venue": "Kaptein Sabeltanns Verden",
     "category": "Underholdning",
     "times": [
      {
@@ -1174,19 +1229,6 @@
     "weather": false
    },
    {
-    "title": "Klatremustur i Hakkebakkeskogen",
-    "venue": "Hakkebakkeskogen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "12:00",
-      "to": "16:30"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
     "title": "Møt tante Sofie og politimester Bastian i Kardemomme by",
     "venue": "Dyreparken",
     "category": "Underholdning",
@@ -1213,23 +1255,6 @@
     "weather": false
    },
    {
-    "title": "Kaptein Sabeltann og hans menn vender hjem fra tokt",
-    "venue": "Kaptein Sabeltanns Verden",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "12:00",
-      "to": "12:15"
-     },
-     {
-      "from": "16:00",
-      "to": "16:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Den gang da",
     "venue": "Dyreparken",
     "category": "Underholdning",
@@ -1237,27 +1262,6 @@
      {
       "from": "13:00",
       "to": "13:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Møt noen av sjørøverne",
-    "venue": "Kaptein Sabeltanns Verden",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "13:00",
-      "to": "13:15"
-     },
-     {
-      "from": "15:00",
-      "to": "15:15"
-     },
-     {
-      "from": "17:00",
-      "to": "17:15"
      }
     ],
     "ticket": false,
@@ -1305,19 +1309,6 @@
    {
     "title": "Møt Klara på KuToppen",
     "venue": "KuToppen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "14:00",
-      "to": "14:20"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Kaptein Sabeltann og hans menn drar på tokt",
-    "venue": "Kaptein Sabeltanns Verden",
     "category": "Underholdning",
     "times": [
      {
@@ -1399,8 +1390,8 @@
     "category": "Underholdning",
     "times": [
      {
-      "from": "17:15",
-      "to": "17:25"
+      "from": "16:45",
+      "to": "16:55"
      }
     ],
     "ticket": false,
@@ -1412,8 +1403,8 @@
     "category": "Underholdning",
     "times": [
      {
-      "from": "17:25",
-      "to": "17:40"
+      "from": "16:55",
+      "to": "17:10"
      }
     ],
     "ticket": false,
@@ -1425,8 +1416,8 @@
     "category": "Underholdning",
     "times": [
      {
-      "from": "18:00",
-      "to": "18:20"
+      "from": "17:30",
+      "to": "17:50"
      }
     ],
     "ticket": false,
@@ -1438,8 +1429,8 @@
     "category": "Underholdning",
     "times": [
      {
-      "from": "18:30",
-      "to": "18:50"
+      "from": "18:00",
+      "to": "18:15"
      }
     ],
     "ticket": false,
@@ -1459,6 +1450,9 @@
     "weather": true
    }
   ],
-  "hours": null
+  "hours": {
+   "dyreparken": "10:00–19:00",
+   "badelandet": "10:00–19:00"
+  }
  }
 }
