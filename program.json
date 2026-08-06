@@ -1,7 +1,20 @@
 {
- "date": "2026-08-05",
- "updated": "2026-08-05T06:05:44.015Z",
+ "date": "2026-08-06",
+ "updated": "2026-08-06T06:09:17.458Z",
  "entries": [
+  {
+   "title": "Klatremustur i Hakkebakkeskogen",
+   "venue": "Hakkebakkeskogen",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "11:00",
+     "to": "15:30"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
   {
    "title": "Jubileumstorget: Besøk fra Dyrene i Hakkebakkeskogen",
    "venue": "Dyreparken",
@@ -25,8 +38,8 @@
      "to": "12:20"
     },
     {
-     "from": "13:00",
-     "to": "13:20"
+     "from": "13:15",
+     "to": "13:35"
     },
     {
      "from": "15:00",
@@ -35,19 +48,6 @@
    ],
    "ticket": false,
    "weather": false
-  },
-  {
-   "title": "Klatremustur i Hakkebakkeskogen",
-   "venue": "Hakkebakkeskogen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "16:30"
-    }
-   ],
-   "ticket": false,
-   "weather": true
   },
   {
    "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Den gang da",
@@ -259,6 +259,10 @@
     {
      "from": "12:30",
      "to": "12:45"
+    },
+    {
+     "from": "15:30",
+     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -295,7 +299,7 @@
    "weather": true
   },
   {
-   "title": "Ulv",
+   "title": "Jerv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -319,19 +323,6 @@
    ],
    "ticket": false,
    "weather": true
-  },
-  {
-   "title": "Gaupe",
-   "venue": "Nordisk Villmark",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "15:30",
-     "to": "15:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -433,6 +424,19 @@
    "weather": true
   },
   {
+   "title": "Klatremustur i Hakkebakkeskogen",
+   "venue": "Hakkebakkeskogen",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "11:00",
+     "to": "15:30"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
    "title": "Jubileumstorget: Møt og hils på Dyrene i Hakkebakkeskogen",
    "venue": "Dyreparken",
    "category": "Underholdning",
@@ -481,8 +485,8 @@
      "to": "12:20"
     },
     {
-     "from": "13:00",
-     "to": "13:20"
+     "from": "13:15",
+     "to": "13:35"
     },
     {
      "from": "15:00",
@@ -491,19 +495,6 @@
    ],
    "ticket": false,
    "weather": false
-  },
-  {
-   "title": "Klatremustur i Hakkebakkeskogen",
-   "venue": "Hakkebakkeskogen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "16:30"
-    }
-   ],
-   "ticket": false,
-   "weather": true
   },
   {
    "title": "Møt tante Sofie og politimester Bastian i Kardemomme by",
@@ -732,7 +723,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-08-06",
+  "date": "2026-08-07",
   "entries": [
    {
     "title": "Klatremustur i Hakkebakkeskogen",
@@ -770,8 +761,8 @@
       "to": "12:20"
      },
      {
-      "from": "13:00",
-      "to": "13:20"
+      "from": "13:15",
+      "to": "13:35"
      },
      {
       "from": "15:00",
@@ -991,10 +982,6 @@
      {
       "from": "12:30",
       "to": "12:45"
-     },
-     {
-      "from": "15:30",
-      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1031,7 +1018,7 @@
     "weather": true
    },
    {
-    "title": "Jerv",
+    "title": "Ulv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1055,6 +1042,19 @@
     ],
     "ticket": false,
     "weather": true
+   },
+   {
+    "title": "Gaupe",
+    "venue": "Nordisk Villmark",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "15:30",
+      "to": "15:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1217,8 +1217,8 @@
       "to": "12:20"
      },
      {
-      "from": "13:00",
-      "to": "13:20"
+      "from": "13:15",
+      "to": "13:35"
      },
      {
       "from": "15:00",
