@@ -1,6 +1,6 @@
 {
- "date": "2026-08-06",
- "updated": "2026-08-06T06:09:17.458Z",
+ "date": "2026-08-07",
+ "updated": "2026-08-07T05:11:24.336Z",
  "entries": [
   {
    "title": "Klatremustur i Hakkebakkeskogen",
@@ -259,10 +259,6 @@
     {
      "from": "12:30",
      "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
     }
    ],
    "ticket": false,
@@ -299,7 +295,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -323,6 +319,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:30",
+     "to": "15:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Asiatiske aper",
@@ -723,7 +732,7 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-08-07",
+  "date": "2026-08-08",
   "entries": [
    {
     "title": "Klatremustur i Hakkebakkeskogen",
@@ -982,6 +991,10 @@
      {
       "from": "12:30",
       "to": "12:45"
+     },
+     {
+      "from": "15:30",
+      "to": "15:45"
      }
     ],
     "ticket": false,
@@ -1018,7 +1031,7 @@
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -1042,19 +1055,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Gaupe",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:30",
-      "to": "15:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Asiatiske aper",
@@ -1450,9 +1450,6 @@
     "weather": true
    }
   ],
-  "hours": {
-   "dyreparken": "10:00–19:00",
-   "badelandet": "10:00–19:00"
-  }
+  "hours": null
  }
 }
