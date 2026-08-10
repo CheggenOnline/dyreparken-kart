@@ -1,6 +1,6 @@
 {
- "date": "2026-08-09",
- "updated": "2026-08-09T04:43:55.946Z",
+ "date": "2026-08-10",
+ "updated": "2026-08-10T05:03:19.955Z",
  "entries": [
   {
    "title": "Klatremustur i Hakkebakkeskogen",
@@ -23,27 +23,6 @@
     {
      "from": "11:30",
      "to": "11:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Klaras mini-superkonsert",
-   "venue": "KuToppen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "12:20"
-    },
-    {
-     "from": "13:15",
-     "to": "13:35"
-    },
-    {
-     "from": "15:00",
-     "to": "15:20"
     }
    ],
    "ticket": false,
@@ -128,149 +107,21 @@
    "weather": false
   },
   {
-   "title": "Sirkus Jesper",
-   "venue": "Dyreparken",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "17:30",
-     "to": "18:40"
-    }
-   ],
-   "ticket": true,
-   "weather": true
-  },
-  {
-   "title": "Tiger",
-   "venue": "Asia",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "10:15",
-     "to": "10:30"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Dyrene på Savannen",
-   "venue": "Afrika",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "10:45"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Dåhjort",
-   "venue": "Dyreparken",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "10:40"
-    },
-    {
-     "from": "14:45",
-     "to": "14:55"
-    },
-    {
-     "from": "16:30",
-     "to": "16:40"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Edderkoppape",
-   "venue": "Jungelen",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "10:45"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Løve",
-   "venue": "Afrika",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "11:00",
-     "to": "11:15"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Ringhalelemur",
-   "venue": "Jungelen",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "11:00",
-     "to": "11:15"
-    },
-    {
-     "from": "12:30",
-     "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Ekornape",
-   "venue": "Jungelen",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "11:30",
-     "to": "11:40"
-    },
-    {
-     "from": "14:30",
-     "to": "14:40"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Oter",
+   "title": "Gaupe",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
     {
-     "from": "12:30",
-     "to": "12:45"
-    },
-    {
-     "from": "15:30",
-     "to": "15:45"
+     "from": "12:15",
+     "to": "12:30"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Orangutang (værforbehold)",
-   "venue": "Asia",
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -282,69 +133,13 @@
    "weather": true
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "13:30",
-     "to": "13:50"
-    },
-    {
-     "from": "17:30",
-     "to": "17:50"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Jerv",
-   "venue": "Nordisk Villmark",
+   "title": "Løve",
+   "venue": "Afrika",
    "category": "Dyrepresentasjoner",
    "times": [
     {
      "from": "14:00",
      "to": "14:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Gepard",
-   "venue": "Afrika",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "15:00",
-     "to": "15:15"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Asiatiske aper",
-   "venue": "Asia",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "16:00",
-     "to": "16:15"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Surikat",
-   "venue": "Afrika",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "17:00",
-     "to": "17:15"
     }
    ],
    "ticket": false,
@@ -442,28 +237,7 @@
    "weather": false
   },
   {
-   "title": "Klaras mini-superkonsert",
-   "venue": "KuToppen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "12:20"
-    },
-    {
-     "from": "13:15",
-     "to": "13:35"
-    },
-    {
-     "from": "15:00",
-     "to": "15:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Møt politimester Bastian i Kardemomme by",
+   "title": "Møt tante Sofie og politimester Bastian i Kardemomme by",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
@@ -482,7 +256,7 @@
    "times": [
     {
      "from": "12:00",
-     "to": "18:15"
+     "to": "17:40"
     }
    ],
    "ticket": false,
@@ -541,20 +315,20 @@
    "weather": false
   },
   {
-   "title": "Møt Klara på KuToppen",
-   "venue": "KuToppen",
+   "title": "Jubileumstorget: Møt og hils på Klara fra KuToppen",
+   "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
     {
-     "from": "14:00",
-     "to": "14:20"
+     "from": "15:00",
+     "to": "15:15"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Jubileumstorget: Møt og hils på Klara fra KuToppen",
+   "title": "Tante Sofie er forferdet",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
@@ -656,27 +430,14 @@
    ],
    "ticket": false,
    "weather": false
-  },
-  {
-   "title": "Sirkus Jesper",
-   "venue": "Dyreparken",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "17:30",
-     "to": "18:40"
-    }
-   ],
-   "ticket": true,
-   "weather": true
   }
  ],
  "hours": {
-  "dyreparken": "10:00–19:00",
+  "dyreparken": "10:00–18:00",
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-08-10",
+  "date": "2026-08-11",
   "entries": [
    {
     "title": "Klatremustur i Hakkebakkeskogen",
@@ -783,7 +544,33 @@
     "weather": false
    },
    {
-    "title": "Gaupe",
+    "title": "Sirkus Jesper",
+    "venue": "Dyreparken",
+    "category": "Kveldsforestillinger",
+    "times": [
+     {
+      "from": "17:30",
+      "to": "18:40"
+     }
+    ],
+    "ticket": true,
+    "weather": true
+   },
+   {
+    "title": "Orangutang (værforbehold)",
+    "venue": "Asia",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "10:30",
+      "to": "10:45"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Oter",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -796,8 +583,8 @@
     "weather": false
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Edderkoppape",
+    "venue": "Jungelen",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -809,13 +596,26 @@
     "weather": true
    },
    {
-    "title": "Løve",
-    "venue": "Afrika",
+    "title": "Tiger",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
       "from": "14:00",
       "to": "14:15"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Gepard",
+    "venue": "Afrika",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "14:45",
+      "to": "15:00"
      }
     ],
     "ticket": false,
@@ -1106,6 +906,19 @@
     ],
     "ticket": false,
     "weather": false
+   },
+   {
+    "title": "Sirkus Jesper",
+    "venue": "Dyreparken",
+    "category": "Kveldsforestillinger",
+    "times": [
+     {
+      "from": "17:30",
+      "to": "18:40"
+     }
+    ],
+    "ticket": true,
+    "weather": true
    }
   ],
   "hours": null
