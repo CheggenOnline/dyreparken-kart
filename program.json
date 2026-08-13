@@ -1,111 +1,7 @@
 {
- "date": "2026-08-12",
- "updated": "2026-08-12T05:12:25.452Z",
+ "date": "2026-08-13",
+ "updated": "2026-08-13T05:16:18.550Z",
  "entries": [
-  {
-   "title": "Klatremustur i Hakkebakkeskogen",
-   "venue": "Hakkebakkeskogen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:00",
-     "to": "15:30"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Jubileumstorget: Besøk fra Dyrene i Hakkebakkeskogen",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:30",
-     "to": "11:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Den gang da",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "13:00",
-     "to": "13:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Besøk fra innbyggerne i Kardemomme by",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "14:00",
-     "to": "14:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Besøk fra KuToppen",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "15:15",
-     "to": "15:30"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Politimester Bastian utfører politiarbeid, og tante Sofie er rystet",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "16:00",
-     "to": "16:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Her og nå",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "16:15",
-     "to": "16:30"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Besøk fra Kaptein Sabeltann og hans mannskap",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "16:45",
-     "to": "16:55"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
   {
    "title": "Sirkus Jesper",
    "venue": "Dyreparken",
@@ -120,8 +16,8 @@
    "weather": true
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Orangutang (værforbehold)",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -133,7 +29,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -159,8 +55,8 @@
    "weather": true
   },
   {
-   "title": "Tiger",
-   "venue": "Asia",
+   "title": "Løve",
+   "venue": "Afrika",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -172,8 +68,8 @@
    "weather": true
   },
   {
-   "title": "Gepard",
-   "venue": "Afrika",
+   "title": "Kamel",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -182,7 +78,7 @@
     }
    ],
    "ticket": false,
-   "weather": true
+   "weather": false
   },
   {
    "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
@@ -232,260 +128,13 @@
    "weather": false
   },
   {
-   "title": "Trikkefører Syversen klargjør trikken (for boende gjester i Kardemomme by)",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "09:30",
-     "to": "09:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Trikkefører Syversen kjører trikken",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "10:00",
-     "to": "18:00"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Klatremustur i Hakkebakkeskogen",
-   "venue": "Hakkebakkeskogen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:00",
-     "to": "15:30"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Jubileumstorget: Møt og hils på Dyrene i Hakkebakkeskogen",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:15",
-     "to": "11:30"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Kaptein Sabeltann og hans menn vender hjem fra tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:30",
-     "to": "11:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Besøk fra Dyrene i Hakkebakkeskogen",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:30",
-     "to": "11:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Møt tante Sofie og politimester Bastian i Kardemomme by",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "12:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Bli med Den Sorte Dame på tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "17:40"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Den gang da",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "13:00",
-     "to": "13:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Politimester Bastian ønsker alle velkommen på torvet",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "13:00",
-     "to": "13:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Møt og hils på innbyggerne i Kardemomme by",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "13:45",
-     "to": "14:00"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Besøk fra innbyggerne i Kardemomme by",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "14:00",
-     "to": "14:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Møt og hils på Klara fra KuToppen",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "15:00",
-     "to": "15:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Tante Sofie er forferdet",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "15:00",
-     "to": "15:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Besøk fra KuToppen",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "15:15",
-     "to": "15:30"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Politimester Bastian utfører politiarbeid, og tante Sofie er rystet",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "16:00",
-     "to": "16:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Jubileumsshow med Jubelteamet - Her og nå",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "16:15",
-     "to": "16:30"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Besøk fra Kaptein Sabeltann og hans mannskap",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "16:45",
-     "to": "16:55"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Jubileumstorget: Møt og hils på Kaptein Sabeltann og hans mannskap",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "16:55",
-     "to": "17:10"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
    "title": "Møt sjørøvere i Abra Havn (For boende gjester i Abra Havn)",
    "venue": "Abra Havn",
    "category": "Underholdning",
    "times": [
     {
-     "from": "17:30",
-     "to": "17:50"
+     "from": "18:00",
+     "to": "18:30"
     }
    ],
    "ticket": false,
@@ -497,8 +146,8 @@
    "category": "Underholdning",
    "times": [
     {
-     "from": "18:00",
-     "to": "18:15"
+     "from": "18:30",
+     "to": "18:50"
     }
    ],
    "ticket": false,
@@ -519,11 +168,11 @@
   }
  ],
  "hours": {
-  "dyreparken": "10:00–18:00",
-  "badelandet": "10:00–19:00"
+  "dyreparken": "10:00–17:00",
+  "badelandet": "15:00–19:30"
  },
  "tomorrow": {
-  "date": "2026-08-13",
+  "date": "2026-08-14",
   "entries": [
    {
     "title": "Sirkus Jesper",
@@ -539,20 +188,24 @@
     "weather": true
    },
    {
-    "title": "Orangutang (værforbehold)",
-    "venue": "Asia",
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
       "from": "10:30",
       "to": "10:45"
+     },
+     {
+      "from": "15:00",
+      "to": "15:15"
      }
     ],
     "ticket": false,
     "weather": true
    },
    {
-    "title": "Ulv",
+    "title": "Oter",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -578,7 +231,7 @@
     "weather": true
    },
    {
-    "title": "Løve",
+    "title": "Gepard",
     "venue": "Afrika",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -589,19 +242,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Kamel",
-    "venue": "Dyreparken",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "14:45",
-      "to": "15:00"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
@@ -632,6 +272,19 @@
      {
       "from": "19:30",
       "to": "19:50"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Vekking i Abra Havn (For boende gjester i Abra Havn)",
+    "venue": "Abra Havn",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "08:00",
+      "to": "08:15"
      }
     ],
     "ticket": false,
@@ -677,6 +330,9 @@
     "weather": true
    }
   ],
-  "hours": null
+  "hours": {
+   "dyreparken": "10:00–17:00",
+   "badelandet": "15:00–19:30"
+  }
  }
 }
