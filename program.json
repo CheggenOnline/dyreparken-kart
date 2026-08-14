@@ -1,6 +1,6 @@
 {
- "date": "2026-08-13",
- "updated": "2026-08-13T05:16:18.550Z",
+ "date": "2026-08-14",
+ "updated": "2026-08-14T05:13:30.189Z",
  "entries": [
   {
    "title": "Sirkus Jesper",
@@ -16,20 +16,7 @@
    "weather": true
   },
   {
-   "title": "Orangutang (værforbehold)",
-   "venue": "Asia",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "10:45"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Ulv",
+   "title": "Oter",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -55,7 +42,7 @@
    "weather": true
   },
   {
-   "title": "Løve",
+   "title": "Gepard",
    "venue": "Afrika",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -68,7 +55,7 @@
    "weather": true
   },
   {
-   "title": "Kamel",
+   "title": "Sjimpanse",
    "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -78,7 +65,7 @@
     }
    ],
    "ticket": false,
-   "weather": false
+   "weather": true
   },
   {
    "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
@@ -172,8 +159,59 @@
   "badelandet": "15:00–19:30"
  },
  "tomorrow": {
-  "date": "2026-08-14",
+  "date": "2026-08-15",
   "entries": [
+   {
+    "title": "Klatremustur i Hakkebakkeskogen",
+    "venue": "Hakkebakkeskogen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:00",
+      "to": "15:30"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Den Sorte Dame vender hjem fra tokt",
+    "venue": "Kaptein Sabeltanns Verden",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:30",
+      "to": "11:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt tante Sofie i Kardemomme by",
+    "venue": "Dyreparken",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:00",
+      "to": "12:20"
+     },
+     {
+      "from": "13:00",
+      "to": "13:20"
+     },
+     {
+      "from": "14:00",
+      "to": "14:20"
+     },
+     {
+      "from": "15:00",
+      "to": "15:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
    {
     "title": "Sirkus Jesper",
     "venue": "Dyreparken",
@@ -188,24 +226,20 @@
     "weather": true
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Løve",
+    "venue": "Afrika",
     "category": "Dyrepresentasjoner",
     "times": [
      {
       "from": "10:30",
       "to": "10:45"
-     },
-     {
-      "from": "15:00",
-      "to": "15:15"
      }
     ],
     "ticket": false,
     "weather": true
    },
    {
-    "title": "Oter",
+    "title": "Gaupe",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -218,8 +252,8 @@
     "weather": false
    },
    {
-    "title": "Edderkoppape",
-    "venue": "Jungelen",
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -231,13 +265,26 @@
     "weather": true
    },
    {
-    "title": "Gepard",
-    "venue": "Afrika",
+    "title": "Tiger",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
       "from": "14:00",
       "to": "14:15"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Edderkoppape",
+    "venue": "Jungelen",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "14:45",
+      "to": "15:00"
      }
     ],
     "ticket": false,
@@ -291,26 +338,90 @@
     "weather": false
    },
    {
-    "title": "Møt sjørøvere i Abra Havn (For boende gjester i Abra Havn)",
-    "venue": "Abra Havn",
+    "title": "Trikkefører Syversen klargjør trikken (for boende gjester i Kardemomme by)",
+    "venue": "Dyreparken",
     "category": "Underholdning",
     "times": [
      {
-      "from": "18:00",
-      "to": "18:30"
+      "from": "09:30",
+      "to": "09:45"
      }
     ],
     "ticket": false,
     "weather": false
    },
    {
-    "title": "Flaggfiring på Kongens Torg (For boende gjester i Abra Havn)",
-    "venue": "Abra Havn",
+    "title": "Trikkefører Syversen kjører trikken",
+    "venue": "Dyreparken",
     "category": "Underholdning",
     "times": [
      {
-      "from": "18:30",
-      "to": "18:50"
+      "from": "10:00",
+      "to": "18:00"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Klatremustur i Hakkebakkeskogen",
+    "venue": "Hakkebakkeskogen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:00",
+      "to": "15:30"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Den Sorte Dame vender hjem fra tokt",
+    "venue": "Kaptein Sabeltanns Verden",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:30",
+      "to": "11:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt tante Sofie i Kardemomme by",
+    "venue": "Dyreparken",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:00",
+      "to": "12:20"
+     },
+     {
+      "from": "13:00",
+      "to": "13:20"
+     },
+     {
+      "from": "14:00",
+      "to": "14:20"
+     },
+     {
+      "from": "15:00",
+      "to": "15:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Bli med Den Sorte Dame på tokt",
+    "venue": "Kaptein Sabeltanns Verden",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:00",
+      "to": "17:40"
      }
     ],
     "ticket": false,
@@ -330,9 +441,6 @@
     "weather": true
    }
   ],
-  "hours": {
-   "dyreparken": "10:00–17:00",
-   "badelandet": "15:00–19:30"
-  }
+  "hours": null
  }
 }
