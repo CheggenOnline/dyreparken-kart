@@ -1,86 +1,9 @@
 {
- "date": "2026-08-16",
- "updated": "2026-08-16T04:06:27.157Z",
+ "date": "2026-08-17",
+ "updated": "2026-08-17T04:10:23.431Z",
  "entries": [
   {
-   "title": "Klatremustur i Hakkebakkeskogen",
-   "venue": "Hakkebakkeskogen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:00",
-     "to": "15:30"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Den Sorte Dame vender hjem fra tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:30",
-     "to": "11:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Møt tante Sofie i Kardemomme by",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "12:20"
-    },
-    {
-     "from": "13:00",
-     "to": "13:20"
-    },
-    {
-     "from": "14:00",
-     "to": "14:20"
-    },
-    {
-     "from": "15:00",
-     "to": "15:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Sirkus Jesper",
-   "venue": "Dyreparken",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "17:30",
-     "to": "18:40"
-    }
-   ],
-   "ticket": true,
-   "weather": true
-  },
-  {
-   "title": "Løve",
-   "venue": "Afrika",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "10:45"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Oter",
+   "title": "Gaupe",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -93,8 +16,8 @@
    "weather": false
   },
   {
-   "title": "Orangutang (værforbehold)",
-   "venue": "Asia",
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -106,8 +29,8 @@
    "weather": true
   },
   {
-   "title": "Tiger",
-   "venue": "Asia",
+   "title": "Løve",
+   "venue": "Afrika",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -117,159 +40,30 @@
    ],
    "ticket": false,
    "weather": true
-  },
-  {
-   "title": "Edderkoppape",
-   "venue": "Jungelen",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "14:45",
-     "to": "15:00"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "15:00",
-     "to": "15:15"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Vekking i Abra Havn (For boende gjester i Abra Havn)",
-   "venue": "Abra Havn",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "08:00",
-     "to": "08:15"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Trikkefører Syversen klargjør trikken (for boende gjester i Kardemomme by)",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "09:30",
-     "to": "09:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Trikkefører Syversen kjører trikken",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "10:00",
-     "to": "18:00"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Klatremustur i Hakkebakkeskogen",
-   "venue": "Hakkebakkeskogen",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:00",
-     "to": "15:30"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Den Sorte Dame vender hjem fra tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "11:30",
-     "to": "11:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Møt tante Sofie i Kardemomme by",
-   "venue": "Dyreparken",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "12:20"
-    },
-    {
-     "from": "13:00",
-     "to": "13:20"
-    },
-    {
-     "from": "14:00",
-     "to": "14:20"
-    },
-    {
-     "from": "15:00",
-     "to": "15:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Bli med Den Sorte Dame på tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "17:40"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Sirkus Jesper",
-   "venue": "Dyreparken",
-   "category": "Kveldsforestillinger",
-   "times": [
-    {
-     "from": "17:30",
-     "to": "18:40"
-    }
-   ],
-   "ticket": true,
-   "weather": true
   }
  ],
  "hours": {
-  "dyreparken": "10:00–18:00",
-  "badelandet": "10:00–19:00"
+  "dyreparken": "10:00–16:00",
+  "badelandet": "15:00–19:30"
  },
  "tomorrow": {
-  "date": "2026-08-17",
+  "date": "2026-08-18",
   "entries": [
    {
-    "title": "Gaupe",
+    "title": "Orangutang (værforbehold)",
+    "venue": "Asia",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "10:30",
+      "to": "10:45"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Oter",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -282,8 +76,8 @@
     "weather": false
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Edderkoppape",
+    "venue": "Jungelen",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -295,13 +89,26 @@
     "weather": true
    },
    {
-    "title": "Løve",
-    "venue": "Afrika",
+    "title": "Tiger",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
       "from": "14:00",
       "to": "14:15"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Gepard",
+    "venue": "Afrika",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "14:45",
+      "to": "15:00"
      }
     ],
     "ticket": false,
