@@ -1,9 +1,22 @@
 {
- "date": "2026-08-17",
- "updated": "2026-08-17T04:10:23.431Z",
+ "date": "2026-08-18",
+ "updated": "2026-08-18T04:04:46.827Z",
  "entries": [
   {
-   "title": "Gaupe",
+   "title": "Orangutang (værforbehold)",
+   "venue": "Asia",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "10:30",
+     "to": "10:45"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Oter",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -16,8 +29,8 @@
    "weather": false
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Edderkoppape",
+   "venue": "Jungelen",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -29,13 +42,26 @@
    "weather": true
   },
   {
-   "title": "Løve",
-   "venue": "Afrika",
+   "title": "Tiger",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
      "from": "14:00",
      "to": "14:15"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Gepard",
+   "venue": "Afrika",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "14:45",
+     "to": "15:00"
     }
    ],
    "ticket": false,
@@ -47,11 +73,11 @@
   "badelandet": "15:00–19:30"
  },
  "tomorrow": {
-  "date": "2026-08-18",
+  "date": "2026-08-19",
   "entries": [
    {
-    "title": "Orangutang (værforbehold)",
-    "venue": "Asia",
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -63,7 +89,7 @@
     "weather": true
    },
    {
-    "title": "Oter",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
