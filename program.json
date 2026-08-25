@@ -1,10 +1,10 @@
 {
- "date": "2026-08-24",
- "updated": "2026-08-24T04:12:48.891Z",
+ "date": "2026-08-25",
+ "updated": "2026-08-25T04:07:11.655Z",
  "entries": [
   {
-   "title": "Dyrene på KuToppen",
-   "venue": "KuToppen",
+   "title": "Møt et av dyrene i Terrariet",
+   "venue": "Terrariet",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -16,8 +16,8 @@
    "weather": false
   },
   {
-   "title": "Chimpanzee presentation (in English)",
-   "venue": "Dyreparken",
+   "title": "Orangutan presentation (in English)",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -29,7 +29,7 @@
    "weather": true
   },
   {
-   "title": "Oter",
+   "title": "Jerv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -47,42 +47,42 @@
   "badelandet": "15:00–19:30"
  },
  "tomorrow": {
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "entries": [
    {
-    "title": "Møt et av dyrene i Terrariet",
-    "venue": "Terrariet",
+    "title": "Kamel",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
-      "from": "10:30",
-      "to": "10:45"
+      "from": "12:15",
+      "to": "12:30"
      }
     ],
     "ticket": false,
     "weather": false
    },
    {
-    "title": "Orangutan presentation (in English)",
-    "venue": "Asia",
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
       "from": "13:00",
-      "to": "13:20"
+      "to": "13:15"
      }
     ],
     "ticket": false,
     "weather": true
    },
    {
-    "title": "Jerv",
+    "title": "Wolf presentation (in English)",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
      {
       "from": "13:00",
-      "to": "13:15"
+      "to": "13:20"
      }
     ],
     "ticket": false,
