@@ -1,41 +1,41 @@
 {
- "date": "2026-08-25",
- "updated": "2026-08-25T04:07:11.655Z",
+ "date": "2026-08-26",
+ "updated": "2026-08-26T04:09:28.090Z",
  "entries": [
   {
-   "title": "Møt et av dyrene i Terrariet",
-   "venue": "Terrariet",
+   "title": "Kamel",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
-     "from": "10:30",
-     "to": "10:45"
+     "from": "12:15",
+     "to": "12:30"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Orangutan presentation (in English)",
-   "venue": "Asia",
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
      "from": "13:00",
-     "to": "13:20"
+     "to": "13:15"
     }
    ],
    "ticket": false,
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Wolf presentation (in English)",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
     {
      "from": "13:00",
-     "to": "13:15"
+     "to": "13:20"
     }
    ],
    "ticket": false,
@@ -47,24 +47,24 @@
   "badelandet": "15:00–19:30"
  },
  "tomorrow": {
-  "date": "2026-08-26",
+  "date": "2026-08-27",
   "entries": [
    {
-    "title": "Kamel",
-    "venue": "Dyreparken",
+    "title": "Møt et av dyrene i Terrariet",
+    "venue": "Terrariet",
     "category": "Dyrepresentasjoner",
     "times": [
      {
-      "from": "12:15",
-      "to": "12:30"
+      "from": "10:30",
+      "to": "10:45"
      }
     ],
     "ticket": false,
     "weather": false
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Orangutang (værforbehold)",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -74,19 +74,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Wolf presentation (in English)",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "13:00",
-      "to": "13:20"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    }
   ],
   "hours": null
