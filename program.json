@@ -1,23 +1,23 @@
 {
- "date": "2026-08-26",
- "updated": "2026-08-26T04:09:28.090Z",
+ "date": "2026-08-27",
+ "updated": "2026-08-27T14:24:31.967Z",
  "entries": [
   {
-   "title": "Kamel",
-   "venue": "Dyreparken",
+   "title": "Møt et av dyrene i Terrariet",
+   "venue": "Terrariet",
    "category": "Dyrepresentasjoner",
    "times": [
     {
-     "from": "12:15",
-     "to": "12:30"
+     "from": "10:30",
+     "to": "10:45"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Orangutang (værforbehold)",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -27,19 +27,6 @@
    ],
    "ticket": false,
    "weather": true
-  },
-  {
-   "title": "Wolf presentation (in English)",
-   "venue": "Nordisk Villmark",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "13:00",
-     "to": "13:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   }
  ],
  "hours": {
@@ -47,11 +34,11 @@
   "badelandet": "15:00–19:30"
  },
  "tomorrow": {
-  "date": "2026-08-27",
+  "date": "2026-08-28",
   "entries": [
    {
-    "title": "Møt et av dyrene i Terrariet",
-    "venue": "Terrariet",
+    "title": "Møt et dyr i Jungelhuset",
+    "venue": "Jungelen",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -63,8 +50,8 @@
     "weather": false
    },
    {
-    "title": "Orangutang (værforbehold)",
-    "venue": "Asia",
+    "title": "Oter",
+    "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -73,7 +60,7 @@
      }
     ],
     "ticket": false,
-    "weather": true
+    "weather": false
    }
   ],
   "hours": null
