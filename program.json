@@ -1,6 +1,6 @@
 {
- "date": "2026-08-29",
- "updated": "2026-08-29T10:17:33.976Z",
+ "date": "2026-08-30",
+ "updated": "2026-08-30T09:22:43.654Z",
  "entries": [
   {
    "title": "Klatremustur i Hakkebakkeskogen",
@@ -34,8 +34,8 @@
    "category": "Underholdning",
    "times": [
     {
-     "from": "12:00",
-     "to": "12:20"
+     "from": "12:30",
+     "to": "12:50"
     },
     {
      "from": "13:00",
@@ -67,7 +67,7 @@
    "weather": true
   },
   {
-   "title": "Gaupe",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -87,6 +87,19 @@
     {
      "from": "13:00",
      "to": "13:15"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:00",
+     "to": "15:15"
     }
    ],
    "ticket": false,
@@ -145,13 +158,26 @@
    "weather": false
   },
   {
+   "title": "Bli med Den Sorte Dame på tokt",
+   "venue": "Kaptein Sabeltanns Verden",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "12:00",
+     "to": "17:40"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
    "title": "Møt tante Sofie i Kardemomme by",
    "venue": "Dyreparken",
    "category": "Underholdning",
    "times": [
     {
-     "from": "12:00",
-     "to": "12:20"
+     "from": "12:30",
+     "to": "12:50"
     },
     {
      "from": "13:00",
@@ -168,19 +194,6 @@
    ],
    "ticket": false,
    "weather": false
-  },
-  {
-   "title": "Bli med Den Sorte Dame på tokt",
-   "venue": "Kaptein Sabeltanns Verden",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "12:00",
-     "to": "17:40"
-    }
-   ],
-   "ticket": false,
-   "weather": false
   }
  ],
  "hours": {
@@ -188,62 +201,11 @@
   "badelandet": "10:00–19:00"
  },
  "tomorrow": {
-  "date": "2026-08-30",
+  "date": "2026-08-31",
   "entries": [
    {
-    "title": "Klatremustur i Hakkebakkeskogen",
-    "venue": "Hakkebakkeskogen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:00",
-      "to": "15:30"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Den Sorte Dame vender hjem fra tokt",
-    "venue": "Kaptein Sabeltanns Verden",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:30",
-      "to": "11:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Møt tante Sofie i Kardemomme by",
-    "venue": "Dyreparken",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "12:00",
-      "to": "12:20"
-     },
-     {
-      "from": "13:00",
-      "to": "13:20"
-     },
-     {
-      "from": "14:00",
-      "to": "14:20"
-     },
-     {
-      "from": "15:00",
-      "to": "15:20"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Løve",
-    "venue": "Afrika",
+    "title": "Dyrene på KuToppen",
+    "venue": "KuToppen",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -252,24 +214,11 @@
      }
     ],
     "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Ulv",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "12:15",
-      "to": "12:30"
-     }
-    ],
-    "ticket": false,
     "weather": false
    },
    {
-    "title": "Tiger",
-    "venue": "Asia",
+    "title": "Oter",
+    "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -278,112 +227,12 @@
      }
     ],
     "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:00",
-      "to": "15:15"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Vekking i Abra Havn (For boende gjester i Abra Havn)",
-    "venue": "Abra Havn",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "08:00",
-      "to": "08:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Klatremustur i Hakkebakkeskogen",
-    "venue": "Hakkebakkeskogen",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:00",
-      "to": "15:30"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Trikken kjører",
-    "venue": "Dyreparken",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:00",
-      "to": "16:00"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Den Sorte Dame vender hjem fra tokt",
-    "venue": "Kaptein Sabeltanns Verden",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "11:30",
-      "to": "11:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Møt tante Sofie i Kardemomme by",
-    "venue": "Dyreparken",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "12:00",
-      "to": "12:20"
-     },
-     {
-      "from": "13:00",
-      "to": "13:20"
-     },
-     {
-      "from": "14:00",
-      "to": "14:20"
-     },
-     {
-      "from": "15:00",
-      "to": "15:20"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Bli med Den Sorte Dame på tokt",
-    "venue": "Kaptein Sabeltanns Verden",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "12:00",
-      "to": "17:40"
-     }
-    ],
-    "ticket": false,
     "weather": false
    }
   ],
-  "hours": null
+  "hours": {
+   "dyreparken": "10:00–16:00",
+   "badelandet": "15:00–19:30"
+  }
  }
 }
