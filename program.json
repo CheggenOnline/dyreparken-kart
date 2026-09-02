@@ -1,23 +1,23 @@
 {
- "date": "2026-09-01",
- "updated": "2026-09-01T08:49:11.580Z",
+ "date": "2026-09-02",
+ "updated": "2026-09-02T08:02:09.115Z",
  "entries": [
   {
-   "title": "Møt et av dyrene i Terrariet",
-   "venue": "Terrariet",
+   "title": "Kamel",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
-     "from": "10:30",
-     "to": "10:45"
+     "from": "12:15",
+     "to": "12:30"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Jerv",
-   "venue": "Nordisk Villmark",
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -26,7 +26,7 @@
     }
    ],
    "ticket": false,
-   "weather": false
+   "weather": true
   }
  ],
  "hours": {
@@ -34,24 +34,24 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-09-02",
+  "date": "2026-09-03",
   "entries": [
    {
-    "title": "Kamel",
-    "venue": "Dyreparken",
+    "title": "Møt et av dyrene i Terrariet",
+    "venue": "Terrariet",
     "category": "Dyrepresentasjoner",
     "times": [
      {
-      "from": "12:15",
-      "to": "12:30"
+      "from": "10:30",
+      "to": "10:45"
      }
     ],
     "ticket": false,
     "weather": false
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Orangutang (værforbehold)",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -63,9 +63,6 @@
     "weather": true
    }
   ],
-  "hours": {
-   "dyreparken": "10:00–16:00",
-   "badelandet": null
-  }
+  "hours": null
  }
 }
