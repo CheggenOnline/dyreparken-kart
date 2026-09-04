@@ -1,10 +1,10 @@
 {
- "date": "2026-09-03",
- "updated": "2026-09-03T08:11:51.163Z",
+ "date": "2026-09-04",
+ "updated": "2026-09-04T08:13:55.388Z",
  "entries": [
   {
-   "title": "Møt et av dyrene i Terrariet",
-   "venue": "Terrariet",
+   "title": "Møt et dyr i Jungelhuset",
+   "venue": "Jungelen",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -16,8 +16,8 @@
    "weather": false
   },
   {
-   "title": "Orangutang (værforbehold)",
-   "venue": "Asia",
+   "title": "Oter",
+   "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -26,7 +26,59 @@
     }
    ],
    "ticket": false,
-   "weather": true
+   "weather": false
+  },
+  {
+   "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
+   "venue": "Dyreparken Safarihotell",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "17:00",
+     "to": "17:20"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Dyrequiz (for boende gjester på Safarihotellet eller i Safaricampen)",
+   "venue": "Dyreparken Safarihotell",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "18:00",
+     "to": "18:20"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Møt sjørøvere i Abra Havn (For boende gjester i Abra Havn)",
+   "venue": "Abra Havn",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "18:00",
+     "to": "18:30"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Flaggfiring på Kongens Torg (For boende gjester i Abra Havn)",
+   "venue": "Abra Havn",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "18:30",
+     "to": "18:50"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   }
  ],
  "hours": {
@@ -34,11 +86,11 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-09-04",
+  "date": "2026-09-05",
   "entries": [
    {
-    "title": "Møt et dyr i Jungelhuset",
-    "venue": "Jungelen",
+    "title": "Løve",
+    "venue": "Afrika",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -47,11 +99,24 @@
      }
     ],
     "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Gaupe",
+    "venue": "Nordisk Villmark",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "12:15",
+      "to": "12:30"
+     }
+    ],
+    "ticket": false,
     "weather": false
    },
    {
-    "title": "Oter",
-    "venue": "Nordisk Villmark",
+    "title": "Tiger",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -60,7 +125,7 @@
      }
     ],
     "ticket": false,
-    "weather": false
+    "weather": true
    },
    {
     "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
@@ -83,6 +148,19 @@
      {
       "from": "18:00",
       "to": "18:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Vekking i Abra Havn (For boende gjester i Abra Havn)",
+    "venue": "Abra Havn",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "08:00",
+      "to": "08:15"
      }
     ],
     "ticket": false,
@@ -115,9 +193,6 @@
     "weather": false
    }
   ],
-  "hours": {
-   "dyreparken": "10:00–16:00",
-   "badelandet": null
-  }
+  "hours": null
  }
 }
