@@ -1,10 +1,10 @@
 {
- "date": "2026-09-06",
- "updated": "2026-09-06T08:01:28.274Z",
+ "date": "2026-09-07",
+ "updated": "2026-09-07T08:32:10.350Z",
  "entries": [
   {
-   "title": "Løve",
-   "venue": "Afrika",
+   "title": "Dyrene på KuToppen",
+   "venue": "KuToppen",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -13,24 +13,11 @@
     }
    ],
    "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Ulv",
-   "venue": "Nordisk Villmark",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "12:15",
-     "to": "12:30"
-    }
-   ],
-   "ticket": false,
    "weather": false
   },
   {
-   "title": "Tiger",
-   "venue": "Asia",
+   "title": "Oter",
+   "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -39,32 +26,19 @@
     }
    ],
    "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Vekking i Abra Havn (For boende gjester i Abra Havn)",
-   "venue": "Abra Havn",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "08:00",
-     "to": "08:15"
-    }
-   ],
-   "ticket": false,
    "weather": false
   }
  ],
  "hours": {
-  "dyreparken": "10:00–17:00",
+  "dyreparken": "10:00–16:00",
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-09-07",
+  "date": "2026-09-08",
   "entries": [
    {
-    "title": "Dyrene på KuToppen",
-    "venue": "KuToppen",
+    "title": "Møt et av dyrene i Terrariet",
+    "venue": "Terrariet",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -76,7 +50,7 @@
     "weather": false
    },
    {
-    "title": "Oter",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
