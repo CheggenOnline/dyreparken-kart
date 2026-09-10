@@ -1,10 +1,10 @@
 {
- "date": "2026-09-09",
- "updated": "2026-09-09T08:17:52.295Z",
+ "date": "2026-09-10",
+ "updated": "2026-09-10T08:17:19.126Z",
  "entries": [
   {
-   "title": "Oter",
-   "venue": "Nordisk Villmark",
+   "title": "Møt et av dyrene i Terrariet",
+   "venue": "Terrariet",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -14,6 +14,19 @@
    ],
    "ticket": false,
    "weather": false
+  },
+  {
+   "title": "Orangutang (værforbehold)",
+   "venue": "Asia",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "13:00",
+     "to": "13:15"
+    }
+   ],
+   "ticket": false,
+   "weather": true
   }
  ],
  "hours": {
@@ -21,11 +34,11 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-09-10",
+  "date": "2026-09-11",
   "entries": [
    {
-    "title": "Møt et av dyrene i Terrariet",
-    "venue": "Terrariet",
+    "title": "Møt et dyr i Jungelhuset",
+    "venue": "Jungelen",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -37,8 +50,8 @@
     "weather": false
    },
    {
-    "title": "Orangutang (værforbehold)",
-    "venue": "Asia",
+    "title": "Oter",
+    "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -47,7 +60,59 @@
      }
     ],
     "ticket": false,
-    "weather": true
+    "weather": false
+   },
+   {
+    "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
+    "venue": "Dyreparken Safarihotell",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "17:00",
+      "to": "17:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Dyrequiz (for boende gjester på Safarihotellet eller i Safaricampen)",
+    "venue": "Dyreparken Safarihotell",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "18:00",
+      "to": "18:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt sjørøvere i Abra Havn (For boende gjester i Abra Havn)",
+    "venue": "Abra Havn",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "18:00",
+      "to": "18:30"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Flaggfiring på Kongens Torg (For boende gjester i Abra Havn)",
+    "venue": "Abra Havn",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "18:30",
+      "to": "18:50"
+     }
+    ],
+    "ticket": false,
+    "weather": false
    }
   ],
   "hours": null
