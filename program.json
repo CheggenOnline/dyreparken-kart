@@ -1,10 +1,10 @@
 {
- "date": "2026-09-20",
- "updated": "2026-09-20T08:44:14.226Z",
+ "date": "2026-09-21",
+ "updated": "2026-09-21T09:10:57.832Z",
  "entries": [
   {
-   "title": "Løve",
-   "venue": "Afrika",
+   "title": "Dyrene på KuToppen",
+   "venue": "KuToppen",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -13,24 +13,11 @@
     }
    ],
    "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Ulv",
-   "venue": "Nordisk Villmark",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "12:15",
-     "to": "12:30"
-    }
-   ],
-   "ticket": false,
    "weather": false
   },
   {
-   "title": "Tiger",
-   "venue": "Asia",
+   "title": "Oter",
+   "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -39,31 +26,18 @@
     }
    ],
    "ticket": false,
-   "weather": true
+   "weather": false
   }
  ],
  "hours": {
-  "dyreparken": "10:00–17:00",
+  "dyreparken": "10:00–16:00",
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "entries": [
    {
-    "title": "Dyrene på KuToppen",
-    "venue": "KuToppen",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "10:30",
-      "to": "10:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Oter",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -74,11 +48,21 @@
     ],
     "ticket": false,
     "weather": false
+   },
+   {
+    "title": "Møt et av dyrene i Terrariet",
+    "venue": "Terrariet",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "14:00",
+      "to": "14:15"
+     }
+    ],
+    "ticket": false,
+    "weather": false
    }
   ],
-  "hours": {
-   "dyreparken": "10:00–16:00",
-   "badelandet": null
-  }
+  "hours": null
  }
 }
