@@ -1,23 +1,23 @@
 {
- "date": "2026-09-23",
- "updated": "2026-09-23T08:44:18.317Z",
+ "date": "2026-09-24",
+ "updated": "2026-09-24T08:38:03.753Z",
  "entries": [
   {
-   "title": "Kamel",
-   "venue": "Dyreparken",
+   "title": "Møt et av dyrene i Terrariet",
+   "venue": "Terrariet",
    "category": "Dyrepresentasjoner",
    "times": [
     {
-     "from": "12:15",
-     "to": "12:30"
+     "from": "10:30",
+     "to": "10:45"
     }
    ],
    "ticket": false,
    "weather": false
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Orangutang (værforbehold)",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -34,11 +34,11 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "entries": [
    {
-    "title": "Møt et av dyrene i Terrariet",
-    "venue": "Terrariet",
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -47,11 +47,11 @@
      }
     ],
     "ticket": false,
-    "weather": false
+    "weather": true
    },
    {
-    "title": "Orangutang (værforbehold)",
-    "venue": "Asia",
+    "title": "Oter",
+    "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -60,7 +60,85 @@
      }
     ],
     "ticket": false,
-    "weather": true
+    "weather": false
+   },
+   {
+    "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
+    "venue": "Dyreparken Safarihotell",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "17:00",
+      "to": "17:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Dyrequiz (for boende gjester på Safarihotellet eller i Safaricampen)",
+    "venue": "Dyreparken Safarihotell",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "18:00",
+      "to": "18:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Glambek sjekker inn gjester (For boende på Glambeks Hvilested)",
+    "venue": "Dyreparken",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "16:00",
+      "to": "16:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt sjørøvere i Abra Havn (For boende gjester i Abra Havn)",
+    "venue": "Abra Havn",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "18:00",
+      "to": "18:30"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Flaggfiring på Kongens Torg (For boende gjester i Abra Havn)",
+    "venue": "Abra Havn",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "18:30",
+      "to": "18:50"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Glambeks dødsbra kveldsunderholdning (For boende på Glambeks Hvilested)",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "19:45",
+      "to": "20:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
    }
   ],
   "hours": null
