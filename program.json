@@ -1,10 +1,10 @@
 {
- "date": "2026-09-24",
- "updated": "2026-09-24T08:38:03.753Z",
+ "date": "2026-09-25",
+ "updated": "2026-09-25T08:59:05.296Z",
  "entries": [
   {
-   "title": "Møt et av dyrene i Terrariet",
-   "venue": "Terrariet",
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -13,11 +13,11 @@
     }
    ],
    "ticket": false,
-   "weather": false
+   "weather": true
   },
   {
-   "title": "Orangutang (værforbehold)",
-   "venue": "Asia",
+   "title": "Oter",
+   "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -26,7 +26,85 @@
     }
    ],
    "ticket": false,
-   "weather": true
+   "weather": false
+  },
+  {
+   "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
+   "venue": "Dyreparken Safarihotell",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "17:00",
+     "to": "17:20"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Dyrequiz (for boende gjester på Safarihotellet eller i Safaricampen)",
+   "venue": "Dyreparken Safarihotell",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "18:00",
+     "to": "18:20"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Glambek sjekker inn gjester (For boende på Glambeks Hvilested)",
+   "venue": "Dyreparken",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "16:00",
+     "to": "16:45"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Møt sjørøvere i Abra Havn (For boende gjester i Abra Havn)",
+   "venue": "Abra Havn",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "18:00",
+     "to": "18:30"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Flaggfiring på Kongens Torg (For boende gjester i Abra Havn)",
+   "venue": "Abra Havn",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "18:30",
+     "to": "18:50"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Glambeks dødsbra kveldsunderholdning (For boende på Glambeks Hvilested)",
+   "venue": "Skumle dager",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "19:45",
+     "to": "20:00"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   }
  ],
  "hours": {
@@ -34,11 +112,122 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-09-25",
+  "date": "2026-09-26",
   "entries": [
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Klaras Bølleshow på KuToppen",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:00",
+      "to": "12:25"
+     },
+     {
+      "from": "13:00",
+      "to": "13:25"
+     },
+     {
+      "from": "14:00",
+      "to": "14:25"
+     },
+     {
+      "from": "15:00",
+      "to": "15:25"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Estragons verden - Rottefangeren fra Sorø (egen forestillingsbillett)",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "13:00",
+      "to": "13:40"
+     },
+     {
+      "from": "14:30",
+      "to": "15:10"
+     },
+     {
+      "from": "16:00",
+      "to": "16:40"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Sorgene blør (åpningsshow)",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:00",
+      "to": "17:10"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Damnanger",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:10",
+      "to": "22:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "M.O.R.",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:10",
+      "to": "22:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Skjalgs Monsterspotting",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:15",
+      "to": "22:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Besettelsen (avslutningsshow)",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "21:00",
+      "to": "21:15"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Løve",
+    "venue": "Afrika",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -50,8 +239,21 @@
     "weather": true
    },
    {
-    "title": "Oter",
+    "title": "Gaupe",
     "venue": "Nordisk Villmark",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "12:15",
+      "to": "12:30"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -60,7 +262,46 @@
      }
     ],
     "ticket": false,
-    "weather": false
+    "weather": true
+   },
+   {
+    "title": "Surikat",
+    "venue": "Afrika",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "13:30",
+      "to": "13:45"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Tiger",
+    "venue": "Asia",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "14:00",
+      "to": "14:15"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Edderkoppape",
+    "venue": "Jungelen",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "14:45",
+      "to": "15:00"
+     }
+    ],
+    "ticket": false,
+    "weather": true
    },
    {
     "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
@@ -89,6 +330,117 @@
     "weather": false
    },
    {
+    "title": "Vekking i Abra Havn (For boende gjester i Abra Havn)",
+    "venue": "Abra Havn",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "08:00",
+      "to": "08:15"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt Klara og Gaute",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:00",
+      "to": "11:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Klaras Bølleshow på KuToppen",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:00",
+      "to": "12:25"
+     },
+     {
+      "from": "13:00",
+      "to": "13:25"
+     },
+     {
+      "from": "14:00",
+      "to": "14:25"
+     },
+     {
+      "from": "15:00",
+      "to": "15:25"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt Glambek og bli med på konkurransen",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:30",
+      "to": "12:40"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Estragons verden - Rottefangeren fra Sorø (egen forestillingsbillett)",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "13:00",
+      "to": "13:40"
+     },
+     {
+      "from": "14:30",
+      "to": "15:10"
+     },
+     {
+      "from": "16:00",
+      "to": "16:40"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt Siful og bli med på konkurransen",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "14:00",
+      "to": "14:10"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Møt Estragon og bli med på konkurransen",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "15:30",
+      "to": "15:40"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
     "title": "Glambek sjekker inn gjester (For boende på Glambeks Hvilested)",
     "venue": "Dyreparken",
     "category": "Underholdning",
@@ -96,6 +448,130 @@
      {
       "from": "16:00",
       "to": "16:45"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "...roland",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "16:30",
+      "to": "22:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Sorgene blør (åpningsshow)",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:00",
+      "to": "17:10"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Fredly",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:10",
+      "to": "22:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Damnanger",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:10",
+      "to": "22:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "M.O.R.",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:10",
+      "to": "22:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Skjalgs Monsterspotting",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:15",
+      "to": "22:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Jeg er Luxi",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:30",
+      "to": "17:40"
+     },
+     {
+      "from": "18:30",
+      "to": "18:40"
+     },
+     {
+      "from": "19:30",
+      "to": "19:40"
+     },
+     {
+      "from": "20:30",
+      "to": "20:40"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Odas ode til hevn",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "18:00",
+      "to": "18:10"
+     },
+     {
+      "from": "19:00",
+      "to": "19:10"
+     },
+     {
+      "from": "20:00",
+      "to": "20:10"
      }
     ],
     "ticket": false,
@@ -139,8 +615,24 @@
     ],
     "ticket": false,
     "weather": false
+   },
+   {
+    "title": "Besettelsen (avslutningsshow)",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "21:00",
+      "to": "21:15"
+     }
+    ],
+    "ticket": false,
+    "weather": false
    }
   ],
-  "hours": null
+  "hours": {
+   "dyreparken": "10:00–22:00",
+   "badelandet": null
+  }
  }
 }
