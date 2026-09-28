@@ -1,6 +1,6 @@
 {
- "date": "2026-09-27",
- "updated": "2026-09-27T09:25:36.547Z",
+ "date": "2026-09-28",
+ "updated": "2026-09-28T10:02:25.638Z",
  "entries": [
   {
    "title": "Klaras Bølleshow på KuToppen",
@@ -93,7 +93,7 @@
    "category": "Underholdning",
    "times": [
     {
-     "from": "17:15",
+     "from": "17:20",
      "to": "22:00"
     }
    ],
@@ -114,20 +114,7 @@
    "weather": false
   },
   {
-   "title": "Løve",
-   "venue": "Afrika",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "10:45"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Oter",
+   "title": "Gaupe",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -140,8 +127,8 @@
    "weather": false
   },
   {
-   "title": "Orangutang (værforbehold)",
-   "venue": "Asia",
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -166,8 +153,8 @@
    "weather": true
   },
   {
-   "title": "Tiger",
-   "venue": "Asia",
+   "title": "Løve",
+   "venue": "Afrika",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -179,26 +166,13 @@
    "weather": true
   },
   {
-   "title": "Edderkoppape",
-   "venue": "Jungelen",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "14:45",
-     "to": "15:00"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
    "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
    "venue": "Dyreparken Safarihotell",
    "category": "Dyrepresentasjoner",
    "times": [
     {
-     "from": "17:00",
-     "to": "17:20"
+     "from": "18:00",
+     "to": "18:20"
     }
    ],
    "ticket": false,
@@ -210,8 +184,8 @@
    "category": "Dyrepresentasjoner",
    "times": [
     {
-     "from": "18:00",
-     "to": "18:20"
+     "from": "19:00",
+     "to": "19:20"
     }
    ],
    "ticket": false,
@@ -442,7 +416,7 @@
    "category": "Underholdning",
    "times": [
     {
-     "from": "17:15",
+     "from": "17:20",
      "to": "22:00"
     }
    ],
@@ -553,7 +527,7 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "entries": [
    {
     "title": "Klaras Bølleshow på KuToppen",
@@ -646,7 +620,7 @@
     "category": "Underholdning",
     "times": [
      {
-      "from": "17:15",
+      "from": "17:20",
       "to": "22:00"
      }
     ],
@@ -667,7 +641,20 @@
     "weather": false
    },
    {
-    "title": "Gaupe",
+    "title": "Orangutang (værforbehold)",
+    "venue": "Asia",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "10:30",
+      "to": "10:45"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Oter",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -680,8 +667,8 @@
     "weather": false
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Edderkoppape",
+    "venue": "Jungelen",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -706,8 +693,8 @@
     "weather": true
    },
    {
-    "title": "Løve",
-    "venue": "Afrika",
+    "title": "Tiger",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -719,13 +706,26 @@
     "weather": true
    },
    {
+    "title": "Gepard",
+    "venue": "Afrika",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "14:45",
+      "to": "15:00"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
     "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
     "venue": "Dyreparken Safarihotell",
     "category": "Dyrepresentasjoner",
     "times": [
      {
-      "from": "17:00",
-      "to": "17:20"
+      "from": "18:00",
+      "to": "18:20"
      }
     ],
     "ticket": false,
@@ -737,8 +737,8 @@
     "category": "Dyrepresentasjoner",
     "times": [
      {
-      "from": "18:00",
-      "to": "18:20"
+      "from": "19:00",
+      "to": "19:20"
      }
     ],
     "ticket": false,
@@ -969,7 +969,7 @@
     "category": "Underholdning",
     "times": [
      {
-      "from": "17:15",
+      "from": "17:20",
       "to": "22:00"
      }
     ],
@@ -1075,6 +1075,9 @@
     "weather": false
    }
   ],
-  "hours": null
+  "hours": {
+   "dyreparken": "10:00–22:00",
+   "badelandet": null
+  }
  }
 }
