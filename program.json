@@ -1,6 +1,6 @@
 {
- "date": "2026-09-28",
- "updated": "2026-09-28T10:02:25.638Z",
+ "date": "2026-09-29",
+ "updated": "2026-09-29T10:01:50.910Z",
  "entries": [
   {
    "title": "Klaras Bølleshow på KuToppen",
@@ -114,7 +114,20 @@
    "weather": false
   },
   {
-   "title": "Gaupe",
+   "title": "Orangutang (værforbehold)",
+   "venue": "Asia",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "10:30",
+     "to": "10:45"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Oter",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -127,8 +140,8 @@
    "weather": false
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Edderkoppape",
+   "venue": "Jungelen",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -153,13 +166,26 @@
    "weather": true
   },
   {
-   "title": "Løve",
-   "venue": "Afrika",
+   "title": "Tiger",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
      "from": "14:00",
      "to": "14:15"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Gepard",
+   "venue": "Afrika",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "14:45",
+     "to": "15:00"
     }
    ],
    "ticket": false,
@@ -527,7 +553,7 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "entries": [
    {
     "title": "Klaras Bølleshow på KuToppen",
@@ -641,8 +667,8 @@
     "weather": false
    },
    {
-    "title": "Orangutang (værforbehold)",
-    "venue": "Asia",
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -654,7 +680,7 @@
     "weather": true
    },
    {
-    "title": "Oter",
+    "title": "Jerv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
