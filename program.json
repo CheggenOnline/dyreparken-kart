@@ -1,6 +1,6 @@
 {
- "date": "2026-09-30",
- "updated": "2026-09-30T09:53:32.115Z",
+ "date": "2026-10-01",
+ "updated": "2026-10-01T10:20:37.052Z",
  "entries": [
   {
    "title": "Klaras Bølleshow på KuToppen",
@@ -114,8 +114,8 @@
    "weather": false
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Orangutang (værforbehold)",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -127,7 +127,7 @@
    "weather": true
   },
   {
-   "title": "Jerv",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -166,8 +166,8 @@
    "weather": true
   },
   {
-   "title": "Tiger",
-   "venue": "Asia",
+   "title": "Løve",
+   "venue": "Afrika",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -179,8 +179,8 @@
    "weather": true
   },
   {
-   "title": "Gepard",
-   "venue": "Afrika",
+   "title": "Kamel",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -189,7 +189,7 @@
     }
    ],
    "ticket": false,
-   "weather": true
+   "weather": false
   },
   {
    "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
@@ -553,7 +553,7 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "entries": [
    {
     "title": "Klaras Bølleshow på KuToppen",
@@ -667,20 +667,7 @@
     "weather": false
    },
    {
-    "title": "Orangutang (værforbehold)",
-    "venue": "Asia",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "10:30",
-      "to": "10:45"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Ulv",
+    "title": "Oter",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -719,7 +706,7 @@
     "weather": true
    },
    {
-    "title": "Løve",
+    "title": "Gepard",
     "venue": "Afrika",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -732,7 +719,7 @@
     "weather": true
    },
    {
-    "title": "Kamel",
+    "title": "Sjimpanse",
     "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -742,7 +729,7 @@
      }
     ],
     "ticket": false,
-    "weather": false
+    "weather": true
    },
    {
     "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
