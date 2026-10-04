@@ -1,6 +1,6 @@
 {
- "date": "2026-10-03",
- "updated": "2026-10-03T09:19:37.894Z",
+ "date": "2026-10-04",
+ "updated": "2026-10-04T09:59:10.662Z",
  "entries": [
   {
    "title": "Klaras Bølleshow på KuToppen",
@@ -68,7 +68,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "22:00"
+     "to": "21:00"
     }
    ],
    "ticket": false,
@@ -81,7 +81,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "22:00"
+     "to": "21:00"
     }
    ],
    "ticket": false,
@@ -127,7 +127,7 @@
    "weather": true
   },
   {
-   "title": "Gaupe",
+   "title": "Oter",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -140,8 +140,8 @@
    "weather": false
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Orangutang (værforbehold)",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -186,6 +186,19 @@
     {
      "from": "14:45",
      "to": "15:00"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "15:00",
+     "to": "15:15"
     }
    ],
    "ticket": false,
@@ -365,7 +378,7 @@
    "times": [
     {
      "from": "16:30",
-     "to": "22:00"
+     "to": "21:15"
     }
    ],
    "ticket": false,
@@ -417,7 +430,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "22:00"
+     "to": "21:00"
     }
    ],
    "ticket": false,
@@ -430,7 +443,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "22:00"
+     "to": "21:00"
     }
    ],
    "ticket": false,
@@ -549,11 +562,11 @@
   }
  ],
  "hours": {
-  "dyreparken": "10:00–22:00",
+  "dyreparken": "10:00–21:15",
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "entries": [
    {
     "title": "Klaras Bølleshow på KuToppen",
@@ -563,10 +576,6 @@
      {
       "from": "12:00",
       "to": "12:25"
-     },
-     {
-      "from": "13:00",
-      "to": "13:25"
      },
      {
       "from": "14:00",
@@ -647,7 +656,7 @@
     "times": [
      {
       "from": "17:20",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -667,20 +676,7 @@
     "weather": false
    },
    {
-    "title": "Løve",
-    "venue": "Afrika",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "10:30",
-      "to": "10:45"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Oter",
+    "title": "Gaupe",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -693,8 +689,8 @@
     "weather": false
    },
    {
-    "title": "Orangutang (værforbehold)",
-    "venue": "Asia",
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -706,52 +702,13 @@
     "weather": true
    },
    {
-    "title": "Surikat",
+    "title": "Løve",
     "venue": "Afrika",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "13:30",
-      "to": "13:45"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Tiger",
-    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
       "from": "14:00",
       "to": "14:15"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Edderkoppape",
-    "venue": "Jungelen",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "14:45",
-      "to": "15:00"
-     }
-    ],
-    "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "15:00",
-      "to": "15:15"
      }
     ],
     "ticket": false,
@@ -804,6 +761,10 @@
      {
       "from": "11:00",
       "to": "11:20"
+     },
+     {
+      "from": "13:00",
+      "to": "13:20"
      }
     ],
     "ticket": false,
@@ -817,10 +778,6 @@
      {
       "from": "12:00",
       "to": "12:25"
-     },
-     {
-      "from": "13:00",
-      "to": "13:25"
      },
      {
       "from": "14:00",
@@ -902,10 +859,6 @@
      {
       "from": "16:00",
       "to": "17:00"
-     },
-     {
-      "from": "17:30",
-      "to": "18:30"
      }
     ],
     "ticket": true,
@@ -970,7 +923,7 @@
     "times": [
      {
       "from": "17:10",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -1009,7 +962,7 @@
     "times": [
      {
       "from": "17:20",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
