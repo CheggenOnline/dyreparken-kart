@@ -1,6 +1,6 @@
 {
- "date": "2026-10-04",
- "updated": "2026-10-04T09:59:10.662Z",
+ "date": "2026-10-05",
+ "updated": "2026-10-05T10:43:19.120Z",
  "entries": [
   {
    "title": "Klaras Bølleshow på KuToppen",
@@ -10,10 +10,6 @@
     {
      "from": "12:00",
      "to": "12:25"
-    },
-    {
-     "from": "13:00",
-     "to": "13:25"
     },
     {
      "from": "14:00",
@@ -94,7 +90,7 @@
    "times": [
     {
      "from": "17:20",
-     "to": "22:00"
+     "to": "21:00"
     }
    ],
    "ticket": false,
@@ -114,20 +110,7 @@
    "weather": false
   },
   {
-   "title": "Løve",
-   "venue": "Afrika",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "10:45"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Oter",
+   "title": "Gaupe",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -140,8 +123,8 @@
    "weather": false
   },
   {
-   "title": "Orangutang (værforbehold)",
-   "venue": "Asia",
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -153,52 +136,13 @@
    "weather": true
   },
   {
-   "title": "Surikat",
+   "title": "Løve",
    "venue": "Afrika",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "13:30",
-     "to": "13:45"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Tiger",
-   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
      "from": "14:00",
      "to": "14:15"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Edderkoppape",
-   "venue": "Jungelen",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "14:45",
-     "to": "15:00"
-    }
-   ],
-   "ticket": false,
-   "weather": true
-  },
-  {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "15:00",
-     "to": "15:15"
     }
    ],
    "ticket": false,
@@ -251,6 +195,10 @@
     {
      "from": "11:00",
      "to": "11:20"
+    },
+    {
+     "from": "13:00",
+     "to": "13:20"
     }
    ],
    "ticket": false,
@@ -264,10 +212,6 @@
     {
      "from": "12:00",
      "to": "12:25"
-    },
-    {
-     "from": "13:00",
-     "to": "13:25"
     },
     {
      "from": "14:00",
@@ -417,7 +361,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "22:00"
+     "to": "21:00"
     }
    ],
    "ticket": false,
@@ -456,7 +400,7 @@
    "times": [
     {
      "from": "17:20",
-     "to": "22:00"
+     "to": "21:00"
     }
    ],
    "ticket": false,
@@ -566,7 +510,7 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-05",
+  "date": "2026-10-06",
   "entries": [
    {
     "title": "Klaras Bølleshow på KuToppen",
@@ -676,7 +620,20 @@
     "weather": false
    },
    {
-    "title": "Gaupe",
+    "title": "Orangutang (værforbehold)",
+    "venue": "Asia",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "10:30",
+      "to": "10:45"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Oter",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -689,8 +646,8 @@
     "weather": false
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Edderkoppape",
+    "venue": "Jungelen",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -702,8 +659,8 @@
     "weather": true
    },
    {
-    "title": "Løve",
-    "venue": "Afrika",
+    "title": "Tiger",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -859,6 +816,10 @@
      {
       "from": "16:00",
       "to": "17:00"
+     },
+     {
+      "from": "17:30",
+      "to": "18:30"
      }
     ],
     "ticket": true,
