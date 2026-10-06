@@ -1,6 +1,6 @@
 {
- "date": "2026-10-05",
- "updated": "2026-10-05T10:43:19.120Z",
+ "date": "2026-10-06",
+ "updated": "2026-10-06T10:36:18.748Z",
  "entries": [
   {
    "title": "Klaras Bølleshow på KuToppen",
@@ -110,7 +110,20 @@
    "weather": false
   },
   {
-   "title": "Gaupe",
+   "title": "Orangutang (værforbehold)",
+   "venue": "Asia",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "10:30",
+     "to": "10:45"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Oter",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -123,8 +136,8 @@
    "weather": false
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Edderkoppape",
+   "venue": "Jungelen",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -136,8 +149,8 @@
    "weather": true
   },
   {
-   "title": "Løve",
-   "venue": "Afrika",
+   "title": "Tiger",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -510,7 +523,7 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "entries": [
    {
     "title": "Klaras Bølleshow på KuToppen",
@@ -620,8 +633,8 @@
     "weather": false
    },
    {
-    "title": "Orangutang (værforbehold)",
-    "venue": "Asia",
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -631,19 +644,6 @@
     ],
     "ticket": false,
     "weather": true
-   },
-   {
-    "title": "Oter",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "12:15",
-      "to": "12:30"
-     }
-    ],
-    "ticket": false,
-    "weather": false
    },
    {
     "title": "Edderkoppape",
@@ -666,6 +666,19 @@
      {
       "from": "14:00",
       "to": "14:15"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Gepard",
+    "venue": "Afrika",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "14:45",
+      "to": "15:00"
      }
     ],
     "ticket": false,
@@ -1028,6 +1041,9 @@
     "weather": false
    }
   ],
-  "hours": null
+  "hours": {
+   "dyreparken": "10:00–21:15",
+   "badelandet": null
+  }
  }
 }
