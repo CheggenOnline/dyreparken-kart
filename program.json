@@ -1,6 +1,6 @@
 {
- "date": "2026-10-08",
- "updated": "2026-10-08T10:48:36.508Z",
+ "date": "2026-10-09",
+ "updated": "2026-10-09T10:47:06.546Z",
  "entries": [
   {
    "title": "Klaras Bølleshow på KuToppen",
@@ -10,6 +10,10 @@
     {
      "from": "12:00",
      "to": "12:25"
+    },
+    {
+     "from": "13:00",
+     "to": "13:25"
     },
     {
      "from": "14:00",
@@ -64,7 +68,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "21:00"
+     "to": "22:00"
     }
    ],
    "ticket": false,
@@ -77,7 +81,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "21:00"
+     "to": "22:00"
     }
    ],
    "ticket": false,
@@ -90,7 +94,7 @@
    "times": [
     {
      "from": "17:20",
-     "to": "21:00"
+     "to": "22:00"
     }
    ],
    "ticket": false,
@@ -110,7 +114,7 @@
    "weather": false
   },
   {
-   "title": "Ulv",
+   "title": "Oter",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -149,7 +153,7 @@
    "weather": true
   },
   {
-   "title": "Gepard",
+   "title": "Løve",
    "venue": "Afrika",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -162,7 +166,7 @@
    "weather": true
   },
   {
-   "title": "Kamel",
+   "title": "Sjimpanse",
    "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -172,33 +176,7 @@
     }
    ],
    "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Dyreduell (for boende gjester på Safarihotellet og Safaricampen)",
-   "venue": "Dyreparken Safarihotell",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "18:00",
-     "to": "18:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Dyrequiz (for boende gjester på Safarihotellet eller i Safaricampen)",
-   "venue": "Dyreparken Safarihotell",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "19:00",
-     "to": "19:20"
-    }
-   ],
-   "ticket": false,
-   "weather": false
+   "weather": true
   },
   {
    "title": "Vekking i Abra Havn (For boende gjester i Abra Havn)",
@@ -221,10 +199,6 @@
     {
      "from": "11:00",
      "to": "11:20"
-    },
-    {
-     "from": "13:00",
-     "to": "13:20"
     }
    ],
    "ticket": false,
@@ -238,6 +212,10 @@
     {
      "from": "12:00",
      "to": "12:25"
+    },
+    {
+     "from": "13:00",
+     "to": "13:25"
     },
     {
      "from": "14:00",
@@ -348,7 +326,7 @@
    "times": [
     {
      "from": "16:30",
-     "to": "21:15"
+     "to": "22:00"
     }
    ],
    "ticket": false,
@@ -387,7 +365,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "21:00"
+     "to": "22:00"
     }
    ],
    "ticket": false,
@@ -400,7 +378,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "21:00"
+     "to": "22:00"
     }
    ],
    "ticket": false,
@@ -413,7 +391,7 @@
    "times": [
     {
      "from": "17:10",
-     "to": "21:00"
+     "to": "22:00"
     }
    ],
    "ticket": false,
@@ -426,7 +404,7 @@
    "times": [
     {
      "from": "17:20",
-     "to": "21:00"
+     "to": "22:00"
     }
    ],
    "ticket": false,
@@ -532,11 +510,11 @@
   }
  ],
  "hours": {
-  "dyreparken": "10:00–21:15",
+  "dyreparken": "10:00–22:00",
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "entries": [
    {
     "title": "Klaras Bølleshow på KuToppen",
@@ -650,7 +628,20 @@
     "weather": false
    },
    {
-    "title": "Oter",
+    "title": "Løve",
+    "venue": "Afrika",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "10:30",
+      "to": "10:45"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Gaupe",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -663,8 +654,8 @@
     "weather": false
    },
    {
-    "title": "Edderkoppape",
-    "venue": "Jungelen",
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -689,8 +680,8 @@
     "weather": true
    },
    {
-    "title": "Løve",
-    "venue": "Afrika",
+    "title": "Tiger",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -702,8 +693,8 @@
     "weather": true
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Edderkoppape",
+    "venue": "Jungelen",
     "category": "Dyrepresentasjoner",
     "times": [
      {
