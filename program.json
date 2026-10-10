@@ -1,6 +1,6 @@
 {
- "date": "2026-10-09",
- "updated": "2026-10-09T10:47:06.546Z",
+ "date": "2026-10-10",
+ "updated": "2026-10-10T10:02:07.175Z",
  "entries": [
   {
    "title": "Klaras Bølleshow på KuToppen",
@@ -114,7 +114,20 @@
    "weather": false
   },
   {
-   "title": "Oter",
+   "title": "Løve",
+   "venue": "Afrika",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "10:30",
+     "to": "10:45"
+    }
+   ],
+   "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Gaupe",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -127,8 +140,8 @@
    "weather": false
   },
   {
-   "title": "Edderkoppape",
-   "venue": "Jungelen",
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -153,8 +166,8 @@
    "weather": true
   },
   {
-   "title": "Løve",
-   "venue": "Afrika",
+   "title": "Tiger",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -166,8 +179,8 @@
    "weather": true
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Edderkoppape",
+   "venue": "Jungelen",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -514,7 +527,7 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "entries": [
    {
     "title": "Klaras Bølleshow på KuToppen",
@@ -582,7 +595,7 @@
     "times": [
      {
       "from": "17:10",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -595,7 +608,7 @@
     "times": [
      {
       "from": "17:10",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -608,7 +621,7 @@
     "times": [
      {
       "from": "17:20",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -641,7 +654,7 @@
     "weather": true
    },
    {
-    "title": "Gaupe",
+    "title": "Oter",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -654,8 +667,8 @@
     "weather": false
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Orangutang (værforbehold)",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -700,6 +713,19 @@
      {
       "from": "14:45",
       "to": "15:00"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "15:00",
+      "to": "15:15"
      }
     ],
     "ticket": false,
@@ -834,39 +860,13 @@
     "weather": false
    },
    {
-    "title": "Glambek sjekker inn gjester (For boende på Glambeks Hvilested)",
-    "venue": "Dyreparken",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "16:00",
-      "to": "16:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "...roland",
     "venue": "Skumle dager",
     "category": "Underholdning",
     "times": [
      {
       "from": "16:30",
-      "to": "22:00"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Kistemåling med Glambek (For boende på Glambeks Hvilested)",
-    "venue": "Skumle dager",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "17:00",
-      "to": "19:15"
+      "to": "21:15"
      }
     ],
     "ticket": false,
@@ -886,26 +886,13 @@
     "weather": false
    },
    {
-    "title": "Fredly",
-    "venue": "Skumle dager",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "17:10",
-      "to": "22:00"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "Damnanger",
     "venue": "Skumle dager",
     "category": "Underholdning",
     "times": [
      {
       "from": "17:10",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -918,7 +905,20 @@
     "times": [
      {
       "from": "17:10",
-      "to": "22:00"
+      "to": "21:00"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Fredly",
+    "venue": "Skumle dager",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "17:10",
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -931,7 +931,7 @@
     "times": [
      {
       "from": "17:20",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -984,45 +984,6 @@
     "weather": false
    },
    {
-    "title": "Møt sjørøvere i Abra Havn (For boende gjester i Abra Havn)",
-    "venue": "Abra Havn",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "18:00",
-      "to": "18:30"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Flaggfiring på Kongens Torg (For boende gjester i Abra Havn)",
-    "venue": "Abra Havn",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "18:30",
-      "to": "18:50"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Glambeks dødsbra kveldsunderholdning (For boende på Glambeks Hvilested)",
-    "venue": "Skumle dager",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "19:45",
-      "to": "20:00"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "Besettelsen (avslutningsshow)",
     "venue": "Skumle dager",
     "category": "Underholdning",
@@ -1037,7 +998,7 @@
    }
   ],
   "hours": {
-   "dyreparken": "10:00–22:00",
+   "dyreparken": "10:00–21:15",
    "badelandet": null
   }
  }
