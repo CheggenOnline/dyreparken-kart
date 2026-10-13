@@ -1,28 +1,28 @@
 {
- "date": "2026-10-12",
- "updated": "2026-10-12T11:10:43.157Z",
+ "date": "2026-10-13",
+ "updated": "2026-10-13T10:51:57.022Z",
  "entries": [
   {
-   "title": "Dyrene på KuToppen",
-   "venue": "KuToppen",
-   "category": "Dyrepresentasjoner",
-   "times": [
-    {
-     "from": "10:30",
-     "to": "10:45"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Oter",
+   "title": "Jerv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
     {
      "from": "13:00",
      "to": "13:15"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Møt et av dyrene i Terrariet",
+   "venue": "Terrariet",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "14:00",
+     "to": "14:15"
     }
    ],
    "ticket": false,
@@ -34,11 +34,24 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "entries": [
    {
-    "title": "Jerv",
-    "venue": "Nordisk Villmark",
+    "title": "Kamel",
+    "venue": "Dyreparken",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "12:15",
+      "to": "12:30"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Sjimpanse",
+    "venue": "Dyreparken",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -47,20 +60,7 @@
      }
     ],
     "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Møt et av dyrene i Terrariet",
-    "venue": "Terrariet",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "14:00",
-      "to": "14:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
+    "weather": true
    }
   ],
   "hours": null
