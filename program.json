@@ -1,6 +1,6 @@
 {
- "date": "2026-10-16",
- "updated": "2026-10-16T08:22:13.957Z",
+ "date": "2026-10-17",
+ "updated": "2026-10-17T07:57:05.343Z",
  "entries": [
   {
    "title": "Klaras Bølleshow på KuToppen",
@@ -28,6 +28,14 @@
    "venue": "Skumle dager",
    "category": "Underholdning",
    "times": [
+    {
+     "from": "13:00",
+     "to": "13:40"
+    },
+    {
+     "from": "14:30",
+     "to": "15:10"
+    },
     {
      "from": "16:00",
      "to": "16:40"
@@ -102,8 +110,8 @@
    "weather": false
   },
   {
-   "title": "Sjimpanse",
-   "venue": "Dyreparken",
+   "title": "Løve",
+   "venue": "Afrika",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -115,7 +123,7 @@
    "weather": true
   },
   {
-   "title": "Oter",
+   "title": "Gaupe",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -128,8 +136,8 @@
    "weather": false
   },
   {
-   "title": "Edderkoppape",
-   "venue": "Jungelen",
+   "title": "Sjimpanse",
+   "venue": "Dyreparken",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -141,8 +149,8 @@
    "weather": true
   },
   {
-   "title": "Gepard",
-   "venue": "Afrika",
+   "title": "Tiger",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -152,6 +160,19 @@
    ],
    "ticket": false,
    "weather": true
+  },
+  {
+   "title": "Vekking i Abra Havn (For boende gjester i Abra Havn)",
+   "venue": "Abra Havn",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "08:00",
+     "to": "08:15"
+    }
+   ],
+   "ticket": false,
+   "weather": false
   },
   {
    "title": "Møt Klara og Gaute",
@@ -192,6 +213,53 @@
    "weather": false
   },
   {
+   "title": "Møt Glambek og bli med på konkurransen",
+   "venue": "Skumle dager",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "12:30",
+     "to": "12:40"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Estragons verden - Rottefangeren fra Sorø (egen forestillingsbillett)",
+   "venue": "Skumle dager",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "13:00",
+     "to": "13:40"
+    },
+    {
+     "from": "14:30",
+     "to": "15:10"
+    },
+    {
+     "from": "16:00",
+     "to": "16:40"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
+   "title": "Møt Siful og bli med på konkurransen",
+   "venue": "Skumle dager",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "14:00",
+     "to": "14:10"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
    "title": "Møt Estragon og bli med på konkurransen",
    "venue": "Skumle dager",
    "category": "Underholdning",
@@ -219,19 +287,6 @@
     }
    ],
    "ticket": true,
-   "weather": false
-  },
-  {
-   "title": "Estragons verden - Rottefangeren fra Sorø (egen forestillingsbillett)",
-   "venue": "Skumle dager",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "16:00",
-     "to": "16:40"
-    }
-   ],
-   "ticket": false,
    "weather": false
   },
   {
@@ -287,6 +342,19 @@
    "weather": false
   },
   {
+   "title": "Fredly",
+   "venue": "Skumle dager",
+   "category": "Underholdning",
+   "times": [
+    {
+     "from": "17:10",
+     "to": "21:00"
+    }
+   ],
+   "ticket": false,
+   "weather": false
+  },
+  {
    "title": "Damnanger",
    "venue": "Skumle dager",
    "category": "Underholdning",
@@ -307,19 +375,6 @@
     {
      "from": "17:10",
      "to": "22:00"
-    }
-   ],
-   "ticket": false,
-   "weather": false
-  },
-  {
-   "title": "Fredly",
-   "venue": "Skumle dager",
-   "category": "Underholdning",
-   "times": [
-    {
-     "from": "17:10",
-     "to": "21:00"
     }
    ],
    "ticket": false,
@@ -442,7 +497,7 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "entries": [
    {
     "title": "Klaras Bølleshow på KuToppen",
@@ -506,7 +561,7 @@
     "times": [
      {
       "from": "17:10",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -519,7 +574,7 @@
     "times": [
      {
       "from": "17:10",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -532,7 +587,7 @@
     "times": [
      {
       "from": "17:20",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -565,7 +620,7 @@
     "weather": true
    },
    {
-    "title": "Gaupe",
+    "title": "Oter",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
@@ -578,8 +633,8 @@
     "weather": false
    },
    {
-    "title": "Sjimpanse",
-    "venue": "Dyreparken",
+    "title": "Orangutang (værforbehold)",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -732,19 +787,6 @@
     "weather": false
    },
    {
-    "title": "Glambek sjekker inn gjester (For boende på Glambeks Hvilested)",
-    "venue": "Dyreparken",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "16:00",
-      "to": "16:45"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "...roland",
     "venue": "Skumle dager",
     "category": "Underholdning",
@@ -752,19 +794,6 @@
      {
       "from": "16:30",
       "to": "21:15"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Kistemåling med Glambek (For boende på Glambeks Hvilested)",
-    "venue": "Skumle dager",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "17:00",
-      "to": "19:15"
      }
     ],
     "ticket": false,
@@ -803,7 +832,7 @@
     "times": [
      {
       "from": "17:10",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -816,7 +845,7 @@
     "times": [
      {
       "from": "17:10",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -829,7 +858,7 @@
     "times": [
      {
       "from": "17:20",
-      "to": "22:00"
+      "to": "21:00"
      }
     ],
     "ticket": false,
@@ -882,45 +911,6 @@
     "weather": false
    },
    {
-    "title": "Møt sjørøvere i Abra Havn (For boende gjester i Abra Havn)",
-    "venue": "Abra Havn",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "18:00",
-      "to": "18:30"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Flaggfiring på Kongens Torg (For boende gjester i Abra Havn)",
-    "venue": "Abra Havn",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "18:30",
-      "to": "18:50"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
-    "title": "Glambeks dødsbra kveldsunderholdning (For boende på Glambeks Hvilested)",
-    "venue": "Skumle dager",
-    "category": "Underholdning",
-    "times": [
-     {
-      "from": "19:45",
-      "to": "20:00"
-     }
-    ],
-    "ticket": false,
-    "weather": false
-   },
-   {
     "title": "Besettelsen (avslutningsshow)",
     "venue": "Skumle dager",
     "category": "Underholdning",
@@ -935,7 +925,7 @@
    }
   ],
   "hours": {
-   "dyreparken": "10:00–22:00",
+   "dyreparken": "10:00–21:15",
    "badelandet": null
   }
  }
