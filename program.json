@@ -1,6 +1,6 @@
 {
- "date": "2026-10-24",
- "updated": "2026-10-24T08:18:41.028Z",
+ "date": "2026-10-25",
+ "updated": "2026-10-25T08:36:27.555Z",
  "entries": [
   {
    "title": "Løve",
@@ -16,7 +16,7 @@
    "weather": true
   },
   {
-   "title": "Gaupe",
+   "title": "Ulv",
    "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
@@ -47,11 +47,11 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "entries": [
    {
-    "title": "Løve",
-    "venue": "Afrika",
+    "title": "Dyrene på KuToppen",
+    "venue": "KuToppen",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -60,24 +60,11 @@
      }
     ],
     "ticket": false,
-    "weather": true
-   },
-   {
-    "title": "Ulv",
-    "venue": "Nordisk Villmark",
-    "category": "Dyrepresentasjoner",
-    "times": [
-     {
-      "from": "12:15",
-      "to": "12:30"
-     }
-    ],
-    "ticket": false,
     "weather": false
    },
    {
-    "title": "Tiger",
-    "venue": "Asia",
+    "title": "Oter",
+    "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -86,7 +73,7 @@
      }
     ],
     "ticket": false,
-    "weather": true
+    "weather": false
    }
   ],
   "hours": null
