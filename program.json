@@ -1,10 +1,10 @@
 {
- "date": "2026-10-29",
- "updated": "2026-10-29T10:16:35.594Z",
+ "date": "2026-10-30",
+ "updated": "2026-10-30T10:18:21.162Z",
  "entries": [
   {
-   "title": "Møt et av dyrene i Terrariet",
-   "venue": "Terrariet",
+   "title": "Møt et dyr i Jungelhuset",
+   "venue": "Jungelen",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -16,8 +16,8 @@
    "weather": false
   },
   {
-   "title": "Orangutang (værforbehold)",
-   "venue": "Asia",
+   "title": "Oter",
+   "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -26,7 +26,7 @@
     }
    ],
    "ticket": false,
-   "weather": true
+   "weather": false
   }
  ],
  "hours": {
@@ -34,11 +34,11 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "entries": [
    {
-    "title": "Møt et dyr i Jungelhuset",
-    "venue": "Jungelen",
+    "title": "Løve",
+    "venue": "Afrika",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -47,11 +47,24 @@
      }
     ],
     "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Gaupe",
+    "venue": "Nordisk Villmark",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "12:15",
+      "to": "12:30"
+     }
+    ],
+    "ticket": false,
     "weather": false
    },
    {
-    "title": "Oter",
-    "venue": "Nordisk Villmark",
+    "title": "Tiger",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -60,7 +73,7 @@
      }
     ],
     "ticket": false,
-    "weather": false
+    "weather": true
    }
   ],
   "hours": null
