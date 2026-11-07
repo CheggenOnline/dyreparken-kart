@@ -1,10 +1,10 @@
 {
- "date": "2026-11-06",
- "updated": "2026-11-06T11:34:13.130Z",
+ "date": "2026-11-07",
+ "updated": "2026-11-07T10:31:00.349Z",
  "entries": [
   {
-   "title": "Møt et dyr i Jungelhuset",
-   "venue": "Jungelen",
+   "title": "Løve",
+   "venue": "Afrika",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -13,11 +13,24 @@
     }
    ],
    "ticket": false,
+   "weather": true
+  },
+  {
+   "title": "Gaupe",
+   "venue": "Nordisk Villmark",
+   "category": "Dyrepresentasjoner",
+   "times": [
+    {
+     "from": "12:15",
+     "to": "12:30"
+    }
+   ],
+   "ticket": false,
    "weather": false
   },
   {
-   "title": "Oter",
-   "venue": "Nordisk Villmark",
+   "title": "Tiger",
+   "venue": "Asia",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -26,7 +39,7 @@
     }
    ],
    "ticket": false,
-   "weather": false
+   "weather": true
   }
  ],
  "hours": {
@@ -34,7 +47,7 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "entries": [
    {
     "title": "Løve",
@@ -50,7 +63,7 @@
     "weather": true
    },
    {
-    "title": "Gaupe",
+    "title": "Ulv",
     "venue": "Nordisk Villmark",
     "category": "Dyrepresentasjoner",
     "times": [
