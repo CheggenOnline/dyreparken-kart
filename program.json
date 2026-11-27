@@ -1,10 +1,10 @@
 {
- "date": "2026-11-26",
- "updated": "2026-11-26T12:58:09.180Z",
+ "date": "2026-11-27",
+ "updated": "2026-11-27T12:53:29.662Z",
  "entries": [
   {
-   "title": "Møt et av dyrene i Terrariet",
-   "venue": "Terrariet",
+   "title": "Møt et dyr i Jungelhuset",
+   "venue": "Jungelen",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -16,8 +16,8 @@
    "weather": false
   },
   {
-   "title": "Orangutang (værforbehold)",
-   "venue": "Asia",
+   "title": "Oter",
+   "venue": "Nordisk Villmark",
    "category": "Dyrepresentasjoner",
    "times": [
     {
@@ -26,7 +26,7 @@
     }
    ],
    "ticket": false,
-   "weather": true
+   "weather": false
   }
  ],
  "hours": {
@@ -34,11 +34,36 @@
   "badelandet": null
  },
  "tomorrow": {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "entries": [
    {
-    "title": "Møt et dyr i Jungelhuset",
-    "venue": "Jungelen",
+    "title": "En skinnende stjernekonsert med Klara og Gaute",
+    "venue": "KuToppen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:00",
+      "to": "12:20"
+     },
+     {
+      "from": "13:00",
+      "to": "13:20"
+     },
+     {
+      "from": "14:00",
+      "to": "14:20"
+     },
+     {
+      "from": "15:00",
+      "to": "15:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "Løve",
+    "venue": "Afrika",
     "category": "Dyrepresentasjoner",
     "times": [
      {
@@ -47,16 +72,67 @@
      }
     ],
     "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Gaupe",
+    "venue": "Nordisk Villmark",
+    "category": "Dyrepresentasjoner",
+    "times": [
+     {
+      "from": "12:15",
+      "to": "12:30"
+     }
+    ],
+    "ticket": false,
     "weather": false
    },
    {
-    "title": "Oter",
-    "venue": "Nordisk Villmark",
+    "title": "Tiger",
+    "venue": "Asia",
     "category": "Dyrepresentasjoner",
     "times": [
      {
       "from": "13:00",
       "to": "13:15"
+     }
+    ],
+    "ticket": false,
+    "weather": true
+   },
+   {
+    "title": "Møt Klara og Gaute",
+    "venue": "KuToppen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "11:00",
+      "to": "11:20"
+     }
+    ],
+    "ticket": false,
+    "weather": false
+   },
+   {
+    "title": "En skinnende stjernekonsert med Klara og Gaute",
+    "venue": "KuToppen",
+    "category": "Underholdning",
+    "times": [
+     {
+      "from": "12:00",
+      "to": "12:20"
+     },
+     {
+      "from": "13:00",
+      "to": "13:20"
+     },
+     {
+      "from": "14:00",
+      "to": "14:20"
+     },
+     {
+      "from": "15:00",
+      "to": "15:20"
      }
     ],
     "ticket": false,
